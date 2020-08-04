@@ -5,7 +5,7 @@ ghpages.publish(
   "public", // <-- replace yourproject with your repo name
   {
     branch: "gh-pages",
-    repo: "https://gitlab.doc.gold.ac.uk/jburg002/2020-final-show.git",
+    repo: "https://github.com/aubergene/2020-final-show.git",
     user: {
       name: "Julian Burgess",
       email: "aubergene@gmail.com",
