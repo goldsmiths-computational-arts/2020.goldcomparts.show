@@ -2,7 +2,7 @@
 const ghpages = require("gh-pages");
 
 ghpages.publish(
-  "public", // <-- replace yourproject with your repo name
+  "public", // the folder we wish to deploy
   {
     branch: "gh-pages",
     repo: "https://github.com/aubergene/2020-final-show.git",
