@@ -1,8 +1,6 @@
 <script context="module">
   export async function preload({ params }) {
-    const artistsRows = await this.fetch("/api/artists.csv").then(d =>
-      d.text()
-    );
+    const artistsRows = await this.fetch("api/artists.csv").then(d => d.text());
 
     return { artistsRows };
   }
