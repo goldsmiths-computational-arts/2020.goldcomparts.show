@@ -9,6 +9,7 @@
 
 <script>
   import { slugify } from "../../js/helpers.js";
+  import SocialLink from "../../components/SocialLink.svelte";
 
   export let artist;
 </script>
@@ -46,15 +47,11 @@
         <p>Bio...</p>
       </div>
 
-      <h3>Social links</h3>
-      <ul>
-        <li>
-          <a href={artist.instagram}>{artist.instagram}</a>
-          <a href={artist.twitter}>{artist.twitter}</a>
-          <a href={artist.website}>{artist.website}</a>
-        </li>
-      </ul>
-
+      <h3>Social linksa</h3>
+      <SocialLink kind="instagram" value={artist.instagram} />
+      <SocialLink kind="twitter" value={artist.twitter} />
+      <SocialLink kind="facebook" value={artist.facebook} />
+      <SocialLink kind="website" value={artist.website} />
     </div>
   </div>
 </section>

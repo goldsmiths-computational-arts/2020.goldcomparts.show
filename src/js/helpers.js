@@ -9,3 +9,7 @@ export const slugify = (str) => {
 export function ascending(a, b) {
   return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
 }
+
+export function trackEvent(category, action, label) {
+  ga("send", "event", category, action, label);
+}
