@@ -14,8 +14,7 @@
 
   export let artistsRows;
 
-  console.log(artistsRows);
-
+  // Make a list of unique artist names
   $: artistNames = Array.from(
     new Set(csvParse(artistsRows).map(d => d.name))
   ).sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
