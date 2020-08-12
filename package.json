@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper export public --legacy --basepath=2020-final-show",
+    "build": "sapper export --legacy --basepath=2020-final-show",
     "deploy": "npm run build && bin/deploy.js"
   },
   "dependencies": {
