@@ -1,4 +1,4 @@
-# 2020-final-show
+# 2020-preview.goldcomparts.show
 
 ## Getting started
 
@@ -22,4 +22,4 @@ This will export the site to `public` and then commit it to the `gh-pages` and p
 npm run deploy
 ```
 
-The url currently is https://aubergene.github.io/2020-final-show/
+The url currently is https://2020-preview.goldcomparts.show/

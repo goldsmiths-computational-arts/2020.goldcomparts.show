@@ -1,10 +1,10 @@
 {
-  "name": "2020-final-show",
-  "description": "2020-final-show",
+  "name": "2020-preview.goldcomparts.show",
+  "description": "2020-preview.goldcomparts.show",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper export --legacy --basepath=2020-final-show",
+    "build": "sapper export --legacy",
     "deploy": "npm run build && bin/deploy.js"
   },
   "dependencies": {
