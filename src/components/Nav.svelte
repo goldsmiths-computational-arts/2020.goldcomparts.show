@@ -38,6 +38,7 @@
         </a>
 
         <a class="navbar-item" href="artists">Artists</a>
+        <a class="navbar-item" href="schedule">Schedule</a>
       </div>
     </div>
   </div>

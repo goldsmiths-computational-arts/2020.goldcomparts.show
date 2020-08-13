@@ -16,15 +16,12 @@
     <div class="content">
       <p>Welcome to the show etc etc</p>
 
-      <h2>Event schedule</h2>
-      <ul>
-        <li>
-          <a href="events/slug">Event 1 - Mon 9am</a>
-        </li>
-        <li>
-          <a href="events/slug">Event 2 - Mon 9:15am</a>
-        </li>
-      </ul>
+      <li>
+        <a href="artists">Artists</a>
+      </li>
+      <li>
+        <a href="schedule">Event schedule</a>
+      </li>
 
     </div>
   </div>

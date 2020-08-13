@@ -1,18 +1,17 @@
 import fs from "fs";
 import { resolve } from "path";
-import { csvParse, csvFormat } from "d3-dsv";
+import { csvParse, tsvFormat } from "d3-dsv";
 import { ascending } from "../../js/helpers";
 
 const RAW_DIR = resolve(`${__dirname}/../../../raw`);
 
-const rows = csvParse(fs.readFileSync(`${RAW_DIR}/artists.csv`, "utf-8"));
+const rows = csvParse(fs.readFileSync(`${RAW_DIR}/schedule.csv`, "utf-8"));
 
-const artists = rows
+const scheduleEvents = rows
+  .filter((d) => d.title)
   .map((d) => {
-    return {
-      name: d.artist,
-      title: d.title,
-    };
+    delete d.notes;
+    return d;
   })
   .sort((a, b) => ascending(a.name, b.name));
 
@@ -21,5 +20,5 @@ export function get(req, res, next) {
     "Content-Type": "text/plain",
   });
 
-  res.end(csvFormat(artists));
+  res.end(tsvFormat(scheduleEvents));
 }

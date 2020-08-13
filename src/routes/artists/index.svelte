@@ -1,20 +1,20 @@
 <script context="module">
   export async function preload({ params }) {
-    const artistsRows = await this.fetch("api/artists.csv").then(d => d.text());
+    const artistsRows = await this.fetch("api/artists.tsv").then(d => d.text());
 
     return { artistsRows };
   }
 </script>
 
 <script>
-  import { csvParse } from "d3-dsv";
+  import { tsvParse } from "d3-dsv";
   import { slugify } from "../../js/helpers.js";
 
   export let artistsRows;
 
   // Make a list of unique artist names
   $: artistNames = Array.from(
-    new Set(csvParse(artistsRows).map(d => d.name))
+    new Set(tsvParse(artistsRows).map(d => d.name))
   ).sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
 </script>
 
