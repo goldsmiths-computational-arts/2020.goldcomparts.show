@@ -8,6 +8,10 @@ Ensure you have Node 12.6.0 installed
 npm i
 ```
 
+### Data
+
+- [Google form Biography data](https://docs.google.com/spreadsheets/d/1cFp1oZc4CSHddOLnevgeJIAc3JT8s7uewNPp9TLViVo/edit#gid=1121962197)
+
 ### Running the project
 
 ```bash
