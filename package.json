@@ -15,6 +15,9 @@
     "sirv": "^1.0.0"
   },
   "devDependencies": {
+    "esm": "^3.2.25",
+    "googleapis": "^59.0.0",
+    "p-queue": "^6.6.1",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
