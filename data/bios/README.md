@@ -11,7 +11,7 @@ The biographies are written in Markdown which is rendered using [markdown-it](ht
 1. **Don't** add any heading, title or your social links, these comes from the spreadsheet. You just need to write the biography/artist statement
 1. You can add bullet points, and links to other works or exhibitions
 1. Use the "Preview Changes" tab to see how your markdown will look once rendered
-1. Click submit as a pull request
+1. Click "propose changes" once you are happy with your work
 1. You changes will appear eventually on the site, but be patient it will be hours or days
 
 ## Basic markdown guide
