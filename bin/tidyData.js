@@ -2,7 +2,9 @@
 import fs from "fs";
 import { execSync } from "child_process";
 import { csvParseRows, tsvFormat } from "d3-dsv";
-import { slugify, ascending } from "../src/js/helpers";
+import MarkdownIt from "markdown-it";
+import ProgressBar from "progress";
+import { slugify } from "../src/js/helpers";
 
 const rawDir = `${__dirname}/../raw`;
 const dataDir = `${__dirname}/../data`;
@@ -21,7 +23,7 @@ name
 showOtherName
 otherName
 otherNameLanguage
-imageFile
+bioImage
 location
 bioTextOrFile
 bioText
@@ -37,17 +39,25 @@ publicEmail`
   .trim()
   .split("\n");
 
-const artists = csvParseRows(fs.readFileSync(artistsCsv, "utf-8"), (row, i) => {
-  if (!i) return null;
-  const out = {};
-  headers.forEach((h, j) => {
-    const value = row[j];
-    out[h] = row[j];
-  });
-  return out;
-});
+const artistRows = csvParseRows(
+  fs.readFileSync(artistsCsv, "utf-8"),
+  (row, i) => {
+    if (!i) return null;
+    const out = {};
+    headers.forEach((h, j) => {
+      const value = row[j];
+      out[h] = row[j];
+    });
+    return out;
+  }
+);
 
-artists.forEach((d) => {
+const artistsMap = new Map();
+
+const bar = new ProgressBar(":percent  [:bar]", { total: artistRows.length });
+const markdown = new MarkdownIt();
+
+artistRows.forEach((d) => {
   delete d.showOtherName;
   delete d.otherNameLanguage;
   delete d.timestamp;
@@ -57,14 +67,20 @@ artists.forEach((d) => {
   d.slug = slugify(d.name);
 
   if (d.bioMarkdown) {
-    console.log(d.bioMarkdown);
+    // console.log(d.bioMarkdown);
     const id = d.bioMarkdown.split("=")[1];
     try {
-      d.bioText = fs.readFileSync(`${rawDir}/bios/${id}.md`);
+      d.bioText = fs.readFileSync(`${rawDir}/bios/${id}.md`, "utf-8");
     } catch (err) {
       console.warn(`Couldn't open ${id} for ${d.slug}`);
     }
   }
+
+  if (d.bioText) {
+    d.bioHTML = markdown.render(d.bioText);
+  }
+  delete d.bioText;
+  delete d.bioMarkdown;
 
   fs.writeFileSync(`${biosDir}/${d.slug}.md`, d.bioText);
   delete d.bioText;
@@ -73,12 +89,17 @@ artists.forEach((d) => {
     const id = d.imageFile.split("=")[1];
     // Resize the images and convert to JPEG, some are PNGs just with .jpeg extension
     execSync(
-      `sips -s format jpeg -Z 600 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.slug}.jpeg`
+      `sips -s format jpeg -Z 600 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.slug}.jpeg`,
+      { stdio: "pipe" }
     );
   }
+  delete d.imageFile;
+
+  artistsMap.set(d.slug, d);
+  bar.tick();
 });
 
-artists.sort((a, b) => ascending(a.name, b.name));
+const artists = Array.from(artistsMap.values());
 
 // console.log(artists);
 fs.writeFileSync(artistsTsv, tsvFormat(artists));
