@@ -16,8 +16,6 @@ The biographies are written in Markdown which is rendered using [markdown-it](ht
 
 ## Basic markdown guide
 
-More detailed info on [markdown](https://guides.github.com/features/mastering-markdown/)
-
 ### Links
 
 Add link with the following, remember links *have to start with* `https://` or `http://`
@@ -48,3 +46,45 @@ You can make something **bold** and in _italics_ like this
 * This 
 * is a 
 * list with bullets
+
+More detailed info on [markdown](https://guides.github.com/features/mastering-markdown/)
+
+## Artist Bio Guide
+
+**General guidelines**
+
+* Write in the 3rd person
+* Mention your full name the first time (if applicable), then only your first name any time after that.
+* Italicise names of projects. PLEASE use _underscores_ to italicise in order to retain the formatting when exporting through spreadsheets. 
+* Capitalise Names of Exhibitions and Institutions
+* Include dates for projects, whether in brackets (2020) or in more narrative form 
+
+**Suggested Structure**
+
+* Opening sentence with your name and board area of work. Eg:
+Your name can be however you want to be referred to as an artist, this isn’t a legal document, but it has to be consistent throughout all exhibition platforms: website, bio, social) and board 
+
+> Mask Off is a performance artist whose work engages with personal space and social dynamics. 
+
+OR
+
+> Mask Off’s practice interrogates conventions on personal space and social dynamics through immersive performance experiences. 
+
+Expand on your general interests, and highlight a couple of key aspects of your practice and/or research that you find most interesting. Note that this is not specific to the project you are exhibiting in the show, this is more about you as an artist. Eg.
+
+Drawing on their background in theatre design, Mask is interested in creating augmented performance experiences through interactive sound. 
+
+Transition into a more biographical couple of sentences, this can be professional experiences, previous education, personal creative projects. Any relevant activity you were doing before joining Goldsmiths. 
+
+If applicable, you can include a list of previous shows, residencies, awards, projects. Make sure to include dates for these and list them in reverse chronological order. 
+
+> Mask has exhibited their work at This Venue (2019). They have also been part of the 2018 iteration of This Event/Project/Collective/Book, where they presented This Project Title which went on to be shortlisted for This Award in 2019/expanded into an ongoing collaboration/be included in Somethings More. 
+
+Any other interests or fun facts you want people to know about you. If you find the bios-space to be too dry, this is where you can mention some of your less professional interests or activities. 
+
+If you want you can close with some basic metadata like where you were born or lived for a long time and where you are currently based. 
+This is an option some people really like and some people really don’t. Usually, artists working with culturally and politically specific topics like to include this, but it can also be integrated in with no. 3 or left out completely.  The reason I suggest putting here and not with no. 1 is that opening with your nationality (which many people tend to do) should not be the defining statement of your practice. 
+
+
+
+
