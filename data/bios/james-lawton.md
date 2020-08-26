@@ -1,1 +1,1 @@
-undefined
+I’m a former digital designer. I’d rather address you like a person, than in the 3rd person. I worked for many years as an interactive designer in the USA, UK, and Mexico. I quit. I’ve also done random things like working on a goat farm, which is far better than being an interactive designer. I used to create illustrations, I’ve had a few photography shows, and I like to write. I’m working on an MFA at Goldsmiths to bring all of this together into a unified digital arts practice.

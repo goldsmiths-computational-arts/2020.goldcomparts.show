@@ -1,1 +1,1 @@
-undefined
+daniel s evans is a family of owls from the pennines. drawn from the chaotic experience of nocturnal life and copious readings of both borges and the kabbalah, this website came into being, summoned from a sigil. they are a musician primarily, computational artist reluctantly. their work has been performed at the tate modern, cafe oto and corsica studios and they have undertaken residency in sweden. they perform music solo as peb and perform in gentle stranger and the shovel dance collective.

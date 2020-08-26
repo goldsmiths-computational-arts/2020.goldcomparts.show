@@ -1,1 +1,5 @@
-undefined
+Yishuai Zhang is an artist and researcher specializing in the demystification of the entanglement between art and science. His artworks intend to explore and navigate a spectrum of dynamic resonance between organisms and machines based on the progression of his interdisciplinary research across biophysics, computation, and art. The media of his works vary from painting, installations, performance, to digital and computational expressions.  An overarching concept, "fluid equilibrium," is conveyed by his practices with incorporated media to create an extension of aesthetics: from the perception of visible things with natural organs to the perception of invisible things with the help of computation. He simulates metaphysical reality to bring the meaning of art into more aspects of this current reality. He is currently pursuing the MFA Computational Arts program at Goldsmiths, University of London.
+
+website: http://zhangyishuai.com
+online bio: http://zhangyishuai.com/bio.html
+instagram: @daven_zhang
