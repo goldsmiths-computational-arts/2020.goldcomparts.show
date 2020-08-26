@@ -15,14 +15,16 @@
 </script>
 
 <svelte:head>
-  <title>{artist.artist} - Final Show - 2020</title>
+  <title>{artist.name} - Final Show - 2020</title>
 </svelte:head>
 
 <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">{artist.artist}</h1>
-      <h2 class="subtitle">{artist.title}</h2>
+      <h1 class="title">{artist.name}</h1>
+      {#if artist.otherName}
+        <h2 class="subtitle">{artist.otherName}</h2>
+      {/if}
     </div>
   </div>
 </section>
@@ -31,23 +33,20 @@
   <div class="container">
 
     <div class="content">
-      <img src="https://i.imgur.com/{artist.imgur}.png" alt={artist.title} />
-      <h2 class="subtitle">{artist.title}</h2>
-      <p>{artist.desc}</p>
-    </div>
+      <img src="img/photos/{artist.slug}.jpeg" alt={artist.name} />
 
-    <div class="content">
-      <h3>Performances</h3>
-      <ul>
-        <li>13:00 - Twitch stream?</li>
-      </ul>
+      <h2>
+        {artist.name}
+        {#if artist.otherName}({artist.otherName}){/if}
+      </h2>
 
-      <h3>Bio</h3>
-      <div class="content">
-        <p>Bio...</p>
-      </div>
+      {#if artist.bioHTML}
+        {@html artist.bioHTML}
+      {:else}
+        <p>No biography provided</p>
+      {/if}
 
-      <h3>Social linksa</h3>
+      <h3>Social links</h3>
       <SocialLink kind="instagram" value={artist.instagram} />
       <SocialLink kind="twitter" value={artist.twitter} />
       <SocialLink kind="facebook" value={artist.facebook} />

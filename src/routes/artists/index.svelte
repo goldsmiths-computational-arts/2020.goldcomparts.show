@@ -1,6 +1,6 @@
 <script context="module">
   export async function preload({ params }) {
-    const artistsRows = await this.fetch("api/artists.tsv").then(d => d.text());
+    const artistsRows = await this.fetch("artists.tsv").then(d => d.text());
 
     return { artistsRows };
   }
@@ -13,10 +13,33 @@
   export let artistsRows;
 
   // Make a list of unique artist names
-  $: artistNames = Array.from(
-    new Set(tsvParse(artistsRows).map(d => d.name))
-  ).sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+  $: artists = tsvParse(artistsRows);
 </script>
+
+<style>
+  .bio-boxes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bio-box {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+  }
+
+  .bio-box:hover {
+    background-color: #eee;
+  }
+
+  .bio-photo {
+    width: 128px;
+    height: 128px;
+    display: block;
+  }
+</style>
 
 <svelte:head>
   <title>Final Show - 2020</title>
@@ -35,10 +58,27 @@
   <div class="container">
     <div class="content">
 
+      <div class="bio-boxes">
+
+        {#each artists as artist}
+          <div class="bio-box">
+            <a href="artists/{slugify(artist.name)}">
+              <img
+                class="bio-photo"
+                src="img/photos/{artist.slug}.jpeg"
+                alt={artist.name} />
+              {artist.name} {artist.otherName ? `  (${artist.otherName})` : ''}
+            </a>
+          </div>
+        {/each}
+      </div>
+
       <ul>
-        {#each artistNames as name}
+        {#each artists as artist}
           <li>
-            <a href="artists/{slugify(name)}">{name}</a>
+            <a href="artists/{slugify(artist.name)}">
+              {artist.name} {artist.otherName ? `  (${artist.otherName})` : ''}
+            </a>
           </li>
         {/each}
       </ul>
