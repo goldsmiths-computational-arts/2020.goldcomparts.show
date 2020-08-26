@@ -2,7 +2,6 @@
 import fs from "fs";
 import { execSync } from "child_process";
 import { csvParseRows, tsvFormat } from "d3-dsv";
-import MarkdownIt from "markdown-it";
 import ProgressBar from "progress";
 import { slugify } from "../src/js/helpers";
 
@@ -55,7 +54,6 @@ const artistRows = csvParseRows(
 const artistsMap = new Map();
 
 const bar = new ProgressBar(":percent  [:bar]", { total: artistRows.length });
-const markdown = new MarkdownIt();
 
 artistRows.forEach((d) => {
   delete d.showOtherName;
@@ -76,24 +74,19 @@ artistRows.forEach((d) => {
     }
   }
 
-  if (d.bioText) {
-    d.bioHTML = markdown.render(d.bioText);
-  }
+  fs.writeFileSync(`${biosDir}/${d.slug}.md`, d.bioText);
   delete d.bioText;
   delete d.bioMarkdown;
 
-  fs.writeFileSync(`${biosDir}/${d.slug}.md`, d.bioText);
-  delete d.bioText;
-
-  if (d.imageFile) {
-    const id = d.imageFile.split("=")[1];
+  if (d.bioImage) {
+    const id = d.bioImage.split("=")[1];
     // Resize the images and convert to JPEG, some are PNGs just with .jpeg extension
     execSync(
       `sips -s format jpeg -Z 600 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.slug}.jpeg`,
       { stdio: "pipe" }
     );
   }
-  delete d.imageFile;
+  delete d.bioImage;
 
   artistsMap.set(d.slug, d);
   bar.tick();
