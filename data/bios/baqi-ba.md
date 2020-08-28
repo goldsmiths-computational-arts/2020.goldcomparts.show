@@ -1,0 +1,13 @@
+Baqi Ba(1994, China) is a director and artist, working with computational media,
+photography, film and installations. Her work explores cybernetic cinema and
+computer film, as well as often takes on a political approach as a critique of human-
+machine generated systems especially the ‘circular-causal’ loop relationship
+between them. Her current work focuses on the use of interactive and immersive as
+narratives in live cinematic performance. Baqi is currently doing MFA Computational
+Arts at Goldsmiths, University of London.
+
+Web:
+http://baqi.live
+
+Instagram:
+baqi_ba https://www.instagram.com/baqi_ba/
