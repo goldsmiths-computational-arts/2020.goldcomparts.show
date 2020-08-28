@@ -44,8 +44,8 @@ const artistRows = csvParseRows(
     if (!i) return null;
     const out = {};
     headers.forEach((h, j) => {
-      const value = row[j];
-      out[h] = row[j];
+      const value = row[j].trim();
+      out[h] = value;
     });
     return out;
   }
@@ -74,7 +74,7 @@ artistRows.forEach((d) => {
     }
   }
 
-  fs.writeFileSync(`${biosDir}/${d.slug}.md`, d.bioText);
+  fs.writeFileSync(`${biosDir}/${d.slug}.md`, d.bioText.trim());
   delete d.bioText;
   delete d.bioMarkdown;
 
