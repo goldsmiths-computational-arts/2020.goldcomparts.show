@@ -9,7 +9,7 @@
 
   switch (kind) {
     case "website":
-      icon = "";
+      icon = `<span class="icon"><i class="fas fa-external-link-alt"></i></span>`;
       url = value;
       text = value;
       break;

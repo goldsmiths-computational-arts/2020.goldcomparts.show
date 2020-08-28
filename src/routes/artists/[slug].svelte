@@ -47,10 +47,10 @@
       {/if}
 
       <h3>Social links</h3>
+      <SocialLink kind="website" value={artist.website} />
       <SocialLink kind="instagram" value={artist.instagram} />
       <SocialLink kind="twitter" value={artist.twitter} />
       <SocialLink kind="facebook" value={artist.facebook} />
-      <SocialLink kind="website" value={artist.website} />
     </div>
   </div>
 </section>
