@@ -11,11 +11,3 @@ His concerns right now are: what does it feel like to be a non-human thing? How 
 
 
 What would he wish for if he died and was allowed to live again? He would ask to be a crow. Or an octopus.
-
-
-Insta: @brother_Sjur
-
-
-
-
-[ends]
