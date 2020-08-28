@@ -65,7 +65,7 @@
             <a href="artists/{slugify(artist.name)}">
               <img
                 class="bio-photo"
-                src="img/photos/{artist.slug}.jpeg"
+                src="img/bios/{artist.username}.jpeg"
                 alt={artist.name} />
               {artist.name} {artist.otherName ? `  (${artist.otherName})` : ''}
             </a>

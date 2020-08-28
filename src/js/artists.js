@@ -15,7 +15,10 @@ export const artists = tsvParse(
 
 artists.forEach((artist) => {
   try {
-    const md = fs.readFileSync(`${DATA_DIR}/bios/${artist.slug}.md`, "utf-8");
+    const md = fs.readFileSync(
+      `${DATA_DIR}/bios/${artist.username}.md`,
+      "utf-8"
+    );
     artist.bioHTML = markdown.render(md);
   } catch (err) {
     // console.log(err)
