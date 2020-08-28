@@ -66,6 +66,19 @@ artistRows.forEach((d) => {
 
   d.username = d.email.split("@")[0];
 
+  if (d.website && !/^https?:\/\//.test(d.website)) {
+    d.website = "http://" + d.website;
+  }
+
+  d.vimeo = d.vimeo.replace("https://vimeo.com/", "");
+  d.facebook = d.facebook.replace("https://www.facebook.com/", "");
+  d.youTube = d.youTube.replace("https://www.youtube.com/channel/", "");
+  d.instagram = d.instagram.replace("https://www.instagram.com/", "");
+  d.instagram = d.instagram.replace("@", "");
+  d.instagram = d.instagram.replace(/\/$/, "");
+  d.twitter = d.twitter.replace("@", "");
+  d.twitch = d.twitch.replace("https://www.twitch.tv/", "");
+
   delete d.email;
 
   if (!d.bioText && d.bioMarkdown) {
