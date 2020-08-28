@@ -19,9 +19,6 @@
       <li>
         <a href="artists">Artists</a>
       </li>
-      <li>
-        <a href="schedule">Event schedule</a>
-      </li>
 
     </div>
   </div>
