@@ -1,0 +1,5 @@
+Nathan Bayliss is an artist and researcher whose work focuses on society's relationship with the technologies that shape human experience. 
+
+Nathan uses speculative fiction as a conceptual frame and research method, combining this with a palette of machine learning, mixed reality (AR & VR) and digital forensic practices. Through the interweaving of these strands his work asks:  how can we better understand the technologies that invisibly reconfigure contemporary life? And how may these technologies be re-purposed to tell down to earth, personal stories.  
+
+Born in Australia, Nathan Bayliss moved to London in 2008 and now works from a studio in Hackney, East London. His work Dubrovnik Ghost Series has been featured at Somerset House (HDI Workshop: ‘Art, AI-created content, & industrial/cultural effects’, 2019) and he is exhibiting Robin Hood Gardens: Rewound at Trajectories III, Watermans Gallery, October 2020.

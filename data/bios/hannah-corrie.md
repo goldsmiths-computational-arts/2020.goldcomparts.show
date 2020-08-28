@@ -1,4 +1,3 @@
-
 Hannah Corrie is an experimental storyteller whose work investigates non-places, temporal irregularity and the powers that govern them. Hannah sees the city as a constantly evolving source of inspiration - a heaving, breathing mass of individuals, industry and intersecting 
 beliefs. 
 

@@ -1,0 +1,1 @@
+Felix Loftus’ practice encompasses interactive sound, film, and computational photography, using them to create immersive installations. Felix works with environmental storytelling through relational poetics, attempting to challenge and disrupt the memory-making patterns of new-media.

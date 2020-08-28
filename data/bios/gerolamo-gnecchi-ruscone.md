@@ -7,4 +7,3 @@ Throughout his years as an Architect, Gerolamo worked at one of the most innovat
 He has now found his artistic obsession...
 
 Instagram: [title](https://www.instagram.com/gero_gnecchi/)
-

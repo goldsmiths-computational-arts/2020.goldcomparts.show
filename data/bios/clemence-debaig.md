@@ -11,5 +11,3 @@ In 2019, she presented her work in several  group exhibitions, including Anamorp
 Since the beginning of 2020, she is part of a research project between Goldsmiths University in London, the university of Lasalle in Singapore and Mavin Khoo, Creative Associate of Akram Khan Dance Company. The project aims at exploring how camera-less motion capture technology can enable virtual collaboration between dancers in remote locations.
 
 Clemence has an MSc in Mechanical Engineering and Industrial Design (2009) from the University of Technology of Compiègne (France).  She quickly specialised in User Experience and Interaction Design and, since, worked on many high profile projects including Decathlon, the Metropolitan Police, TfL and MTA (NYC). In parallel to her academic studies, she trained as a dancer, focusing particularly on contemporary and dance theatre techniques.
-
-
