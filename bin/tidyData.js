@@ -8,7 +8,7 @@ import { slugify } from "../src/js/helpers";
 const rawDir = `${__dirname}/../raw`;
 const dataDir = `${__dirname}/../data`;
 const biosDir = `${__dirname}/../data/bios`;
-const photosDir = `${__dirname}/../static/img/photos`;
+const photosDir = `${__dirname}/../static/img/bios`;
 
 [biosDir, photosDir].forEach((d) => fs.mkdirSync(d, { recursive: true }));
 
@@ -59,10 +59,14 @@ artistRows.forEach((d) => {
   delete d.showOtherName;
   delete d.otherNameLanguage;
   delete d.timestamp;
-  delete d.email;
+
   delete d.bioTextOrFile;
 
   d.slug = slugify(d.name);
+
+  d.username = d.email.split("@")[0];
+
+  delete d.email;
 
   if (!d.bioText && d.bioMarkdown) {
     // console.log(d.bioMarkdown);
@@ -74,7 +78,7 @@ artistRows.forEach((d) => {
     }
   }
 
-  fs.writeFileSync(`${biosDir}/${d.slug}.md`, d.bioText.trim());
+  fs.writeFileSync(`${biosDir}/${d.username}.md`, d.bioText.trim());
   delete d.bioText;
   delete d.bioMarkdown;
 
@@ -82,7 +86,7 @@ artistRows.forEach((d) => {
     const id = d.bioImage.split("=")[1];
     // Resize the images and convert to JPEG, some are PNGs just with .jpeg extension
     execSync(
-      `sips -s format jpeg -Z 600 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.slug}.jpeg`,
+      `sips -s format jpeg -Z 600 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.username}.jpeg`,
       { stdio: "pipe" }
     );
   }
