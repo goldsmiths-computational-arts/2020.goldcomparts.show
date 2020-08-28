@@ -64,7 +64,7 @@ artistRows.forEach((d) => {
 
   d.slug = slugify(d.name);
 
-  if (d.bioMarkdown) {
+  if (!d.bioText && d.bioMarkdown) {
     // console.log(d.bioMarkdown);
     const id = d.bioMarkdown.split("=")[1];
     try {
