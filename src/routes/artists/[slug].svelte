@@ -33,7 +33,7 @@
   <div class="container">
 
     <div class="content">
-      <img src="img/photos/{artist.slug}.jpeg" alt={artist.name} />
+      <img src="img/bios/{artist.username}.jpeg" alt={artist.name} />
 
       <h2>
         {artist.name}
