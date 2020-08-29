@@ -73,16 +73,6 @@
         {/each}
       </div>
 
-      <ul>
-        {#each artists as artist}
-          <li>
-            <a href="artists/{slugify(artist.name)}">
-              {artist.name} {artist.otherName ? `  (${artist.otherName})` : ''}
-            </a>
-          </li>
-        {/each}
-      </ul>
-
     </div>
   </div>
 </section>
