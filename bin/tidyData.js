@@ -72,7 +72,7 @@ artistRows.forEach((d) => {
 
   d.vimeo = d.vimeo.replace("https://vimeo.com/", "");
   d.facebook = d.facebook.replace("https://www.facebook.com/", "");
-  d.youTube = d.youTube.replace("https://www.youtube.com/channel/", "");
+  d.youtube = d.youtube.replace("https://www.youtube.com/channel/", "");
   d.instagram = d.instagram.replace("https://www.instagram.com/", "");
   d.instagram = d.instagram.replace("@", "");
   d.instagram = d.instagram.replace(/\/$/, "");
