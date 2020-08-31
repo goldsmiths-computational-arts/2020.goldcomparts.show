@@ -51,6 +51,9 @@
       <SocialLink kind="instagram" value={artist.instagram} />
       <SocialLink kind="twitter" value={artist.twitter} />
       <SocialLink kind="facebook" value={artist.facebook} />
+      <SocialLink kind="vimeo" value={artist.vimeo} />
+      <SocialLink kind="youtube" value={artist.youtube} />
+      <SocialLink kind="twitch" value={artist.twitch} />
     </div>
   </div>
 </section>
