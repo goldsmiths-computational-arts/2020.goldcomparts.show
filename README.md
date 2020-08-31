@@ -1,5 +1,10 @@
 # 2020-preview.goldcomparts.show
 
+## Biography data
+
+- [How to edit your biography](https://github.com/aubergene/2020-preview.goldcomparts.show/tree/master/data/bios#artist-biographies)
+
+
 ## Getting started
 
 Ensure you have Node 12.6.0 installed
