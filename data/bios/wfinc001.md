@@ -6,5 +6,3 @@ setting. His style draws on his formal studies in graphic design, and is
 influenced by the mid 1900’s animated films that pervaded his childhood.
 The subject matter of his work typically deals with identity
 impermanence and reconciling the analog with the digital.
-
-Website: [williamsfincannon.com](https://www.williamsfincannon.com)
