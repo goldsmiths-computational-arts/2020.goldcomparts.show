@@ -28,7 +28,7 @@ bioTextOrFile
 bioText
 bioMarkdown
 website
-youTube
+youtube
 vimeo
 twitch
 facebook
