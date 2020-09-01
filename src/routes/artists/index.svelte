@@ -28,6 +28,9 @@
     padding: 16px;
     margin: 16px;
     text-align: center;
+
+    width: 150px;
+    height: 220px;
   }
 
   .bio-box:hover {
