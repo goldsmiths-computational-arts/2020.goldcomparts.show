@@ -26,7 +26,7 @@
 <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <!-- JB - This is for Mobile really, we need a small version of the logo, we could hide it on desktop -->
-    <a class="navbar-item" href=".">Chimera Garden</a>
+    <a class="navbar-item desktop-display-none" href=".">Chimera Garden</a>
 
     <a
       href="#top"

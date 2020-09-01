@@ -12,6 +12,8 @@
   export let imageHeight = 630;
 </script>
 
+<link rel="stylesheet" href="css/global.css">
+
 <title>{title}</title>
 <meta property="og:title" content={title} />
 <meta property="og:url" content={BASE_URL + url} />
@@ -19,3 +21,4 @@
 <meta property="og:image" content={BASE_URL + image} />
 <meta property="og:image:width" content={imageWidth} />
 <meta property="og:image:height" content={imageHeight} />
+
