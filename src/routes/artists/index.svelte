@@ -20,6 +20,7 @@
   .bio-boxes {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 7.5%;
   }
 
   .bio-box {
@@ -29,7 +30,9 @@
     margin: 16px;
     text-align: center;
 
-    width: 150px;
+    transition: 0.25s ease-in;
+
+    width: 220px;
     height: 220px;
   }
 
@@ -37,9 +40,16 @@
     background-color: #eee;
   }
 
+  .bio-box:hover a {
+    color: black;
+  }
+
   .bio-photo {
-    width: 128px;
-    height: 128px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 150px;
+    height: 150px;
     display: block;
   }
 </style>
