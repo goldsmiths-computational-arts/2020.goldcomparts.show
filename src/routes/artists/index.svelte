@@ -25,19 +25,22 @@
 
   .bio-box {
     display: inline-block;
-    border: 1px solid #ddd;
+    border: 1px solid rgba(220,200,220,0.4);
     padding: 16px;
     margin: 16px;
     text-align: center;
 
-    transition: 0.25s ease-in;
+    background-color: rgba(238,238,238,0.4);
+
+    transition: 0.35s ease;
 
     width: 220px;
     height: 220px;
   }
 
   .bio-box:hover {
-    background-color: #eee;
+    background-color: rgba(238,238,238,1);
+    border: 2px solid rgba(0,0,0,1);
   }
 
   .bio-box:hover a {
@@ -51,6 +54,10 @@
     width: 150px;
     height: 150px;
     display: block;
+  }
+
+  .bio-box:hover .bio-photo{
+    border: 1px solid rgba(0,0,0,0.5);
   }
 </style>
 
