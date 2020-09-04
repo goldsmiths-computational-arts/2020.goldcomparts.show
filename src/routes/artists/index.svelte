@@ -20,7 +20,7 @@
   .bio-boxes {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 7.5%;
+    justify-content: center;
   }
 
   .bio-box {
@@ -29,6 +29,8 @@
     padding: 16px;
     margin: 16px;
     text-align: center;
+    
+    border-radius: 5%;
 
     background-color: rgba(238,238,238,0.4);
 
@@ -48,8 +50,9 @@
   }
 
   .bio-photo {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 11%;
+
+    border-radius: 5%;
 
     width: 150px;
     height: 150px;
