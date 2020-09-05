@@ -14,6 +14,7 @@ fs.mkdirSync(biosDir, { recursive: true });
 const queue = new PQueue({ concurrency: 1 });
 
 const artistsForm = "1cFp1oZc4CSHddOLnevgeJIAc3JT8s7uewNPp9TLViVo";
+const schedule = "1yyrr3frgtnz4TnLlPAJRwanqLC8fNSMsr9g9ZnzdTRM";
 
 const auth = new google.auth.GoogleAuth({
   keyFile: `${__dirname}/../secrets/goldcomparts-show-592cf6b0475d.json`,
@@ -29,6 +30,7 @@ main();
 
 async function main() {
   await exportFile(artistsForm, "text/csv", `${rawDir}/artists.csv`);
+  await exportFile(schedule, "text/csv", `${rawDir}/schedule.csv`);
 
   let res = await drive.files.list({
     q: "mimeType='image/jpeg' or mimeType='image/png'",

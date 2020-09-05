@@ -1,6 +1,6 @@
 <script context="module">
   export async function preload({ params }) {
-    const eventRows = await this.fetch("api/events.tsv").then(d => d.text());
+    const eventRows = await this.fetch("schedule.tsv").then(d => d.text());
 
     return { eventRows };
   }
@@ -8,8 +8,7 @@
 
 <script>
   import { tsvParse } from "d3-dsv";
-
-  import { slugify } from "../js/helpers";
+  import { slugify } from "../../js/helpers";
 
   export let eventRows;
 

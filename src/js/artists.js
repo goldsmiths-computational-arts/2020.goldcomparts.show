@@ -1,10 +1,8 @@
 import fs from "fs";
-import { resolve } from "path";
+import { DATA_DIR } from "./server-constants";
 import { tsvParse, autoType } from "d3-dsv";
 import { ascending } from "./helpers";
 import MarkdownIt from "markdown-it";
-
-const DATA_DIR = resolve(`${__dirname}/../../../data`);
 
 const markdown = new MarkdownIt();
 
