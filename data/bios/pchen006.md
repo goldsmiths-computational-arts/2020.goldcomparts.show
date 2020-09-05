@@ -1,1 +1,1 @@
-Peilu Chen is interested in exploring the field of sound and moving images. Her works mainly focus on screen-based audio-visual interaction, which discusses personal identity and social issues in the Internet age through the instant interaction of sound and vision.
+Peilu Chen has interests in exploring the mediums of sound and moving images. Her works mainly focus on screen-based audio-visual interaction, discussing personal identity and social issues in the internet age through real-time interaction between sound and vision.
