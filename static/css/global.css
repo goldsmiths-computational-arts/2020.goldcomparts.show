@@ -1,7 +1,42 @@
-.desktop-display-none{
-	display: none;
+/* 
+#FD7F4C 
+#387194 
+#7BC1B7 
+#000000 
+#484848 
+#A6A8AB 
+#F8F8F8
+
+*/
+
+body {
+  font-family: futura-pt, sans-serif;
 }
 
-.mobile-display-none{
-	display: none;
+.bg-col-1 {
+  background-color: #fd7f4c;
+}
+.bg-col-2 {
+  background-color: #387194;
+  color: #fff;
+}
+.bg-col-3 {
+  background-color: #7bc1b7;
+}
+.bg-col-4 {
+  background-color: #000000;
+}
+.bg-col-5 {
+  background-color: #484848;
+}
+.bg-col-6 {
+  background-color: #a6a8ab;
+}
+.bg-col-7 {
+  background-color: #f8f8f8;
+}
+
+.button-link {
+  padding: 4px 16px;
+  border-radius: 20px;
 }
