@@ -1,0 +1,3 @@
+Cosmic Mourn is an AR soundscape installation using procedural instruments, built in Unity.  It explores using ellements of play and exploration as a means to overcome the technicalities and complexities of standard music making, whilst also allowing the persons embodyment in the virtual space to play a larg role in the veiwing/playing of the peice. 
+
+The audio in the peice was a collaboration with Izzy Nahkla and is a recording of improvised singing. In the peice it produces a beautiful choral of voices building and fading, guided by your interaction.
