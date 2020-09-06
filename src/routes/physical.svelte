@@ -3,24 +3,33 @@
 </svelte:head>
 
 <style>
-  p{
-    padding: 5px 0px;
-  }
-  ul{
-    padding: 7px 0px;
-  }
-  h2{
-    padding: 5px 0px;
-  }
   .main{
     margin-right: 75px;
     margin-left: 75px;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 400px 320px 320px;
-    grid-template-areas: "church visit"  "cvd cvd" "trnspt trnspt";
+    grid-template-rows: auto auto auto 300px;
+    grid-template-areas: "church map" "trnspt map" "cvd cvd" "visit visit";
   }
 
+  .main p{
+    padding: 5px 0px;
+  }
+  .main ul{
+    padding: 7px 0px;
+  }
+  .main h2{
+    padding: 5px 0px;
+  }
+
+  .page-nav{
+    display: flex;
+    flex-direction: row;
+  }
+  .page-nav li{
+    margin-right: 15px;
+  }
+  
   .section-title{
     font-size: 25px;
     color: black;
@@ -33,17 +42,26 @@
   }
 
   .transport{
+    padding-top: 20px;
     grid-area: trnspt;
   }
 
   .covid{
+    padding-top: 20px;
     grid-area: cvd;
   }
 
   .visit-us{
-    padding-left: 10px; 
     padding-top: 20px;
     grid-area: visit;
+  }
+
+  .church-map{
+    width: 400px;
+    height: 400px;
+    margin-left: 25%; 
+    padding-top: 20px;
+    grid-area: map;
   }
 
   .visit-us ul{
@@ -55,37 +73,37 @@
     list-style-type: square;
     margin-left: 20px;
   }
+
+  @media screen and (max-width: 750px){
+    .main{
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: "church" "map" "trnspt" "cvd" "visit";
+    }
+    .church-map{
+      margin-left: 0%;
+      padding: none;
+      width: 300px;
+      height: 300px;
+    }
+  }
 </style>
 
 <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">How to find us</h1>
+      <ul class="page-nav">
+        <li><a href="physical#location">Location</a></li>
+        <li><a href="physical#covid">Covid Guidance</a></li>
+        <li><a href="physical#attendance">Visiting in Person</a></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <section class="main">
-  <section class="visit-us">
-    <h2 class="section-title">Visiting the exhibition in person</h2>
-    <p>
-      To manage capacity all visitors must register to 
-      attend during a slot via 
-      <a href="https://www.eventbrite.co.uk/e/chimera-garden-the-computational-arts-mamfa-degree-show-goldsmiths-tickets-119513047743">this Eventbrite</a>. 
-      Please arrive at the beginning of your time slot, but please 
-      be aware we have limited capacity inside the venue, 
-      you may be asked to queue until space inside becomes available.
-    </p>
-    <p>Opening Hours</p>
-    <ul>
-      <li style="">Thursday 17th: 16:30-21:30</li>
-      <li>Friday 18th: 11:00-21:30</li>
-      <li>Saturday 19th: 11:00-21:30</li>
-      <li>Sunday 20th: 11:00-18:00</li>
-    </ul>
-  </section>
-
-  <section class="hatcham">
+  <section class="hatcham" id="location">
     <h2 class="section-title">How to get here</h2>
     <p>Goldsmiths is in New Cross, South East London, five miles from central London.</p>
     <ul>
@@ -103,6 +121,8 @@
     <p>For more information <a href="https://www.gold.ac.uk/find-us/places/st-james-hatcham-building/">click here</a>.</p>
   </section>
 
+  <img class="church-map"src="img/map.png" alt="Google map screenshot of St James Hatcham - Goldsmiths">
+
   <section class="transport">
     <h2 class="section-title">Public Transport</h2>
     <p>
@@ -116,25 +136,44 @@
     </p>
   </section>
 
-  <section class="covid">
-  <h2 class="section-title">COVID Guidance</h2>
-  <p>
-    It is important to us that visitors and staff feel safe and comfortable in the 
-    exhibition. To this end we are taking a number of precautions. 
-    Please do follow the guidelines below to ensure you have a 
-    safe and pleasant visit:
-  </p>
+  <section class="covid" id="covid">
+    <h2 class="section-title">COVID Guidance</h2>
+    <p>
+      It is important to us that visitors and staff feel safe and comfortable in the 
+      exhibition. To this end we are taking a number of precautions. 
+      Please do follow the guidelines below to ensure you have a 
+      safe and pleasant visit:
+    </p>
+      <ul>
+        <li>We have limited capacity inside the venue. 
+          You may be asked to queue until space inside becomes available.</li>
+        <li>Masks are required when indoors, unless you are exempt</li>
+        <li>You are encouraged to bring your own wired headphones to listen to exhibits</li>
+        <li>Please maintain 2m distance to other guests where possible</li>
+        <li>There will be sanitisation stations throughout the exhibition, 
+          exits, entrances and at interactive pieces</li>
+        <li>No refreshments will be permitted inside the venue</li>
+        <li>On the opening night (Thursday 17th), there will be outdoor space and bar 
+          available to socialise, maintaining social distancing.</li>
+      </ul>
+  </section>
+
+  <section class="visit-us" id="attendance">
+    <h2 class="section-title">Visiting the exhibition in person</h2>
+    <p>
+      To manage capacity all visitors must register to 
+      attend during a slot via 
+      <a href="https://www.eventbrite.co.uk/e/chimera-garden-the-computational-arts-mamfa-degree-show-goldsmiths-tickets-119513047743">this Eventbrite</a>. 
+      Please arrive at the beginning of your time slot, but please 
+      be aware we have limited capacity inside the venue, 
+      you may be asked to queue until space inside becomes available.
+    </p>
+    <p>Opening Hours</p>
     <ul>
-      <li>We have limited capacity inside the venue. 
-        You may be asked to queue until space inside becomes available.</li>
-      <li>Masks are required when indoors, unless you are exempt</li>
-      <li>You are encouraged to bring your own wired headphones to listen to exhibits</li>
-      <li>Please maintain 2m distance to other guests where possible</li>
-      <li>There will be sanitisation stations throughout the exhibition, 
-        exits, entrances and at interactive pieces</li>
-      <li>No refreshments will be permitted inside the venue</li>
-      <li>On the opening night (Thursday 17th), there will be outdoor space and bar 
-        available to socialise, maintaining social distancing.</li>
+      <li style="">Thursday 17th: 16:30-21:30</li>
+      <li>Friday 18th: 11:00-21:30</li>
+      <li>Saturday 19th: 11:00-21:30</li>
+      <li>Sunday 20th: 11:00-18:00</li>
     </ul>
   </section>
 </section>
