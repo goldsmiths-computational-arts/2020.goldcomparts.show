@@ -10,9 +10,9 @@
   let menuItems = [
     { label: "Artists", href: "/artists" },
     { label: "Schedule", href: "/schedule" },
-    { label: "Live", href: "/live" },
+    // { label: "Live", href: "/live" },
     { label: "Getting There", href: "/getting-there" },
-    { label: "Map", href: "/map" },
+    // { label: "Map", href: "/map" },
     { label: "About", href: "/about" }
   ];
 
@@ -49,7 +49,7 @@
   role="navigation"
   aria-label="main navigation">
   <div class="container">
-    <div class="navbar-brand">
+    <div class="navbar-brand is-hidden-tablet">
       <!-- JB - This is for Mobile really, we need a small version of the logo, we could hide it on desktop -->
       <!-- <a class="navbar-item desktop-display-none" href=".">Chimera Garden</a> -->
       <a class="navbar-item desktop-display-none" href="/">
