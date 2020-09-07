@@ -1,0 +1,85 @@
+/* 
+#FD7F4C 
+#387194 
+#7BC1B7 
+#000000 
+#484848 
+#A6A8AB 
+#F8F8F8
+
+*/
+
+body {
+  font-family: futura-pt, sans-serif;
+}
+
+.bg-col-1 {
+  background-color: #fd7f4c;
+}
+.bg-col-2 {
+  background-color: #387194;
+}
+.bg-col-3 {
+  background-color: #7bc1b7;
+}
+.bg-col-4 {
+  background-color: #000000;
+}
+.bg-col-5 {
+  background-color: #484848;
+}
+.bg-col-6 {
+  background-color: #a6a8ab;
+}
+.bg-col-7 {
+  background-color: #f8f8f8;
+}
+
+.bd-col-1 {
+  border-color: #fd7f4c;
+}
+.bd-col-2 {
+  border-color: #387194;
+}
+.bd-col-3 {
+  border-color: #7bc1b7;
+}
+.bd-col-4 {
+  border-color: #000000;
+}
+.bd-col-5 {
+  border-color: #484848;
+}
+.bd-col-6 {
+  border-color: #a6a8ab;
+}
+.bd-col-7 {
+  border-color: #f8f8f8;
+}
+
+.col-1 {
+  color: #fd7f4c;
+}
+.col-2 {
+  color: #387194;
+}
+.col-3 {
+  color: #7bc1b7;
+}
+.col-4 {
+  color: #000000;
+}
+.col-5 {
+  color: #484848;
+}
+.col-6 {
+  color: #a6a8ab;
+}
+.col-7 {
+  color: #f8f8f8;
+}
+
+.button-link {
+  padding: 4px 16px;
+  border-radius: 20px;
+}
