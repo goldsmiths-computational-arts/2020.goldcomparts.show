@@ -64,7 +64,7 @@
         <table>
           <tr>
             <td>Opening night Thursday 17th</td>
-            <td>4.30(tbc) - 9.30 pm</td>
+            <td>5 pm - 9.30 pm</td>
           </tr>
           <tr>
             <td>Friday 18th - Saturday 19th</td>
