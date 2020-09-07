@@ -28,20 +28,40 @@
 <style>
   nav {
     background-color: transparent;
-    padding-left: 40px;
   }
 
   a {
     font-family: futura-pt, sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #fcfcfc;
     border-bottom: 4px solid transparent;
   }
 
   a.is-active {
     border-bottom-color: black;
+    color:black;
   }
+
+  @media only screen and (min-width: 600px) {
+    nav {
+      padding-top: 20px;
+    }
+    .navbar-item img {
+        margin-top: -10px;
+        max-height:2.3rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .navbar-item img {
+        margin-left: -10px;
+    }
+    .navbar-menu{
+      background-color: #387194;
+    }
+  }
+
 </style>
 
 <nav
@@ -49,14 +69,12 @@
   role="navigation"
   aria-label="main navigation">
   <div class="container">
-    <div class="navbar-brand is-hidden-tablet">
-      <!-- JB - This is for Mobile really, we need a small version of the logo, we could hide it on desktop -->
-      <!-- <a class="navbar-item desktop-display-none" href=".">Chimera Garden</a> -->
-      <a class="navbar-item desktop-display-none" href="/">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
         <img
           src="/img/brand.svg"
-          width="200"
-          height="30"
+          width="250"
+          height="45"
           alt="Chimera Garden" />
       </a>
 
@@ -76,7 +94,7 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu" class:is-active={showMenu}>
-      <div class="navbar-start">
+      <div class="navbar-end">
         {#each menuItems as item}
           <a
             class="navbar-item"

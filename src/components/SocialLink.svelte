@@ -51,6 +51,12 @@
   }
 </script>
 
+<style>
+  a{
+    color:#387194;
+  }
+</style>
+
 {#if value}
   <div class="social-profile">
     {@html icon}

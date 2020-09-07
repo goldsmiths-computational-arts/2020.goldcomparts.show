@@ -27,21 +27,13 @@
 
   .bio-box {
     display: inline-block;
-    border: 1px solid rgba(220, 200, 220, 0.4);
-    padding: 16px;
     margin: 16px;
-    text-align: center;
-
-    border-radius: 5%;
-
-    background-color: rgba(238, 238, 238, 0.4);
-
-    transition: 0.35s ease;
-
-    width: 220px;
-    height: 220px;
+    text-align: left;
+    background-color: white;
+    width: 190px;
+    height: 250px;
   }
-
+/*
   .bio-box:hover {
     background-color: rgba(238, 238, 238, 1);
     border: 2px solid rgba(0, 0, 0, 1);
@@ -49,20 +41,21 @@
 
   .bio-box:hover a {
     color: black;
-  }
+  }*/
 
   .bio-photo {
-    margin-left: 11%;
-
-    border-radius: 5%;
-
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 190px;
     display: block;
+    background-position: center;
+    background-size:contain;
+    background-color: #A6A8AB;
   }
-
+  .bio-box h6{
+    padding:0.5em;
+  }
   .bio-box:hover .bio-photo {
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    /*border: 1px solid rgba(0, 0, 0, 0.5);*/
   }
 </style>
 
@@ -70,16 +63,16 @@
   <title>Final Show - 2020</title>
 </svelte:head>
 
-<section class="hero is-primary">
+<!-- <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">Artists</h1>
       <h2 class="subtitle">MA/MFA Computational Arts 2020 - Goldsmiths</h2>
     </div>
   </div>
-</section>
+</section> -->
 
-<section class="section">
+<section class="section bg-col-7">
   <div class="container">
     <div class="content">
 
@@ -88,11 +81,11 @@
         {#each artists as artist}
           <div class="bio-box">
             <a href="artists/{slugify(artist.name)}">
-              <img
+              <div
                 class="bio-photo"
-                src="img/bios/{artist.username}.jpeg"
-                alt={artist.name} />
-              {artist.name} {artist.otherName ? `  (${artist.otherName})` : ''}
+                style="background-image:url(img/bios/{artist.username}.jpeg)">
+              </div>
+              <h6>{artist.name} {artist.otherName ? `  (${artist.otherName})` : ''}</h6>
             </a>
           </div>
         {/each}

@@ -111,14 +111,14 @@
   <title>Schedule - Final Show - 2020</title>
 </svelte:head>
 
-<section class="hero is-primary">
+<!-- <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">Final Show - 2020</h1>
       <h2 class="subtitle">MA/MFA Computational Arts - Goldsmiths</h2>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="section bg-col-7">
   <div class="container">
@@ -129,14 +129,14 @@
       <div>
         {#each Array.from(eventsByDay.entries()) as [date, events]}
           <a
-            class="rounded-link bd-col-1"
+            class="rounded-link bd-col-1 col-1"
             href="#{formatDay(events[0].startsAt).toLowerCase()}"
             on:click|preventDefault={scrollTo}>
             {formatDay(events[0].startsAt)}
           </a>
         {/each}
 
-        <a class="rounded-link bd-col-2" href={REGISTER_URL}>Get free ticket</a>
+        <a class="rounded-link bd-col-2 col-2" href={REGISTER_URL}>Get free ticket</a>
       </div>
 
       {#each Array.from(eventsByDay.entries()) as [date, events]}
