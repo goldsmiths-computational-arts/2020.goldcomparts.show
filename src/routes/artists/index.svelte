@@ -13,7 +13,9 @@
   export let artistsRows;
 
   // Make a list of unique artist names
-  $: artists = tsvParse(artistsRows);
+  $: artists = tsvParse(artistsRows).sort((a, b) =>
+    a.name.localeCompare(b.name, "en", { sensitivity: "base" })
+  );
 </script>
 
 <style>
@@ -25,14 +27,14 @@
 
   .bio-box {
     display: inline-block;
-    border: 1px solid rgba(220,200,220,0.4);
+    border: 1px solid rgba(220, 200, 220, 0.4);
     padding: 16px;
     margin: 16px;
     text-align: center;
-    
+
     border-radius: 5%;
 
-    background-color: rgba(238,238,238,0.4);
+    background-color: rgba(238, 238, 238, 0.4);
 
     transition: 0.35s ease;
 
@@ -41,8 +43,8 @@
   }
 
   .bio-box:hover {
-    background-color: rgba(238,238,238,1);
-    border: 2px solid rgba(0,0,0,1);
+    background-color: rgba(238, 238, 238, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
   }
 
   .bio-box:hover a {
@@ -59,8 +61,8 @@
     display: block;
   }
 
-  .bio-box:hover .bio-photo{
-    border: 1px solid rgba(0,0,0,0.5);
+  .bio-box:hover .bio-photo {
+    border: 1px solid rgba(0, 0, 0, 0.5);
   }
 </style>
 
