@@ -91,7 +91,7 @@
     please be aware we have limited capacity inside the venue, you may be asked
     to queue until space inside becomes available.
     <div>
-      <a class="button-link bg-col-3" href={REGISTER_URL}>Register</a>
+      <a class="rounded-link bg-col-3" href={REGISTER_URL}>Register</a>
     </div>
   </div>
 </section>

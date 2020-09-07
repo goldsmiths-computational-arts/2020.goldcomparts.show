@@ -79,7 +79,10 @@ body {
   color: #f8f8f8;
 }
 
-.button-link {
+/* TODO make this like the design, see if it can be used in combo with above classes for colours */
+.rounded-link {
   padding: 4px 16px;
   border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
 }

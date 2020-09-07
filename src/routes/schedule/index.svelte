@@ -12,11 +12,14 @@
   import { group } from "d3-array";
   import { timeFormat } from "d3-time-format";
   import { slugify } from "../../js/helpers";
+  import { REGISTER_URL } from "../../js/constants";
+  import { now } from "../../js/stores";
 
   export let scheduleRows;
   export let artistsRows;
 
   const formatDate = timeFormat("%A %d %b");
+  const formatDay = timeFormat("%A");
   const formatTime = timeFormat("%H.%M");
 
   // Make a list of unique artist names
@@ -30,15 +33,11 @@
     artists.forEach(artist => {
       artistByUsername.set(artist.username, artist);
     });
-    // console.log(artistByUsername);
 
     events = tsvParse(scheduleRows)
       .map(row => {
-        // console.log(row);
-        // TODO localise the time etc...
-
-        row.themes = row.themes ? row.themes.split(/,\s*/) : [];
-        row.medium = row.medium ? row.medium.split(/,\s*/) : [];
+        row.themes = row.themes.split(/,\s*/);
+        row.medium = row.medium.split(/,\s*/);
 
         row.artists = [];
         if (row.username.trim()) {
@@ -54,9 +53,6 @@
 
         row.startsAt = new Date(row.startTime);
 
-        // console.log(row);
-        // console.log(row.startTime);
-
         return row;
       })
       .filter(d => d.startTime);
@@ -64,8 +60,6 @@
     console.log(events);
     eventsByDay = group(events, d => d.startTime.slice(0, 10));
   }
-
-  const now = new Date(); // TODO make this a reactive store
 
   function happeningNow(event) {
     return event.startsAt >= now && event.endsAt < now;
@@ -83,6 +77,12 @@
     if (happeningNow(event.startsAt)) {
       return "bd-col-1"; // TODO design shows red colour not in pallette
     }
+  }
+
+  function scrollTo({ target }) {
+    document.querySelector(target.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
   }
 </script>
 
@@ -126,10 +126,23 @@
 
       <h2>Event schedule</h2>
 
-      <p>TODO - make this in to a proper listing</p>
+      <div>
+        {#each Array.from(eventsByDay.entries()) as [date, events]}
+          <a
+            class="rounded-link bd-col-1"
+            href="#{formatDay(events[0].startsAt).toLowerCase()}"
+            on:click|preventDefault={scrollTo}>
+            {formatDay(events[0].startsAt)}
+          </a>
+        {/each}
+
+        <a class="rounded-link bd-col-2" href={REGISTER_URL}>Get free ticket</a>
+      </div>
 
       {#each Array.from(eventsByDay.entries()) as [date, events]}
-        <h2>{formatDate(events[0].startsAt)}</h2>
+        <h2 id={formatDay(events[0].startsAt).toLowerCase()}>
+          {formatDate(events[0].startsAt)}
+        </h2>
 
         {#each events as event, i}
           <div class="event {eventBdClass(event)}">
