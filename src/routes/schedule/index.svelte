@@ -1,8 +1,9 @@
 <script context="module">
   export async function preload({ params }) {
-    const eventRows = await this.fetch("schedule.tsv").then(d => d.text());
+    const scheduleRows = await this.fetch("schedule.tsv").then(d => d.text());
+    const artistsRows = await this.fetch("artists.tsv").then(d => d.text());
 
-    return { eventRows };
+    return { scheduleRows, artistsRows };
   }
 </script>
 
@@ -10,12 +11,36 @@
   import { tsvParse } from "d3-dsv";
   import { slugify } from "../../js/helpers";
 
-  export let eventRows;
+  export let scheduleRows;
+  export let artistsRows;
 
-  $: events = tsvParse(eventRows).map(row => {
-    // TODO localise the time etc...
-    return row;
-  });
+  // Make a list of unique artist names
+  let artists;
+  let events;
+  let artistByUsername = new Map();
+  $: {
+    artists = tsvParse(artistsRows);
+    artists.forEach(artist => {
+      artistByUsername.set(artist.username, artist);
+    });
+    events = tsvParse(scheduleRows).map(row => {
+      console.log(row);
+      // TODO localise the time etc...
+      row.artists = [];
+      if (row.username.trim()) {
+        row.username.split(",").forEach(username => {
+          const artist = artistByUsername.get(row.username.trim());
+          if (artist) {
+            row.artists.push(artist);
+          } else {
+            console.log(`Couldn't find "${username.trim()}"`);
+          }
+        });
+      }
+
+      return row;
+    });
+  }
 </script>
 
 <svelte:head>
@@ -44,7 +69,9 @@
           <li>
             {event.title} - {event.startTime}
             <br />
-            <a href="artists/{slugify(event.artist)}">{event.artist}</a>
+            {#each event.artists as artist}
+              <a href="artists/{artist.slug}">{artist.name}</a>
+            {/each}
 
           </li>
         {/each}
