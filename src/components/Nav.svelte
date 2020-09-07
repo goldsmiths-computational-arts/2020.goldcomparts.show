@@ -36,10 +36,11 @@
     font-weight: 600;
     font-size: 1.5rem;
     color: #fcfcfc;
+    border-bottom: 4px solid transparent;
   }
 
   a.is-active {
-    border-bottom: 4px solid black;
+    border-bottom-color: black;
   }
 </style>
 
