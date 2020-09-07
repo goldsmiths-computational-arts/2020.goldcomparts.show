@@ -1,5 +1,28 @@
 import { artists } from "../../js/artists";
+import { schedule } from "../../js/schedule";
 import { slugify } from "../../js/helpers";
+
+const artistByUsername = new Map(
+  artists.map((d) => {
+    d.events = [];
+    return [d.username, d];
+  })
+);
+
+console.log(artistByUsername);
+
+schedule.forEach((event, i) => {
+  if (event.username) {
+    event.username.split(/,\s*/).forEach((username) => {
+      const artist = artistByUsername.get(username);
+      if (artist) {
+        artist.events.push(event);
+      } else {
+        console.log(`Couldn't find ${username} for event ${i}`);
+      }
+    });
+  }
+});
 
 const artistBySlug = new Map(
   artists.map((d) => {

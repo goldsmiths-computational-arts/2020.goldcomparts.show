@@ -15,46 +15,46 @@
 </script>
 
 <style>
-  .content{
+  .content {
     display: grid;
     justify-content: center;
     grid-template-columns: 400px auto;
-    grid-template-rows: 50px 400px 10px ;
+    grid-template-rows: 50px 400px 10px;
     grid-template-areas: "img name" "img bio" "links bio";
   }
 
-  .artist-img{
+  .artist-img {
     width: 400px;
     height: 400px;
     grid-area: img;
   }
 
-  .artist-bio{
+  .artist-bio {
     padding-top: 50px;
     grid-area: bio;
     padding-left: 10px;
   }
 
-  .social-links{
+  .social-links {
     grid-area: links;
     display: flex;
     flex-direction: column;
   }
 
-  .artist-name{
+  .artist-name {
     grid-area: name;
     padding-left: 10px;
   }
 
-  @media screen and (max-width: 750px){
-    .content{
+  @media screen and (max-width: 750px) {
+    .content {
       display: grid;
       grid-template-columns: 400px;
-      grid-template-rows: 400px 50px auto ;
+      grid-template-rows: 400px 50px auto;
       grid-template-areas: "img" "name" "bio" "links";
     }
 
-    .social-links{
+    .social-links {
       padding-top: 25px;
     }
   }
@@ -79,7 +79,10 @@
   <div class="container">
 
     <div class="content">
-      <img class="artist-img" src="img/bios/{artist.username}.jpeg" alt={artist.name} />
+      <img
+        class="artist-img"
+        src="img/bios/{artist.username}.jpeg"
+        alt={artist.name} />
 
       <h2 class="artist-name">
         {artist.name}
@@ -94,6 +97,20 @@
         {/if}
       </div>
 
+      {#if artist.events.length}
+        <div class="event-schedule">
+          <h3>Event schedule</h3>
+          <ul>
+            {#each artist.events as event}
+              <li>
+                <a href="/schedule/TODO">{event.title}</a>
+                - {event.startTime}
+              </li>
+            {/each}
+          </ul>
+        </div>
+      {/if}
+
       <div class="social-links">
         <h3>Social links</h3>
         <SocialLink kind="website" value={artist.website} />
@@ -106,5 +123,5 @@
       </div>
     </div>
   </div>
-  <div style="padding-top: 100px;"></div>
+  <div style="padding-top: 100px;" />
 </section>
