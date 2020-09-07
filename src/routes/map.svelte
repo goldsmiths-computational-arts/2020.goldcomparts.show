@@ -1,7 +1,7 @@
 <svelte:head>
-  <title>Events</title>
+  <title>Map</title>
 </svelte:head>
 
-<h1>Events</h1>
+<h1>Map</h1>
 
-<p>this will be a list of events etc.</p>
+<p>Map of the church layout with people's work</p>
