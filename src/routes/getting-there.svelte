@@ -15,6 +15,7 @@
 <svelte:head>
   <title>Getting there</title>
 </svelte:head>
+
 <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
