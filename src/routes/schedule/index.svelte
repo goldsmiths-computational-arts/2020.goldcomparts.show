@@ -38,7 +38,7 @@
         // TODO localise the time etc...
 
         row.themes = row.themes ? row.themes.split(/,\s*/) : [];
-        row.mediums = row.mediums ? row.mediums.split(/,\s*/) : [];
+        row.medium = row.medium ? row.medium.split(/,\s*/) : [];
 
         row.artists = [];
         if (row.username.trim()) {
@@ -155,8 +155,8 @@
             </ul>
 
             <ul>
-              {#each event.mediums as medium}
-                <li>{medium}</li>
+              {#each event.medium as media}
+                <li>{media}</li>
               {/each}
             </ul>
 
