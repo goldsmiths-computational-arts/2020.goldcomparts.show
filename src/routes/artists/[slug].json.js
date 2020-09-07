@@ -9,8 +9,6 @@ const artistByUsername = new Map(
   })
 );
 
-console.log(artistByUsername);
-
 schedule.forEach((event, i) => {
   if (event.username) {
     event.username.split(/,\s*/).forEach((username) => {
@@ -18,7 +16,9 @@ schedule.forEach((event, i) => {
       if (artist) {
         artist.events.push(event);
       } else {
-        console.log(`Couldn't find ${username} for event ${i}`);
+        console.log(
+          `artists/[slug] - Couldn't find ${username} for event ${i}`
+        );
       }
     });
   }

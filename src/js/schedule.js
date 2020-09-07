@@ -1,9 +1,7 @@
 import fs from "fs";
 import { tsvParse, autoType } from "d3-dsv";
 import { timeParse } from "d3-time-format";
-
 import { DATA_DIR } from "./server-constants";
-import { start } from "repl";
 
 const parseDate = timeParse("%a %d %b %Y %H:%M"); // Thu 17 Sep 2020
 
@@ -16,6 +14,8 @@ export const schedule = [];
 
 let prevRow;
 scheduleRows.forEach((row) => {
+  if (!(row.startDate && row.title)) return;
+
   let startTime = parseDate(row.startDate + " " + row.startTime);
 
   if (startTime) {
