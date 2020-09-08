@@ -1,4 +1,0 @@
-# This is just a preview site, we don't want to get indexed by accident!
-
-User-agent: *
-Disallow: /
