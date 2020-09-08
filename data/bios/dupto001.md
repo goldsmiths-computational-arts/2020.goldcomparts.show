@@ -1,0 +1,7 @@
+David Upton is interested in subtle differences, in conceptual art, and in discovering unseen patterns and inter-relationships. He embraces the digital world because it offers him such a range of new opportunities.
+
+After starting his career in the UK Foreign Office, he built up, with some friends, a small, specialised, management consultancy company, which organised crisis simulation exercises all over the world, for several of the world's largest companies. Eventually it occurred to him that he had created far more 'situations' than Guy Debord ever did, and from there it was a short step to becoming a digital artist. Inspired by the US countercultural movement, and British cyberneticians of the 1960's, he spends increasing amounts of time using small pieces of wire to pick the locks of the doors of perception, and seeking (legal and non-pharmacological) 'technologies of the self'.
+
+His work has been exhibited or experienced at EVA London (2017), in the V&A New Directions series (2017), at the 20th Generative Art Conference in Ravenna (2017), at the 4th World Congress of Psychogeography (2018 and 2019), and at Goldsmiths College (2018, 2019), where he is currently studying for an MA in Computational Art.
+
+He lives, solders, and is a flaneur in London.
