@@ -1,0 +1,1 @@
+To try it out, Dowload it on an AR ready device from these links :( Links to come, hope thats ok)
