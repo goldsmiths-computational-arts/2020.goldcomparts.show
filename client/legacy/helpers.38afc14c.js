@@ -1,8 +1,1 @@
-var slugify = function slugify(str) {
-  return str.toLowerCase().replace(/[^a-z]+/g, " ").trim().replace(/ /g, "-");
-};
-function trackEvent(category, action, label) {
-  ga("send", "event", category, action, label);
-}
-
-export { slugify as s, trackEvent as t };
+var e=function(e){return e.toLowerCase().replace(/[^a-z]+/g," ").trim().replace(/ /g,"-")};function a(e,a,r){ga("send","event",e,a,r)}export{e as s,a as t};
