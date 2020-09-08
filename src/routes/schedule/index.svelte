@@ -9,7 +9,7 @@
 
 <script>
   import { tsvParse } from "d3-dsv";
-  import { group } from "d3-array";
+  import { ascending, group } from "d3-array";
   import { timeFormat } from "d3-time-format";
   import { slugify } from "../../js/helpers";
   import { EVENT_URL } from "../../js/constants";
@@ -26,7 +26,8 @@
   let artists;
   let events;
   let artistByUsername = new Map();
-  let eventsByDay;
+
+  let filter = null;
 
   $: {
     artists = tsvParse(artistsRows);
@@ -57,9 +58,30 @@
       })
       .filter(d => d.startTime);
 
-    console.log(events);
-    eventsByDay = group(events, d => d.startTime.slice(0, 10));
+    // console.log(events);
   }
+
+  $: filteredEvents = events
+    .filter(d => {
+      if (!filter) {
+        return true;
+      } else {
+        // TODO make some constants
+        // TODO tidy up the sheet parsing
+        if (filter === "onsite") {
+          return d.physical == "yes";
+        }
+        if (filter === "online") {
+          return d.livestream == "true";
+        }
+      }
+    })
+    .sort((a, b) => a.startAt - b.startsAt);
+
+  $: eventsByDay = group(filteredEvents, d => d.startTime.slice(0, 10));
+  $: eventsByDay2 = Array.from(eventsByDay.entries()).sort((a, b) =>
+    ascending(a[0], b[0])
+  );
 
   function happeningNow(event) {
     return event.startsAt >= now && event.endsAt < now;
@@ -94,17 +116,13 @@
     padding: 24px;
   }
 
-  .event[physical="yes"]{
-
-  }
-
-  .event-description{
+  .event-description {
     margin: 0.5rem 0;
   }
 
-  .artist-name{
+  .artist-name {
     font-weight: 600;
-    margin:0em 0.5em 0em 0em;
+    margin: 0em 0.5em 0em 0em;
   }
   .event-time,
   .event-title {
@@ -112,13 +130,13 @@
     font-weight: 600;
   }
 
-  .text-align-right{
-      text-align: right;
+  .text-align-right {
+    text-align: right;
   }
-  .location-data{
-    padding-left:0;
+  .location-data {
+    padding-left: 0;
   }
-  .location-data .rounded-link{
+  .location-data .rounded-link {
     font-size: 0.75em;
     margin-bottom: 0.5em;
     display: inline-block;
@@ -131,67 +149,88 @@
     padding-bottom: 45%;
     display: inline-block;
     background-position: center;
-    background-size:contain;
-    background-color: #A6A8AB;
+    background-size: contain;
+    background-color: #a6a8ab;
   }
 
   @media only screen and (max-width: 1100px) {
-
-    .location-data .rounded-link{
+    .location-data .rounded-link {
       font-size: 0.6em;
-
     }
-
   }
 
-
-   @media only screen and (max-width: 768px) {
-      .bio-photo {
-        border-radius: 50%;
-        width: 20%;
-        height: 0px;
-        padding-bottom: 20%;
-        display: inline-block;
-        background-position: center;
-        background-size:contain;
-        background-color: #A6A8AB;
-      }
-      .text-align-right{
-        padding-top: 0px;
-        padding-bottom: 0px;
-      }
-
-      .location-data{
-        padding-left:0.75rem;
-      }
-
-      .location-data .rounded-link{
-        font-size: 1em;
-
-      }
+  @media only screen and (max-width: 768px) {
+    .bio-photo {
+      border-radius: 50%;
+      width: 20%;
+      height: 0px;
+      padding-bottom: 20%;
+      display: inline-block;
+      background-position: center;
+      background-size: contain;
+      background-color: #a6a8ab;
+    }
+    .text-align-right {
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
 
+    .location-data {
+      padding-left: 0.75rem;
+    }
+
+    .location-data .rounded-link {
+      font-size: 1em;
+    }
+  }
+
+  .filter-items {
+    margin-top: 20px;
+  }
+
+  .filter-item {
+    padding-top: 14px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #999;
+    border-bottom: 3px solid transparent;
+  }
+
+  .filter-item.is-selected {
+    color: black;
+    border-bottom-color: black;
+  }
 </style>
 
 <svelte:head>
   <title>Schedule - Final Show - 2020</title>
 </svelte:head>
 
-
 <section class="section bg-col-7">
   <div class="container is-widescreen">
     <div class="content">
 
-      
       <h2>Events</h2>
 
-      <p>The online component of Chimera Garden features a mixture of live performance, discussion and demonstrations, streamed directly from St James Hatcham Church and remote artists’ locations. You will be able to catch the online stream through Twitch here on our website during the show.</p>
+      <p>
+        The online component of Chimera Garden features a mixture of live
+        performance, discussion and demonstrations, streamed directly from St
+        James Hatcham Church and remote artists’ locations. You will be able to
+        catch the online stream through Twitch here on our website during the
+        show.
+      </p>
 
-      <p>Below you can find the line up of events, some that will be happening physically in St James Hatcham Church and those that will be streaming online. Below you can register for free tickets for the online events. If you would like to visit us at St James Hatcham Church please read our <a href="/getting-there">safety guidelines and register here.</a></p>
+      <p>
+        Below you can find the line up of events, some that will be happening
+        physically in St James Hatcham Church and those that will be streaming
+        online. Below you can register for free tickets for the online events.
+        If you would like to visit us at St James Hatcham Church please read our
+        <a href="/getting-there">safety guidelines and register here.</a>
+      </p>
 
       <h2>Schedule</h2>
       <div>
-        {#each Array.from(eventsByDay.entries()) as [date, events]}
+        {#each eventsByDay2 as [date, events]}
           <a
             class="rounded-link bd-col-1 col-1"
             href="#{formatDay(events[0].startsAt).toLowerCase()}"
@@ -199,10 +238,33 @@
             {formatDay(events[0].startsAt)}
           </a>
         {/each}
-        <a class="rounded-link bd-col-2 col-2" href={EVENT_URL}>Free online tickets</a>
+        <a class="rounded-link bd-col-2 col-2" href={EVENT_URL}>
+          Free online tickets
+        </a>
       </div>
 
-      {#each Array.from(eventsByDay.entries()) as [date, events]}
+      <div class="filter-items">
+        <span
+          class="filter-item"
+          class:is-selected={filter === null}
+          on:click={() => (filter = null)}>
+          ALL
+        </span>
+        <span
+          class="filter-item"
+          class:is-selected={filter === 'online'}
+          on:click={() => (filter = 'online')}>
+          ONLINE
+        </span>
+        <span
+          class="filter-item"
+          class:is-selected={filter === 'onsite'}
+          on:click={() => (filter = 'onsite')}>
+          ONSITE
+        </span>
+      </div>
+
+      {#each eventsByDay2 as [date, events]}
         <h2 id={formatDay(events[0].startsAt).toLowerCase()}>
           {formatDate(events[0].startsAt)}
         </h2>
@@ -210,18 +272,21 @@
         <!-- TODO reimport the events schedule after it has been fixed up a bit, I manually just edited it for the events that are physical and online just to style.-->
 
         {#each events as event, i}
-          <div class=" event {eventBdClass(event)}" live="{event.livestream}" physical="{event.physical}">
+          <div
+            class=" event {eventBdClass(event)}"
+            live={event.livestream}
+            physical={event.physical}>
 
-            <!-- TODO for next release convert to links  to live page and getting there-->
+            <!-- TODO for next release convert to links to live page and getting there-->
             <div class="columns">
               <div class="column is-1 location-data">
-                {#if event.livestream == "true"}
+                {#if event.livestream == 'true'}
                   <span class="rounded-link col-6 bd-col-6">ONLINE</span>
                   <!-- <a href="/live" class="col-3 bd-col-3">ONLINE</a> -->
                 {/if}
-                {#if event.physical == "yes"}
-                  <span class="rounded-link col-6 bd-col-6">PHYSICAL</span>
-                  <!-- <a href="/getting-there" class="col-3 bd-col-3">PHYSICAL</a> -->
+                {#if event.physical == 'yes'}
+                  <span class="rounded-link col-6 bd-col-6">ONSITE</span>
+                  <!-- <a href="/getting-there" class="col-3 bd-col-3">ONSITE</a> -->
                 {/if}
               </div>
 
@@ -231,7 +296,9 @@
                 <div class="event-description">{event.desc}</div>
 
                 {#each event.artists as artist}
-                  <a href="artists/{artist.slug}" class="artist-name col-5">{artist.name}</a>
+                  <a href="artists/{artist.slug}" class="artist-name col-5">
+                    {artist.name}
+                  </a>
                 {/each}
               </div>
 
@@ -241,16 +308,15 @@
                   <a href="artists/{artist.slug}">
                     <!-- Changed all bio photos to background images as it solves the missing image problems and the wrong file resolution -->
                     <span
-                    class="bio-photo"
-                    style="background-image:url(img/bios/{artist.username}.jpeg)">
-                    </span>
+                      class="bio-photo"
+                      style="background-image:url(img/bios/{artist.username}.jpeg)" />
                   </a>
                 {/each}
 
-               </div>
+              </div>
 
               <!-- TODO I think let's wait on the tags and themes until we have some sort of filtering? If that is still happening? -->
-  <!--             <ul>
+              <!--             <ul>
                 {#each event.themes as theme}
                   <li>{theme}</li>
                 {/each}

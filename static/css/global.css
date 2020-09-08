@@ -82,12 +82,20 @@ body {
   color: #f8f8f8;
 }
 
-p a{
-  color:#387194;
+p a {
+  color: #387194;
 }
 
-.navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a:hover{
-  color:black;
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover,
+a:hover {
+  color: black;
 }
 
 /* mixed this up by just "hard-coding" the hover states*/
@@ -103,17 +111,17 @@ p a{
 }
 .rounded-link.col-1:hover {
   color: white;
-  background-color: #FD7F4C;
+  background-color: #fd7f4c;
 }
 .rounded-link.col-2:hover {
   color: white;
-  background-color: #387194;;
+  background-color: #387194;
 }
 .rounded-link.col-7:hover {
   color: black;
   background-color: white;
 }
-.rounded-link.bg-col-3:hover{
+.rounded-link.bg-col-3:hover {
   background-color: transparent;
   color: #7bc1b7;
   border-color: #7bc1b7;
@@ -121,6 +129,5 @@ p a{
 
 section.bg-col-2 h2,
 section.bg-col-2 {
-  color:white;
+  color: white;
 }
-
