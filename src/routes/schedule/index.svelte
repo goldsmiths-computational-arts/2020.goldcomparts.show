@@ -175,7 +175,7 @@
 
       <p>The online component of Chimera Garden features a mixture of live performance, discussion and demonstrations, streamed directly from St James Hatcham Church and remote artists’ locations. You will be able to catch the online stream through Twitch here on our website during the show.</p>
 
-      <p>Below you can find the line up of events, some that will be happening physically in St James Hatcham Church and those that will be streaming online. If you would like to visit us at St James Hatcham Church please read our <a href="/getting-there">safety guidelines and register here.</a></p>
+      <p>Below you can find the line up of events, some that will be happening physically in St James Hatcham Church and those that will be streaming online. Below you can register for free tickets for the online events. If you would like to visit us at St James Hatcham Church please read our <a href="/getting-there">safety guidelines and register here.</a></p>
 
       <h2>Schedule</h2>
       <div>
