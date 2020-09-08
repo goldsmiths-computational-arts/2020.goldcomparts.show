@@ -61,27 +61,29 @@
     // console.log(events);
   }
 
-  $: filteredEvents = events
-    .filter(d => {
-      if (!filter) {
-        return true;
-      } else {
-        // TODO make some constants
-        // TODO tidy up the sheet parsing
-        if (filter === "onsite") {
-          return d.physical == "yes";
-        }
-        if (filter === "online") {
-          return d.livestream == "true";
-        }
+  $: filteredEvents = events.filter(d => {
+    if (!filter) {
+      return true;
+    } else {
+      // TODO make some constants
+      // TODO tidy up the sheet parsing
+      if (filter === "onsite") {
+        return d.physical == "yes";
       }
-    })
-    .sort((a, b) => a.startAt - b.startsAt);
+      if (filter === "online") {
+        return d.livestream == "true";
+      }
+    }
+  });
 
   $: eventsByDay = group(filteredEvents, d => d.startTime.slice(0, 10));
-  $: eventsByDay2 = Array.from(eventsByDay.entries()).sort((a, b) =>
-    ascending(a[0], b[0])
-  );
+  $: eventsByDay2 = Array.from(eventsByDay.entries())
+    .sort((a, b) => ascending(a[0], b[0]))
+    .map(([key, events]) => {
+      // JB - sorry this is messy!
+      events.sort((a, b) => a.startsAt - b.startsAt);
+      return [key, events];
+    });
 
   function happeningNow(event) {
     return event.startsAt >= now && event.endsAt < now;
