@@ -64,7 +64,7 @@
     padding-left: 10px;
   }*/
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
 /*    .content {
       display: grid;
       grid-template-columns: 400px;
@@ -87,19 +87,9 @@
   <title>{artist.name} - Final Show - 2020</title>
 </svelte:head>
 
-<!-- <section class="hero is-primary">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">{artist.name}</h1>
-      {#if artist.otherName}
-        <h2 class="subtitle">{artist.otherName}</h2>
-      {/if}
-    </div>
-  </div>
-</section> -->
 
 <section class="section bg-col-7">
-  <div class="container">
+  <div class="container is-widescreen">
 
     <div class="content">
       <div class="columns">

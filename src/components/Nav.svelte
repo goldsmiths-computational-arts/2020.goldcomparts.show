@@ -43,7 +43,13 @@
     color:black;
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (max-width: 1023px) {
+    .navbar-menu{
+      background-color: #387194;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
     nav {
       padding-top: 20px;
     }
@@ -53,12 +59,9 @@
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .navbar-item img {
         margin-left: -10px;
-    }
-    .navbar-menu{
-      background-color: #387194;
     }
   }
 

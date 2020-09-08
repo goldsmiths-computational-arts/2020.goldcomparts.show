@@ -91,7 +91,7 @@
     padding-top: 4rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .leftColumn {
       /*background-position: bottom right;*/
       /*background-size: 100% auto;*/
@@ -115,7 +115,7 @@
 <div class="hero-container">
   <section class="hero">
     <div class="hero-body">
-      <div class="container">
+      <div class="container is-widescreen">
         <div class="columns">
           <div class="column is-6 leftColumn">
     

@@ -18,7 +18,7 @@
 
 <section class="hero is-primary">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-widescreen">
       <h1 class="title">Live</h1>
     </div>
   </div>

@@ -115,7 +115,9 @@
   .text-align-right{
       text-align: right;
   }
-
+  .location-data{
+    padding-left:0;
+  }
   .location-data .rounded-link{
     font-size: 0.75em;
     margin-bottom: 0.5em;
@@ -133,8 +135,17 @@
     background-color: #A6A8AB;
   }
 
+  @media only screen and (max-width: 1100px) {
 
-   @media only screen and (max-width: 600px) {
+    .location-data .rounded-link{
+      font-size: 0.6em;
+
+    }
+
+  }
+
+
+   @media only screen and (max-width: 768px) {
       .bio-photo {
         border-radius: 50%;
         width: 20%;
@@ -149,6 +160,15 @@
         padding-top: 0px;
         padding-bottom: 0px;
       }
+
+      .location-data{
+        padding-left:0.75rem;
+      }
+
+      .location-data .rounded-link{
+        font-size: 1em;
+
+      }
     }
 
 </style>
@@ -157,17 +177,9 @@
   <title>Schedule - Final Show - 2020</title>
 </svelte:head>
 
-<!-- <section class="hero is-primary">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">Final Show - 2020</h1>
-      <h2 class="subtitle">MA/MFA Computational Arts - Goldsmiths</h2>
-    </div>
-  </div>
-</section> -->
 
 <section class="section bg-col-7">
-  <div class="container">
+  <div class="container is-widescreen">
     <div class="content">
 
       
@@ -202,7 +214,7 @@
 
             <!-- TODO for next release convert to links  to live page and getting there-->
             <div class="columns">
-              <div class="column is-2 location-data">
+              <div class="column is-1 location-data">
                 {#if event.livestream == "true"}
                   <span class="rounded-link col-6 bd-col-6">ONLINE</span>
                   <!-- <a href="/live" class="col-3 bd-col-3">ONLINE</a> -->
@@ -213,7 +225,7 @@
                 {/if}
               </div>
 
-              <div class="column is-8">
+              <div class="column is-9">
                 <div class="event-time col-3">{formatTime(event.startsAt)}</div>
                 <div class="event-title">{event.title}</div>
                 <div class="event-description">{event.desc}</div>
