@@ -10,6 +10,7 @@
   import { tsvParse } from "d3-dsv";
   import { slugify } from "../js/helpers";
   import Meta from "../components/Meta.svelte";
+  import { REGISTER_URL } from "../js/constants";
 
   export let artistsRows;
 
@@ -98,12 +99,11 @@
       height: 100vh;
       min-height: 500px;
       height: 50vh;
-    }   
+    }
     .showDates {
       padding-top: 0rem;
     }
   }
-
 </style>
 
 <svelte:head>
@@ -117,24 +117,29 @@
     <div class="hero-body">
       <div class="container is-widescreen">
         <div class="columns">
-          <div class="column is-6 leftColumn">
-    
-          </div>
+          <div class="column is-6 leftColumn" />
           <div class="column is-6">
             <div>
               <h2 class="showDates">17-20 September 2020</h2>
-              <h2 class="subtitle">The Computational Arts MA/MFA Degree Show</h2>
+              <h2 class="subtitle">
+                The Computational Arts MA/MFA Degree Show
+              </h2>
               <h2 class="location">Goldsmiths, University of London</h2>
             </div>
             <div class="introBodyStrong">
               Chimera Garden is a ​celebration of Computational Art now​, a
               blend of physical and online installation and performance, a
-              four-day festival open to all via free ticket registration at this
-              site soon.
+              four-day festival open to all via
+              <a href={REGISTER_URL}>free ticket registration</a>
+              .
             </div>
             <div>
-              <a href="/schedule" class="rounded-link col-7 bd-col-7">EVENTS SCHEDULE</a>
-              <a href="/getting-there" class="rounded-link col-7 bd-col-7">VISIT ON-SITE</a>
+              <a href="/schedule" class="rounded-link col-7 bd-col-7">
+                EVENTS SCHEDULE
+              </a>
+              <a href="/getting-there" class="rounded-link col-7 bd-col-7">
+                VISIT ON-SITE
+              </a>
             </div>
           </div>
         </div>
@@ -142,5 +147,3 @@
     </div>
   </section>
 </div>
-
-
