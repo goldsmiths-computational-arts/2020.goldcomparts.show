@@ -1816,7 +1816,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[6] = list[i];
   return child_ctx;
-} // (98:8) {#each menuItems as item}
+} // (101:8) {#each menuItems as item}
 
 
 function create_each_block(ctx) {
@@ -1848,7 +1848,7 @@ function create_each_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(a, "class", "navbar-item svelte-336hwb");
+      attr_dev(a, "class", "navbar-item svelte-my4bc");
       attr_dev(a, "href", a_href_value =
       /*item*/
       ctx[6].href);
@@ -1857,7 +1857,7 @@ function create_each_block(ctx) {
       ctx[1].path ===
       /*item*/
       ctx[6].href);
-      add_location(a, file, 98, 10, 2036);
+      add_location(a, file, 101, 10, 2088);
     },
     m: function mount(target, anchor) {
       insert_dev(target, a, anchor);
@@ -1892,7 +1892,7 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(98:8) {#each menuItems as item}",
+    source: "(101:8) {#each menuItems as item}",
     ctx: ctx
   });
   return block;
@@ -2031,43 +2031,43 @@ function create_fragment(ctx) {
       attr_dev(img, "width", "250");
       attr_dev(img, "height", "45");
       attr_dev(img, "alt", "Chimera Garden");
-      attr_dev(img, "class", "svelte-336hwb");
-      add_location(img, file, 73, 8, 1372);
-      attr_dev(a0, "class", "navbar-item svelte-336hwb");
+      attr_dev(img, "class", "svelte-my4bc");
+      add_location(img, file, 76, 8, 1424);
+      attr_dev(a0, "class", "navbar-item svelte-my4bc");
       attr_dev(a0, "href", "/");
-      add_location(a0, file, 72, 6, 1331);
+      add_location(a0, file, 75, 6, 1383);
       attr_dev(span0, "aria-hidden", "true");
-      add_location(span0, file, 89, 8, 1757);
+      add_location(span0, file, 92, 8, 1809);
       attr_dev(span1, "aria-hidden", "true");
-      add_location(span1, file, 90, 8, 1793);
+      add_location(span1, file, 93, 8, 1845);
       attr_dev(span2, "aria-hidden", "true");
-      add_location(span2, file, 91, 8, 1829);
+      add_location(span2, file, 94, 8, 1881);
       attr_dev(a1, "href", "#top");
       attr_dev(a1, "role", "button");
-      attr_dev(a1, "class", "navbar-burger burger svelte-336hwb");
+      attr_dev(a1, "class", "navbar-burger burger svelte-my4bc");
       attr_dev(a1, "aria-label", "menu");
       attr_dev(a1, "aria-expanded", "false");
       attr_dev(a1, "data-target", "navbarBasicExample");
       toggle_class(a1, "is-active",
       /*showMenu*/
       ctx[0]);
-      add_location(a1, file, 80, 6, 1504);
+      add_location(a1, file, 83, 6, 1556);
       attr_dev(div0, "class", "navbar-brand");
-      add_location(div0, file, 71, 4, 1298);
+      add_location(div0, file, 74, 4, 1350);
       attr_dev(div1, "class", "navbar-end");
-      add_location(div1, file, 96, 6, 1967);
+      add_location(div1, file, 99, 6, 2019);
       attr_dev(div2, "id", "navbarBasicExample");
-      attr_dev(div2, "class", "navbar-menu svelte-336hwb");
+      attr_dev(div2, "class", "navbar-menu svelte-my4bc");
       toggle_class(div2, "is-active",
       /*showMenu*/
       ctx[0]);
-      add_location(div2, file, 95, 4, 1884);
+      add_location(div2, file, 98, 4, 1936);
       attr_dev(div3, "class", "container");
-      add_location(div3, file, 70, 2, 1270);
-      attr_dev(nav, "class", "navbar is-transparent svelte-336hwb");
+      add_location(div3, file, 73, 2, 1322);
+      attr_dev(nav, "class", "navbar is-transparent svelte-my4bc");
       attr_dev(nav, "role", "navigation");
       attr_dev(nav, "aria-label", "main navigation");
-      add_location(nav, file, 66, 0, 1179);
+      add_location(nav, file, 69, 0, 1231);
     },
     m: function mount(target, anchor) {
       insert_dev(target, nav, anchor);
@@ -3246,47 +3246,47 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/schedule\.tsv$/, /^\/artists\.tsv$/, /^\/artists\/([^\/]+?)\.json$/];
 var components = [{
   js: function js() {
-    return import('./index.9c9205c1.js');
+    return import('./index.7d820c05.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./getting-there.332bf640.js');
+    return import('./getting-there.3edb532f.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./physical.41a6ba0e.js');
+    return import('./physical.15f1a926.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./index.10fa6613.js');
+    return import('./index.1102c42a.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./index.d2dd5a92.js');
+    return import('./index.e50e33c9.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./[slug].d35a5b75.js');
+    return import('./[slug].2352a6bc.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./about.a529410a.js');
+    return import('./about.f8a7c252.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./live.0d2a74f0.js');
+    return import('./live.3b3e3705.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./map.ae01dfa4.js');
+    return import('./map.fe11ad27.js');
   },
   css: []
 }];

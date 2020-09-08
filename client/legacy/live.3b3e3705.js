@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, j as validate_slots, l as space, k as element, t as text, E as query_selector_all, q as detach_dev, n as claim_space, m as claim_element, o as children, p as claim_text, r as attr_dev, u as add_location, w as insert_dev, x as append_dev, A as noop } from './client.7792818e.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, j as validate_slots, l as space, k as element, t as text, E as query_selector_all, q as detach_dev, n as claim_space, m as claim_element, o as children, p as claim_text, r as attr_dev, u as add_location, w as insert_dev, x as append_dev, A as noop } from './client.43b14e5b.js';
 import { a as BASE_HOST } from './constants.8e4190be.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
@@ -125,8 +125,8 @@ function create_fragment(ctx) {
     h: function hydrate() {
       document.title = "Live";
       attr_dev(h1, "class", "title");
-      add_location(h1, file, 21, 6, 302);
-      attr_dev(div0, "class", "container");
+      add_location(h1, file, 21, 6, 316);
+      attr_dev(div0, "class", "container is-widescreen");
       add_location(div0, file, 20, 4, 272);
       attr_dev(div1, "class", "hero-body");
       add_location(div1, file, 19, 2, 244);
@@ -141,23 +141,23 @@ function create_fragment(ctx) {
       attr_dev(iframe0, "height", "500");
       attr_dev(iframe0, "width", "900");
       attr_dev(iframe0, "class", "svelte-wjjmqy");
-      add_location(iframe0, file, 28, 4, 402);
+      add_location(iframe0, file, 28, 4, 416);
       attr_dev(div2, "class", "container");
-      add_location(div2, file, 27, 2, 374);
-      add_location(section1, file, 26, 0, 362);
+      add_location(div2, file, 27, 2, 388);
+      add_location(section1, file, 26, 0, 376);
       attr_dev(h2, "class", "subtitle");
-      add_location(h2, file, 42, 4, 743);
+      add_location(h2, file, 42, 4, 757);
       attr_dev(iframe1, "id", "twitch-chat");
       attr_dev(iframe1, "title", "Twitch chat");
       if (iframe1.src !== (iframe1_src_value = "https://www.twitch.tv/embed/goldsmiths_comparts/chat?parent=" + BASE_HOST)) attr_dev(iframe1, "src", iframe1_src_value);
       attr_dev(iframe1, "height", "500");
       attr_dev(iframe1, "width", "900");
       attr_dev(iframe1, "class", "svelte-wjjmqy");
-      add_location(iframe1, file, 44, 4, 786);
+      add_location(iframe1, file, 44, 4, 800);
       attr_dev(div3, "class", "container");
-      add_location(div3, file, 41, 2, 715);
+      add_location(div3, file, 41, 2, 729);
       attr_dev(section2, "class", "chat svelte-wjjmqy");
-      add_location(section2, file, 40, 0, 690);
+      add_location(section2, file, 40, 0, 704);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);

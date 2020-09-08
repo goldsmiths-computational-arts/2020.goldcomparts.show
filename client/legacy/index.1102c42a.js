@@ -1,4 +1,4 @@
-import { y as _slicedToArray, L as readable, B as _asyncToGenerator, C as regenerator, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, M as globals, N as validate_each_argument, j as validate_slots, k as element, t as text, m as claim_element, o as children, p as claim_text, q as detach_dev, r as attr_dev, u as add_location, w as insert_dev, x as append_dev, O as listen_dev, z as set_data_dev, l as space, P as empty, n as claim_space, Q as destroy_each, E as query_selector_all, A as noop, R as prevent_default, K as set_style } from './client.7792818e.js';
+import { y as _slicedToArray, L as readable, B as _asyncToGenerator, C as regenerator, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, M as globals, N as validate_each_argument, j as validate_slots, k as element, t as text, m as claim_element, o as children, p as claim_text, q as detach_dev, r as attr_dev, u as add_location, w as insert_dev, x as append_dev, O as listen_dev, z as set_data_dev, l as space, P as empty, n as claim_space, Q as destroy_each, E as query_selector_all, A as noop, R as prevent_default, K as set_style } from './client.43b14e5b.js';
 import { t as tsvParse } from './tsv.c906c42a.js';
 import { s as slugify } from './helpers.38afc14c.js';
 import { E as EVENT_URL } from './constants.8e4190be.js';
@@ -1025,7 +1025,7 @@ function get_each_context_4(ctx, list, i) {
   child_ctx[12] = list[i][0];
   child_ctx[1] = list[i][1];
   return child_ctx;
-} // (182:8) {#each Array.from(eventsByDay.entries()) as [date, events]}
+} // (194:8) {#each Array.from(eventsByDay.entries()) as [date, events]}
 
 
 function create_each_block_4(ctx) {
@@ -1062,7 +1062,7 @@ function create_each_block_4(ctx) {
       ctx[3](
       /*events*/
       ctx[1][0].startsAt).toLowerCase());
-      add_location(a, file, 182, 10, 4630);
+      add_location(a, file, 194, 10, 4689);
     },
     m: function mount(target, anchor) {
       insert_dev(target, a, anchor);
@@ -1102,11 +1102,11 @@ function create_each_block_4(ctx) {
     block: block,
     id: create_each_block_4.name,
     type: "each",
-    source: "(182:8) {#each Array.from(eventsByDay.entries()) as [date, events]}",
+    source: "(194:8) {#each Array.from(eventsByDay.entries()) as [date, events]}",
     ctx: ctx
   });
   return block;
-} // (206:16) {#if event.livestream == "true"}
+} // (218:16) {#if event.livestream == "true"}
 
 
 function create_if_block_1(ctx) {
@@ -1128,8 +1128,8 @@ function create_if_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(span, "class", "rounded-link col-6 bd-col-6 svelte-ltehsb");
-      add_location(span, file, 206, 18, 5717);
+      attr_dev(span, "class", "rounded-link col-6 bd-col-6 svelte-1oqplu8");
+      add_location(span, file, 218, 18, 5776);
     },
     m: function mount(target, anchor) {
       insert_dev(target, span, anchor);
@@ -1143,11 +1143,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(206:16) {#if event.livestream == \\\"true\\\"}",
+    source: "(218:16) {#if event.livestream == \\\"true\\\"}",
     ctx: ctx
   });
   return block;
-} // (210:16) {#if event.physical == "yes"}
+} // (222:16) {#if event.physical == "yes"}
 
 
 function create_if_block(ctx) {
@@ -1169,8 +1169,8 @@ function create_if_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(span, "class", "rounded-link col-6 bd-col-6 svelte-ltehsb");
-      add_location(span, file, 210, 18, 5936);
+      attr_dev(span, "class", "rounded-link col-6 bd-col-6 svelte-1oqplu8");
+      add_location(span, file, 222, 18, 5995);
     },
     m: function mount(target, anchor) {
       insert_dev(target, span, anchor);
@@ -1184,11 +1184,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(210:16) {#if event.physical == \\\"yes\\\"}",
+    source: "(222:16) {#if event.physical == \\\"yes\\\"}",
     ctx: ctx
   });
   return block;
-} // (221:16) {#each event.artists as artist}
+} // (233:16) {#each event.artists as artist}
 
 
 function create_each_block_3(ctx) {
@@ -1218,8 +1218,8 @@ function create_each_block_3(ctx) {
       attr_dev(a, "href", a_href_value = "artists/" +
       /*artist*/
       ctx[18].slug);
-      attr_dev(a, "class", "artist-name col-5 svelte-ltehsb");
-      add_location(a, file, 221, 18, 6441);
+      attr_dev(a, "class", "artist-name col-5 svelte-1oqplu8");
+      add_location(a, file, 233, 18, 6500);
     },
     m: function mount(target, anchor) {
       insert_dev(target, a, anchor);
@@ -1248,11 +1248,11 @@ function create_each_block_3(ctx) {
     block: block,
     id: create_each_block_3.name,
     type: "each",
-    source: "(221:16) {#each event.artists as artist}",
+    source: "(233:16) {#each event.artists as artist}",
     ctx: ctx
   });
   return block;
-} // (228:16) {#each event.artists as artist}
+} // (240:16) {#each event.artists as artist}
 
 
 function create_each_block_2(ctx) {
@@ -1283,15 +1283,15 @@ function create_each_block_2(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(span, "class", "bio-photo svelte-ltehsb");
+      attr_dev(span, "class", "bio-photo svelte-1oqplu8");
       set_style(span, "background-image", "url(img/bios/" +
       /*artist*/
       ctx[18].username + ".jpeg)");
-      add_location(span, file, 230, 20, 6878);
+      add_location(span, file, 242, 20, 6937);
       attr_dev(a, "href", a_href_value = "artists/" +
       /*artist*/
       ctx[18].slug);
-      add_location(a, file, 228, 18, 6682);
+      add_location(a, file, 240, 18, 6741);
     },
     m: function mount(target, anchor) {
       insert_dev(target, a, anchor);
@@ -1323,11 +1323,11 @@ function create_each_block_2(ctx) {
     block: block,
     id: create_each_block_2.name,
     type: "each",
-    source: "(228:16) {#each event.artists as artist}",
+    source: "(240:16) {#each event.artists as artist}",
     ctx: ctx
   });
   return block;
-} // (200:8) {#each events as event, i}
+} // (212:8) {#each events as event, i}
 
 
 function create_each_block_1(ctx) {
@@ -1491,32 +1491,32 @@ function create_each_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(div0, "class", "column is-2 location-data svelte-ltehsb");
-      add_location(div0, file, 204, 14, 5610);
-      attr_dev(div1, "class", "event-time col-3 svelte-ltehsb");
-      add_location(div1, file, 216, 16, 6182);
-      attr_dev(div2, "class", "event-title svelte-ltehsb");
-      add_location(div2, file, 217, 16, 6263);
-      attr_dev(div3, "class", "event-description svelte-ltehsb");
-      add_location(div3, file, 218, 16, 6324);
-      attr_dev(div4, "class", "column is-8");
-      add_location(div4, file, 215, 14, 6140);
-      attr_dev(div5, "class", "column text-align-right svelte-ltehsb");
-      add_location(div5, file, 225, 14, 6577);
+      attr_dev(div0, "class", "column is-1 location-data svelte-1oqplu8");
+      add_location(div0, file, 216, 14, 5669);
+      attr_dev(div1, "class", "event-time col-3 svelte-1oqplu8");
+      add_location(div1, file, 228, 16, 6241);
+      attr_dev(div2, "class", "event-title svelte-1oqplu8");
+      add_location(div2, file, 229, 16, 6322);
+      attr_dev(div3, "class", "event-description svelte-1oqplu8");
+      add_location(div3, file, 230, 16, 6383);
+      attr_dev(div4, "class", "column is-9");
+      add_location(div4, file, 227, 14, 6199);
+      attr_dev(div5, "class", "column text-align-right svelte-1oqplu8");
+      add_location(div5, file, 237, 14, 6636);
       attr_dev(div6, "class", "columns");
-      add_location(div6, file, 203, 12, 5574);
+      add_location(div6, file, 215, 12, 5633);
       attr_dev(div7, "class", div7_class_value = " event " +
       /*eventBdClass*/
       ctx[5](
       /*event*/
-      ctx[15]) + " svelte-ltehsb");
+      ctx[15]) + " svelte-1oqplu8");
       attr_dev(div7, "live", div7_live_value =
       /*event*/
       ctx[15].livestream);
       attr_dev(div7, "physical", div7_physical_value =
       /*event*/
       ctx[15].physical);
-      add_location(div7, file, 200, 10, 5373);
+      add_location(div7, file, 212, 10, 5432);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div7, anchor);
@@ -1663,7 +1663,7 @@ function create_each_block_1(ctx) {
       /*eventBdClass*/
       ctx[5](
       /*event*/
-      ctx[15]) + " svelte-ltehsb")) {
+      ctx[15]) + " svelte-1oqplu8")) {
         attr_dev(div7, "class", div7_class_value);
       }
 
@@ -1695,11 +1695,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(200:8) {#each events as event, i}",
+    source: "(212:8) {#each events as event, i}",
     ctx: ctx
   });
   return block;
-} // (193:6) {#each Array.from(eventsByDay.entries()) as [date, events]}
+} // (205:6) {#each Array.from(eventsByDay.entries()) as [date, events]}
 
 
 function create_each_block(ctx) {
@@ -1758,7 +1758,7 @@ function create_each_block(ctx) {
       ctx[3](
       /*events*/
       ctx[1][0].startsAt).toLowerCase());
-      add_location(h2, file, 193, 8, 5046);
+      add_location(h2, file, 205, 8, 5105);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -1832,7 +1832,7 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(193:6) {#each Array.from(eventsByDay.entries()) as [date, events]}",
+    source: "(205:6) {#each Array.from(eventsByDay.entries()) as [date, events]}",
     ctx: ctx
   });
   return block;
@@ -1990,22 +1990,22 @@ function create_fragment(ctx) {
     },
     h: function hydrate() {
       document_1.title = "Schedule - Final Show - 2020";
-      add_location(h20, file, 173, 6, 3836);
-      add_location(p0, file, 175, 6, 3859);
+      add_location(h20, file, 185, 6, 3895);
+      add_location(p0, file, 187, 6, 3918);
       attr_dev(a0, "href", "/getting-there");
-      add_location(a0, file, 177, 294, 4445);
-      add_location(p1, file, 177, 6, 4157);
-      add_location(h21, file, 179, 6, 4522);
+      add_location(a0, file, 189, 294, 4504);
+      add_location(p1, file, 189, 6, 4216);
+      add_location(h21, file, 191, 6, 4581);
       attr_dev(a1, "class", "rounded-link bd-col-2 col-2");
       attr_dev(a1, "href", EVENT_URL);
-      add_location(a1, file, 189, 8, 4878);
-      add_location(div0, file, 180, 6, 4546);
+      add_location(a1, file, 201, 8, 4937);
+      add_location(div0, file, 192, 6, 4605);
       attr_dev(div1, "class", "content");
-      add_location(div1, file, 170, 4, 3800);
-      attr_dev(div2, "class", "container");
-      add_location(div2, file, 169, 2, 3772);
+      add_location(div1, file, 182, 4, 3859);
+      attr_dev(div2, "class", "container is-widescreen");
+      add_location(div2, file, 181, 2, 3817);
       attr_dev(section, "class", "section bg-col-7");
-      add_location(section, file, 168, 0, 3735);
+      add_location(section, file, 180, 0, 3780);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
