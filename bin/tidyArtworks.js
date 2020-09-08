@@ -1,16 +1,20 @@
 #!/usr/bin/env node -r esm
 import fs from "fs";
+import { resolve } from "path";
 import { execSync } from "child_process";
 import { csvParseRows, tsvFormat } from "d3-dsv";
 import ProgressBar from "progress";
 import { slugify } from "../src/js/helpers";
 
-const rawDir = `${__dirname}/../raw`;
-const dataDir = `${__dirname}/../data`;
-const artworksDir = `${__dirname}/../data/artworks`;
-const photosDir = `${__dirname}/../static/img/artworks`;
+const rawDir = resolve(`${__dirname}/../raw`);
+const dataDir = resolve(`${__dirname}/../data`);
+const artworksDir = resolve(`${__dirname}/../data/artworks`);
+const webInstructionsDir = resolve(`${__dirname}/../data/webInstructions`);
+const photosDir = resolve(`${__dirname}/../static/img/artworks`);
 
-[artworksDir, photosDir].forEach((d) => fs.mkdirSync(d, { recursive: true }));
+[artworksDir, webInstructionsDir, photosDir].forEach((d) =>
+  fs.mkdirSync(d, { recursive: true })
+);
 
 const artworksCsv = `${rawDir}/artworks.csv`;
 const artworksTsv = `${dataDir}/artworks.tsv`;
@@ -74,15 +78,35 @@ artworkRows.forEach((d) => {
   d.username = d.email.split("@")[0];
 
   fs.writeFileSync(`${artworksDir}/${d.username}.md`, d.desc.trim());
+  delete d.desc;
+
+  fs.writeFileSync(
+    `${webInstructionsDir}/${d.username}.md`,
+    d.webInstructions.trim()
+  );
+  delete d.webInstructions;
 
   if (d.images) {
-    const id = d.images.split("=")[1];
-    // Resize the images and convert to JPEG, some are PNGs just with .jpeg extension
-    execSync(
-      `sips -z 1080 1920 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.username}.jpeg`,
-      { stdio: "pipe" }
-    );
+    // console.log();
+    // console.log(d.images);
+    const images = d.images.split(", ");
+
+    d.numImages = images.length;
+
+    images.forEach((image, i) => {
+      const id = image.split("=")[1];
+
+      // Resize the images and convert to JPEG, some are PNGs just with .jpeg extension
+      const cmd = `sips -z 1080 1920 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${
+        d.username
+      }-${i + 1}.jpeg`;
+      // console.log(cmd);
+      execSync(cmd, { stdio: "pipe" });
+    });
   }
+
+  delete d.images;
+  delete d.submitImagesLater;
 
   artworksMap.set(d.username, d);
   bar.tick();
