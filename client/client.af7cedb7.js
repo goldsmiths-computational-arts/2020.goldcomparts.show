@@ -1845,39 +1845,39 @@ const ignore = [/^\/schedule\.tsv$/, /^\/artists\.tsv$/, /^\/artists\/([^\/]+?)\
 
 const components = [
 	{
-		js: () => import('./index.196e2a5b.js'),
+		js: () => import('./index.2d8b6896.js'),
 		css: []
 	},
 	{
-		js: () => import('./getting-there.72bc3a74.js'),
+		js: () => import('./getting-there.a9df50b4.js'),
 		css: []
 	},
 	{
-		js: () => import('./physical.a39dbeae.js'),
+		js: () => import('./physical.7f88379f.js'),
 		css: []
 	},
 	{
-		js: () => import('./index.42156c5b.js'),
+		js: () => import('./index.0ee3592b.js'),
 		css: []
 	},
 	{
-		js: () => import('./index.f7c9fd2f.js'),
+		js: () => import('./index.69aec898.js'),
 		css: []
 	},
 	{
-		js: () => import('./[slug].ec622767.js'),
+		js: () => import('./[slug].031009fc.js'),
 		css: []
 	},
 	{
-		js: () => import('./about.2d828eae.js'),
+		js: () => import('./about.9cbd7a4f.js'),
 		css: []
 	},
 	{
-		js: () => import('./live.a6c83749.js'),
+		js: () => import('./live.aa7227a7.js'),
 		css: []
 	},
 	{
-		js: () => import('./map.e47e81d1.js'),
+		js: () => import('./map.32f347ae.js'),
 		css: []
 	}
 ];

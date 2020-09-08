@@ -3246,47 +3246,47 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/schedule\.tsv$/, /^\/artists\.tsv$/, /^\/artists\/([^\/]+?)\.json$/];
 var components = [{
   js: function js() {
-    return import('./index.7d820c05.js');
+    return import('./index.28425f4e.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./getting-there.3edb532f.js');
+    return import('./getting-there.4958ec4e.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./physical.15f1a926.js');
+    return import('./physical.97d9c485.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./index.1102c42a.js');
+    return import('./index.7e26f4f0.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./index.e50e33c9.js');
+    return import('./index.d2f68600.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./[slug].2352a6bc.js');
+    return import('./[slug].d192d2bf.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./about.f8a7c252.js');
+    return import('./about.15829b64.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./live.3b3e3705.js');
+    return import('./live.e6a22baf.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./map.fe11ad27.js');
+    return import('./map.10cc8c70.js');
   },
   css: []
 }];

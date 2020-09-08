@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, M as globals, j as validate_slots, k as element, l as space, t as text, m as claim_element, o as children, n as claim_space, p as claim_text, q as detach_dev, T as HtmlTag, r as attr_dev, u as add_location, w as insert_dev, x as append_dev, O as listen_dev, z as set_data_dev, P as empty, y as _slicedToArray, A as noop, B as _asyncToGenerator, C as regenerator, D as create_component, E as query_selector_all, F as claim_component, K as set_style, G as mount_component, H as transition_in, I as transition_out, J as destroy_component } from './client.43b14e5b.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, M as globals, j as validate_slots, k as element, l as space, t as text, m as claim_element, o as children, n as claim_space, p as claim_text, q as detach_dev, T as HtmlTag, r as attr_dev, u as add_location, w as insert_dev, x as append_dev, O as listen_dev, z as set_data_dev, P as empty, y as _slicedToArray, A as noop, B as _asyncToGenerator, C as regenerator, D as create_component, E as query_selector_all, F as claim_component, K as set_style, G as mount_component, H as transition_in, I as transition_out, J as destroy_component } from './client.5e9a2189.js';
 import { t as trackEvent, s as slugify } from './helpers.38afc14c.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
@@ -324,7 +324,7 @@ var SocialLink = /*#__PURE__*/function (_SvelteComponentDev) {
 function _createSuper$1(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$1() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-var file$1 = "src/routes/artists/[slug].svelte"; // (108:12) {#if artist.otherName}
+var file$1 = "src/routes/artists/[slug].svelte"; // (112:12) {#if artist.otherName}
 
 function create_if_block_3(ctx) {
   var t0;
@@ -366,11 +366,11 @@ function create_if_block_3(ctx) {
     block: block,
     id: create_if_block_3.name,
     type: "if",
-    source: "(108:12) {#if artist.otherName}",
+    source: "(112:12) {#if artist.otherName}",
     ctx: ctx
   });
   return block;
-} // (114:12) {:else}
+} // (118:12) {:else}
 
 
 function create_else_block_1(ctx) {
@@ -390,7 +390,7 @@ function create_else_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 114, 14, 2400);
+      add_location(p, file$1, 118, 14, 2477);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -405,11 +405,11 @@ function create_else_block_1(ctx) {
     block: block,
     id: create_else_block_1.name,
     type: "else",
-    source: "(114:12) {:else}",
+    source: "(118:12) {:else}",
     ctx: ctx
   });
   return block;
-} // (112:12) {#if artist.bioHTML}
+} // (116:12) {#if artist.bioHTML}
 
 
 function create_if_block_2(ctx) {
@@ -450,11 +450,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(112:12) {#if artist.bioHTML}",
+    source: "(116:12) {#if artist.bioHTML}",
     ctx: ctx
   });
   return block;
-} // (151:14) {#if artist.otherName}
+} // (155:14) {#if artist.otherName}
 
 
 function create_if_block_1(ctx) {
@@ -497,11 +497,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(151:14) {#if artist.otherName}",
+    source: "(155:14) {#if artist.otherName}",
     ctx: ctx
   });
   return block;
-} // (157:14) {:else}
+} // (161:14) {:else}
 
 
 function create_else_block(ctx) {
@@ -521,7 +521,7 @@ function create_else_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 157, 16, 3863);
+      add_location(p, file$1, 161, 16, 3954);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -536,11 +536,11 @@ function create_else_block(ctx) {
     block: block,
     id: create_else_block.name,
     type: "else",
-    source: "(157:14) {:else}",
+    source: "(161:14) {:else}",
     ctx: ctx
   });
   return block;
-} // (155:14) {#if artist.bioHTML}
+} // (159:14) {#if artist.bioHTML}
 
 
 function create_if_block$1(ctx) {
@@ -581,7 +581,7 @@ function create_if_block$1(ctx) {
     block: block,
     id: create_if_block$1.name,
     type: "if",
-    source: "(155:14) {#if artist.bioHTML}",
+    source: "(159:14) {#if artist.bioHTML}",
     ctx: ctx
   });
   return block;
@@ -889,39 +889,39 @@ function create_fragment$1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(div0, "class", "bio-photo svelte-8iplde");
+      attr_dev(div0, "class", "bio-photo svelte-tb3y5a");
       set_style(div0, "background-image", "url(img/bios/" +
       /*artist*/
       ctx[0].username + ".jpeg)");
-      add_location(div0, file$1, 97, 8, 1797);
-      attr_dev(h20, "class", "artist-name svelte-8iplde");
-      add_location(h20, file$1, 105, 10, 2133);
+      add_location(div0, file$1, 101, 8, 1874);
+      attr_dev(h20, "class", "artist-name svelte-tb3y5a");
+      add_location(h20, file$1, 109, 10, 2210);
       attr_dev(div1, "class", "artist-bio");
-      add_location(div1, file$1, 110, 10, 2271);
+      add_location(div1, file$1, 114, 10, 2348);
       attr_dev(div2, "class", "is-hidden-desktop is-hidden-tablet");
-      add_location(div2, file$1, 104, 8, 2074);
-      attr_dev(h3, "class", "svelte-8iplde");
-      add_location(h3, file$1, 120, 10, 2525);
-      attr_dev(div3, "class", "social-links svelte-8iplde");
-      add_location(div3, file$1, 119, 8, 2488);
-      attr_dev(div4, "class", "column");
-      add_location(div4, file$1, 95, 6, 1767);
-      attr_dev(h21, "class", "artist-name svelte-8iplde");
-      add_location(h21, file$1, 148, 12, 3580);
+      add_location(div2, file$1, 108, 8, 2151);
+      attr_dev(h3, "class", "svelte-tb3y5a");
+      add_location(h3, file$1, 124, 10, 2602);
+      attr_dev(div3, "class", "social-links svelte-tb3y5a");
+      add_location(div3, file$1, 123, 8, 2565);
+      attr_dev(div4, "class", "column is-one-third");
+      add_location(div4, file$1, 99, 6, 1831);
+      attr_dev(h21, "class", "artist-name svelte-tb3y5a");
+      add_location(h21, file$1, 152, 12, 3671);
       attr_dev(div5, "class", "artist-bio");
-      add_location(div5, file$1, 153, 12, 3726);
-      attr_dev(div6, "class", "column is-hidden-mobile");
-      add_location(div6, file$1, 147, 6, 3530);
+      add_location(div5, file$1, 157, 12, 3817);
+      attr_dev(div6, "class", "column is-hidden-mobile is-two-thirds");
+      add_location(div6, file$1, 151, 6, 3607);
       attr_dev(div7, "class", "columns");
-      add_location(div7, file$1, 94, 6, 1739);
+      add_location(div7, file$1, 98, 6, 1803);
       attr_dev(div8, "class", "content");
-      add_location(div8, file$1, 93, 4, 1711);
+      add_location(div8, file$1, 97, 4, 1775);
       set_style(div9, "padding-top", "100px");
-      add_location(div9, file$1, 163, 2, 3966);
+      add_location(div9, file$1, 167, 2, 4057);
       attr_dev(div10, "class", "container is-widescreen");
-      add_location(div10, file$1, 91, 2, 1668);
-      attr_dev(section, "class", "section bg-col-7");
-      add_location(section, file$1, 90, 0, 1631);
+      add_location(div10, file$1, 95, 2, 1732);
+      attr_dev(section, "class", "section bg-col-7 artists-section svelte-tb3y5a");
+      add_location(section, file$1, 94, 0, 1679);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
