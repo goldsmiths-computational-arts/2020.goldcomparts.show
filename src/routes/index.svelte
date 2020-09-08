@@ -118,14 +118,12 @@
       <div class="container">
         <div class="columns">
           <div class="column is-6 leftColumn">
-            <div class="is-hidden-desktop is-hidden-tablet">
-              <h2 class="subtitle">The Computational Arts MA/MFA Degree Show</h2>
-            </div>
+    
           </div>
           <div class="column is-6">
             <div>
               <h2 class="showDates">17-20 September 2020</h2>
-              <h2 class="subtitle is-hidden-mobile">The Computational Arts MA/MFA Degree Show</h2>
+              <h2 class="subtitle">The Computational Arts MA/MFA Degree Show</h2>
               <h2 class="location">Goldsmiths, University of London</h2>
             </div>
             <div class="introBodyStrong">
@@ -135,7 +133,7 @@
               site soon.
             </div>
             <div>
-              <a href="/schedule" class="rounded-link col-7 bd-col-7">ONLINE SCHEDULE</a>
+              <a href="/schedule" class="rounded-link col-7 bd-col-7">EVENTS SCHEDULE</a>
               <a href="/getting-there" class="rounded-link col-7 bd-col-7">VISIT ON-SITE</a>
             </div>
           </div>

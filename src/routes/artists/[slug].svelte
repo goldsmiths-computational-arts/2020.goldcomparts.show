@@ -138,7 +138,9 @@
           <SocialLink kind="twitch" value={artist.twitch} />
         </div>
 
-        {#if artist.events.length}
+
+        <!-- TODO these don't seem to be implemented yet, leading to 404 errors so just editing out for now-->
+<!--         {#if artist.events.length}
           <div class="event-schedule">
             <h3>Event schedule</h3>
             <ul>
@@ -151,7 +153,7 @@
             </ul>
           </div>
         {/if}
-
+ -->
       </div>
       <div class="column is-hidden-mobile">
             <h2 class="artist-name">

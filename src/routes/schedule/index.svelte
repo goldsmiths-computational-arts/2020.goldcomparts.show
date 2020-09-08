@@ -12,7 +12,7 @@
   import { group } from "d3-array";
   import { timeFormat } from "d3-time-format";
   import { slugify } from "../../js/helpers";
-  import { REGISTER_URL } from "../../js/constants";
+  import { EVENT_URL } from "../../js/constants";
   import { now } from "../../js/stores";
 
   export let scheduleRows;
@@ -89,22 +89,68 @@
 <style>
   .event {
     background-color: white;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     border-left: 6px solid transparent;
     padding: 24px;
   }
 
+  .event[physical="yes"]{
+
+  }
+
+  .event-description{
+    margin: 0.5rem 0;
+  }
+
+  .artist-name{
+    font-weight: 600;
+    margin:0em 0.5em 0em 0em;
+  }
   .event-time,
   .event-title {
     font-size: 18px;
     font-weight: 600;
   }
 
-  .artist-pic {
-    width: 64px;
-    height: 64px;
-    border-radius: 32px;
+  .text-align-right{
+      text-align: right;
   }
+
+  .location-data .rounded-link{
+    font-size: 0.75em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+  }
+
+  .bio-photo {
+    border-radius: 50%;
+    width: 45%;
+    height: 0px;
+    padding-bottom: 45%;
+    display: inline-block;
+    background-position: center;
+    background-size:contain;
+    background-color: #A6A8AB;
+  }
+
+
+   @media only screen and (max-width: 600px) {
+      .bio-photo {
+        border-radius: 50%;
+        width: 20%;
+        height: 0px;
+        padding-bottom: 20%;
+        display: inline-block;
+        background-position: center;
+        background-size:contain;
+        background-color: #A6A8AB;
+      }
+      .text-align-right{
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+    }
+
 </style>
 
 <svelte:head>
@@ -124,8 +170,14 @@
   <div class="container">
     <div class="content">
 
-      <h2>Event schedule</h2>
+      
+      <h2>Events</h2>
 
+      <p>The online component of Chimera Garden features a mixture of live performance, discussion and demonstrations, streamed directly from St James Hatcham Church and remote artists’ locations. You will be able to catch the online stream through Twitch here on our website during the show.</p>
+
+      <p>Below you can find the line up of events, some that will be happening physically in St James Hatcham Church and those that will be streaming online. If you would like to visit us at St James Hatcham Church please read our <a href="/getting-there">safety guidelines and register here.</a></p>
+
+      <h2>Schedule</h2>
       <div>
         {#each Array.from(eventsByDay.entries()) as [date, events]}
           <a
@@ -135,8 +187,7 @@
             {formatDay(events[0].startsAt)}
           </a>
         {/each}
-
-        <a class="rounded-link bd-col-2 col-2" href={REGISTER_URL}>Get free ticket</a>
+        <a class="rounded-link bd-col-2 col-2" href={EVENT_URL}>Free online tickets</a>
       </div>
 
       {#each Array.from(eventsByDay.entries()) as [date, events]}
@@ -144,35 +195,61 @@
           {formatDate(events[0].startsAt)}
         </h2>
 
+        <!-- TODO reimport the events schedule after it has been fixed up a bit, I manually just edited it for the events that are physical and online just to style.-->
+
         {#each events as event, i}
-          <div class="event {eventBdClass(event)}">
-            <div class="event-time">{formatTime(event.startsAt)}</div>
-            <div class="event-title">{event.title}</div>
-            {#each event.artists as artist}
-              <a href="artists/{artist.slug}">{artist.name}</a>
-            {/each}
+          <div class=" event {eventBdClass(event)}" live="{event.livestream}" physical="{event.physical}">
 
-            {#each event.artists as artist}
-              <a href="artists/{artist.slug}">
-                <img
-                  class="artist-pic"
-                  src="img/bios/{artist.username}.jpeg"
-                  alt={artist.name} />
-              </a>
-            {/each}
+            <!-- TODO for next release convert to links  to live page and getting there-->
+            <div class="columns">
+              <div class="column is-2 location-data">
+                {#if event.livestream == "true"}
+                  <span class="rounded-link col-6 bd-col-6">ONLINE</span>
+                  <!-- <a href="/live" class="col-3 bd-col-3">ONLINE</a> -->
+                {/if}
+                {#if event.physical == "yes"}
+                  <span class="rounded-link col-6 bd-col-6">PHYSICAL</span>
+                  <!-- <a href="/getting-there" class="col-3 bd-col-3">PHYSICAL</a> -->
+                {/if}
+              </div>
 
-            <ul>
-              {#each event.themes as theme}
-                <li>{theme}</li>
-              {/each}
-            </ul>
+              <div class="column is-8">
+                <div class="event-time col-3">{formatTime(event.startsAt)}</div>
+                <div class="event-title">{event.title}</div>
+                <div class="event-description">{event.desc}</div>
 
-            <ul>
-              {#each event.medium as media}
-                <li>{media}</li>
-              {/each}
-            </ul>
+                {#each event.artists as artist}
+                  <a href="artists/{artist.slug}" class="artist-name col-5">{artist.name}</a>
+                {/each}
+              </div>
 
+              <div class="column text-align-right">
+
+                {#each event.artists as artist}
+                  <a href="artists/{artist.slug}">
+                    <!-- Changed all bio photos to background images as it solves the missing image problems and the wrong file resolution -->
+                    <span
+                    class="bio-photo"
+                    style="background-image:url(img/bios/{artist.username}.jpeg)">
+                    </span>
+                  </a>
+                {/each}
+
+               </div>
+
+              <!-- TODO I think let's wait on the tags and themes until we have some sort of filtering? If that is still happening? -->
+  <!--             <ul>
+                {#each event.themes as theme}
+                  <li>{theme}</li>
+                {/each}
+              </ul>
+
+              <ul>
+                {#each event.medium as media}
+                  <li>{media}</li>
+                {/each}
+              </ul> -->
+            </div>
           </div>
         {/each}
       {/each}
