@@ -43,6 +43,10 @@
     color:#387194;
   }
 
+  .artists-section{
+    min-height: 100vh;
+  }
+
   .content ul {
      list-style: none; 
      margin-left: 0em;
@@ -88,12 +92,12 @@
 </svelte:head>
 
 
-<section class="section bg-col-7">
+<section class="section bg-col-7 artists-section">
   <div class="container is-widescreen">
 
     <div class="content">
       <div class="columns">
-      <div class="column">
+      <div class="column is-one-third">
 
         <div
           class="bio-photo"
@@ -145,7 +149,7 @@
         {/if}
  -->
       </div>
-      <div class="column is-hidden-mobile">
+      <div class="column is-hidden-mobile is-two-thirds">
             <h2 class="artist-name">
               {artist.name}
               {#if artist.otherName}({artist.otherName}){/if}
