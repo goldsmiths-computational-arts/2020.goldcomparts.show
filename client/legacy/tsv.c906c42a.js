@@ -1,1 +1,175 @@
-var n={},r={};function t(n){return new Function("d","return {"+n.map((function(n,r){return JSON.stringify(n)+": d["+r+'] || ""'})).join(",")+"}")}function e(n){var r=Object.create(null),t=[];return n.forEach((function(n){for(var e in n)e in r||t.push(r[e]=e)})),t}function o(n,r){var t=n+"",e=t.length;return e<r?new Array(r-e+1).join(0)+t:t}function u(n){var r,t=n.getUTCHours(),e=n.getUTCMinutes(),u=n.getUTCSeconds(),a=n.getUTCMilliseconds();return isNaN(n)?"Invalid Date":((r=n.getUTCFullYear())<0?"-"+o(-r,6):r>9999?"+"+o(r,6):o(r,4))+"-"+o(n.getUTCMonth()+1,2)+"-"+o(n.getUTCDate(),2)+(a?"T"+o(t,2)+":"+o(e,2)+":"+o(u,2)+"."+o(a,3)+"Z":u?"T"+o(t,2)+":"+o(e,2)+":"+o(u,2)+"Z":e||t?"T"+o(t,2)+":"+o(e,2)+"Z":"")}var a=function(o){var a=new RegExp('["'+o+"\n\r]"),i=o.charCodeAt(0);function c(t,e){var o,u=[],a=t.length,c=0,f=0,l=a<=0,s=!1;function h(){if(l)return r;if(s)return s=!1,n;var e,o,u=c;if(34===t.charCodeAt(u)){for(;c++<a&&34!==t.charCodeAt(c)||34===t.charCodeAt(++c););return(e=c)>=a?l=!0:10===(o=t.charCodeAt(c++))?s=!0:13===o&&(s=!0,10===t.charCodeAt(c)&&++c),t.slice(u+1,e-1).replace(/""/g,'"')}for(;c<a;){if(10===(o=t.charCodeAt(e=c++)))s=!0;else if(13===o)s=!0,10===t.charCodeAt(c)&&++c;else if(o!==i)continue;return t.slice(u,e)}return l=!0,t.slice(u,a)}for(10===t.charCodeAt(a-1)&&--a,13===t.charCodeAt(a-1)&&--a;(o=h())!==r;){for(var C=[];o!==n&&o!==r;)C.push(o),o=h();e&&null==(C=e(C,f++))||u.push(C)}return u}function f(n,r){return n.map((function(n){return r.map((function(r){return s(n[r])})).join(o)}))}function l(n){return n.map(s).join(o)}function s(n){return null==n?"":n instanceof Date?u(n):a.test(n+="")?'"'+n.replace(/"/g,'""')+'"':n}return{parse:function(n,r){var e,o,u=c(n,(function(n,u){if(e)return e(n,u-1);o=n,e=r?function(n,r){var e=t(n);return function(t,o){return r(e(t),o,n)}}(n,r):t(n)}));return u.columns=o||[],u},parseRows:c,format:function(n,r){return null==r&&(r=e(n)),[r.map(s).join(o)].concat(f(n,r)).join("\n")},formatBody:function(n,r){return null==r&&(r=e(n)),f(n,r).join("\n")},formatRows:function(n){return n.map(l).join("\n")},formatRow:l,formatValue:s}}("\t").parse;export{a as t};
+var EOL = {},
+    EOF = {},
+    QUOTE = 34,
+    NEWLINE = 10,
+    RETURN = 13;
+
+function objectConverter(columns) {
+  return new Function("d", "return {" + columns.map(function (name, i) {
+    return JSON.stringify(name) + ": d[" + i + "] || \"\"";
+  }).join(",") + "}");
+}
+
+function customConverter(columns, f) {
+  var object = objectConverter(columns);
+  return function (row, i) {
+    return f(object(row), i, columns);
+  };
+} // Compute unique columns in order of discovery.
+
+
+function inferColumns(rows) {
+  var columnSet = Object.create(null),
+      columns = [];
+  rows.forEach(function (row) {
+    for (var column in row) {
+      if (!(column in columnSet)) {
+        columns.push(columnSet[column] = column);
+      }
+    }
+  });
+  return columns;
+}
+
+function pad(value, width) {
+  var s = value + "",
+      length = s.length;
+  return length < width ? new Array(width - length + 1).join(0) + s : s;
+}
+
+function formatYear(year) {
+  return year < 0 ? "-" + pad(-year, 6) : year > 9999 ? "+" + pad(year, 6) : pad(year, 4);
+}
+
+function formatDate(date) {
+  var hours = date.getUTCHours(),
+      minutes = date.getUTCMinutes(),
+      seconds = date.getUTCSeconds(),
+      milliseconds = date.getUTCMilliseconds();
+  return isNaN(date) ? "Invalid Date" : formatYear(date.getUTCFullYear()) + "-" + pad(date.getUTCMonth() + 1, 2) + "-" + pad(date.getUTCDate(), 2) + (milliseconds ? "T" + pad(hours, 2) + ":" + pad(minutes, 2) + ":" + pad(seconds, 2) + "." + pad(milliseconds, 3) + "Z" : seconds ? "T" + pad(hours, 2) + ":" + pad(minutes, 2) + ":" + pad(seconds, 2) + "Z" : minutes || hours ? "T" + pad(hours, 2) + ":" + pad(minutes, 2) + "Z" : "");
+}
+
+function dsv (delimiter) {
+  var reFormat = new RegExp("[\"" + delimiter + "\n\r]"),
+      DELIMITER = delimiter.charCodeAt(0);
+
+  function parse(text, f) {
+    var convert,
+        columns,
+        rows = parseRows(text, function (row, i) {
+      if (convert) return convert(row, i - 1);
+      columns = row, convert = f ? customConverter(row, f) : objectConverter(row);
+    });
+    rows.columns = columns || [];
+    return rows;
+  }
+
+  function parseRows(text, f) {
+    var rows = [],
+        // output rows
+    N = text.length,
+        I = 0,
+        // current character index
+    n = 0,
+        // current line number
+    t,
+        // current token
+    eof = N <= 0,
+        // current token followed by EOF?
+    eol = false; // current token followed by EOL?
+    // Strip the trailing newline.
+
+    if (text.charCodeAt(N - 1) === NEWLINE) --N;
+    if (text.charCodeAt(N - 1) === RETURN) --N;
+
+    function token() {
+      if (eof) return EOF;
+      if (eol) return eol = false, EOL; // Unescape quotes.
+
+      var i,
+          j = I,
+          c;
+
+      if (text.charCodeAt(j) === QUOTE) {
+        while (I++ < N && text.charCodeAt(I) !== QUOTE || text.charCodeAt(++I) === QUOTE) {
+        }
+
+        if ((i = I) >= N) eof = true;else if ((c = text.charCodeAt(I++)) === NEWLINE) eol = true;else if (c === RETURN) {
+          eol = true;
+          if (text.charCodeAt(I) === NEWLINE) ++I;
+        }
+        return text.slice(j + 1, i - 1).replace(/""/g, "\"");
+      } // Find next delimiter or newline.
+
+
+      while (I < N) {
+        if ((c = text.charCodeAt(i = I++)) === NEWLINE) eol = true;else if (c === RETURN) {
+          eol = true;
+          if (text.charCodeAt(I) === NEWLINE) ++I;
+        } else if (c !== DELIMITER) continue;
+        return text.slice(j, i);
+      } // Return last token before EOF.
+
+
+      return eof = true, text.slice(j, N);
+    }
+
+    while ((t = token()) !== EOF) {
+      var row = [];
+
+      while (t !== EOL && t !== EOF) {
+        row.push(t), t = token();
+      }
+
+      if (f && (row = f(row, n++)) == null) continue;
+      rows.push(row);
+    }
+
+    return rows;
+  }
+
+  function preformatBody(rows, columns) {
+    return rows.map(function (row) {
+      return columns.map(function (column) {
+        return formatValue(row[column]);
+      }).join(delimiter);
+    });
+  }
+
+  function format(rows, columns) {
+    if (columns == null) columns = inferColumns(rows);
+    return [columns.map(formatValue).join(delimiter)].concat(preformatBody(rows, columns)).join("\n");
+  }
+
+  function formatBody(rows, columns) {
+    if (columns == null) columns = inferColumns(rows);
+    return preformatBody(rows, columns).join("\n");
+  }
+
+  function formatRows(rows) {
+    return rows.map(formatRow).join("\n");
+  }
+
+  function formatRow(row) {
+    return row.map(formatValue).join(delimiter);
+  }
+
+  function formatValue(value) {
+    return value == null ? "" : value instanceof Date ? formatDate(value) : reFormat.test(value += "") ? "\"" + value.replace(/"/g, "\"\"") + "\"" : value;
+  }
+
+  return {
+    parse: parse,
+    parseRows: parseRows,
+    format: format,
+    formatBody: formatBody,
+    formatRows: formatRows,
+    formatRow: formatRow,
+    formatValue: formatValue
+  };
+}
+
+var tsv = dsv("\t");
+var tsvParse = tsv.parse;
+
+export { tsvParse as t };

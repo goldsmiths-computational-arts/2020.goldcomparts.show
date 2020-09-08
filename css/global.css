@@ -34,6 +34,9 @@ body {
 .bg-col-7 {
   background-color: #f8f8f8;
 }
+.bg-col-8 {
+  background-color: white;
+}
 
 .bd-col-1 {
   border-color: #fd7f4c;
@@ -79,7 +82,45 @@ body {
   color: #f8f8f8;
 }
 
-.button-link {
-  padding: 4px 16px;
-  border-radius: 20px;
+p a{
+  color:#387194;
 }
+
+.navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a:hover{
+  color:black;
+}
+
+/* mixed this up by just "hard-coding" the hover states*/
+.rounded-link {
+  padding: 0.25em 1em;
+  margin: 0 0.25em 0.5em 0em;
+  border-radius: 1.4em;
+  border-width: 1px;
+  border-style: solid;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+}
+.rounded-link.col-1:hover {
+  color: white;
+  background-color: #FD7F4C;
+}
+.rounded-link.col-2:hover {
+  color: white;
+  background-color: #387194;;
+}
+.rounded-link.col-7:hover {
+  color: black;
+  background-color: white;
+}
+.rounded-link.bg-col-3:hover{
+  background-color: transparent;
+  color: #7bc1b7;
+  border-color: #7bc1b7;
+}
+
+section.bg-col-2 h2,
+section.bg-col-2 {
+  color:white;
+}
+
