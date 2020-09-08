@@ -2,8 +2,7 @@
 
 ## Biography data
 
-- [How to edit your biography](https://github.com/aubergene/2020-preview.goldcomparts.show/tree/master/data/bios#artist-biographies)
-
+- [How to edit your biography](https://github.com/aubergene/2020.goldcomparts.show/tree/master/data/bios#artist-biographies)
 
 ## Getting started
 
@@ -31,4 +30,4 @@ This will export the site to `public` and then commit it to the `gh-pages` and p
 npm run deploy
 ```
 
-The url currently is https://2020-preview.goldcomparts.show/
+The url is https://2020.goldcomparts.show/

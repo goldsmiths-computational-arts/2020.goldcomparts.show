@@ -1,6 +1,6 @@
 {
-  "name": "2020-preview.goldcomparts.show",
-  "description": "2020-preview.goldcomparts.show",
+  "name": "2020.goldcomparts.show",
+  "description": "2020.goldcomparts.show",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
