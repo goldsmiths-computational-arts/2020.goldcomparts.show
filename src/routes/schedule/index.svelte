@@ -240,7 +240,7 @@
             {formatDay(events[0].startsAt)}
           </a>
         {/each}
-        <a class="rounded-link bd-col-2 col-2" href={EVENT_URL}>
+        <a class="rounded-link bd-col-2 col-2" href={EVENT_URL} target="_blank">
           Free online tickets
         </a>
       </div>
