@@ -1,8 +1,3 @@
-<svelte:head>
-  <title>About</title>
-</svelte:head>
-
-
 <style>
   h2 {
     color: #fcfcfc;
@@ -63,26 +58,27 @@
     color: #fcfcfc;
     padding-top: 4rem;
   }
-
 </style>
 
-
+<svelte:head>
+  <title>About</title>
+</svelte:head>
 <section class="section">
 
   <div class="container">
     <div class="content">
-     <div>
+      <div>
         <!-- <h2 class="showDates">17-20 September 2020</h2> -->
         <h2 class="subtitle">Positioning Statement</h2>
         <!-- <h2 class="location">Goldsmiths, University of London</h2> -->
       </div>
-	    <div class="introBody">
-	      The exhibition presents a collection of assemblages we’ve
-	      cultivated under the extraordinary and global conditions of these
-	      troubled months. Fantastic fusions of technology, ideas, humans
-	      and other creatures, these works have emerged, flourishing, from a
-	      twisted reality of seismic chaos and confusion.
-	    </div>
+      <div class="introBody">
+        The exhibition presents a collection of assemblages we’ve cultivated
+        under the extraordinary and global conditions of these troubled months.
+        Fantastic fusions of technology, ideas, humans and other creatures,
+        these works have emerged, flourishing, from a twisted reality of seismic
+        chaos and confusion.
+      </div>
       <p>
         The Goldsmiths MA/MFA in Computational Art invites you to step into
         Chimera Garden and walk among the collection of assemblages we’ve
@@ -101,13 +97,18 @@
         re-imagine, to re-world - making new connections to each other and the
         world around us, building new possibilities of being.
       </p>
-<!--       <p>
+      <!--       <p>
         Chimera Garden is a blend of physical and online installation and
         performance, a four-day festival open to all via free ticket
         registration on this site soon.
       </p>
  -->
     </div>
+  </div>
+
+  <div style="display: none;">
+    <!-- These links are to get Sapper to work, ignore them -->
+    <a href="/sitemap.xml">sitemap</a>
   </div>
 
 </section>
