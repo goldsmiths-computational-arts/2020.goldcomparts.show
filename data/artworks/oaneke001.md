@@ -1,0 +1,7 @@
+# Just Another Portrait Printer   
+
+A suit made by a tailor is considered handcrafted despite the machine-made interventions. In comparison, a portrait made using a stylus to paint onto a screen instead of paper is considered a digital drawing.  
+
+Handcrafted often refers to being made by hand, but there are small whispers of debate arguing to expand the definition of ‘handcrafted’ to make way for the digital era and the new way of creating thinking birthed. These new technologies aid in the production of creativity instead of completely removing traditional techniques giving way to a subsection of products that don’t feel completely void of the human touch. Plotters, 3D printers, and sewing machines are digital tools that can be considered aids in the hand making process and shouldn’t necessarily be slapped with the ‘machine-made’ title automatically.  
+
+* Just Another Portrait Printer * is a printing system that explores these same ideas associated with craftmanship in the new digital era. Using web Technologies and a pen plotter, * Just Another Portrait Printer * draw designs onto fabric. I created a program to translate an image into g-code, the language used to tell the pen mechanic where to go. You can input hand-drawn images and designs, photographs taken, or even images found into the system. Handcrafted can be considered a stretch, but the conversation has started.

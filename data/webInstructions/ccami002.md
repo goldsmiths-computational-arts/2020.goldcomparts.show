@@ -1,0 +1,1 @@
+The piece is interactive to the movement of the audience in the exhibition space.

@@ -1,1 +1,1 @@
-Follow the link to explore Choose Your anceStory™.
+Follow the link to explore Choose Your anceStory™. A second play-through is highly reccomended.
