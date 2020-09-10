@@ -1,3 +1,5 @@
+import { timeFormat } from "d3-time-format";
+
 export const slugify = (str) => {
   return str
     .toLowerCase()
@@ -13,3 +15,7 @@ export function ascending(a, b) {
 export function trackEvent(category, action, label) {
   ga("send", "event", category, action, label);
 }
+
+export const formatDate = timeFormat("%A %d %b");
+export const formatDay = timeFormat("%A");
+export const formatTime = timeFormat("%H.%M");

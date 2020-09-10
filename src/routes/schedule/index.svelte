@@ -10,17 +10,12 @@
 <script>
   import { tsvParse } from "d3-dsv";
   import { ascending, group } from "d3-array";
-  import { timeFormat } from "d3-time-format";
-  import { slugify } from "../../js/helpers";
+  import { slugify, formatDate, formatDay, formatTime } from "../../js/helpers";
   import { EVENT_URL } from "../../js/constants";
   import { now } from "../../js/stores";
 
   export let scheduleRows;
   export let artistsRows;
-
-  const formatDate = timeFormat("%A %d %b");
-  const formatDay = timeFormat("%A");
-  const formatTime = timeFormat("%H.%M");
 
   // Make a list of unique artist names
   let artists;

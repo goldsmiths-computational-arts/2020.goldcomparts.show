@@ -11,15 +11,34 @@ export const artists = tsvParse(
   autoType
 );
 
-artists.forEach((artist) => {
+const artworksByUsername = new Map();
+
+export const artworks = tsvParse(
+  fs.readFileSync(`${DATA_DIR}/artworks.tsv`, "utf-8"),
+  autoType
+);
+
+artworks.forEach((artwork) => {
+  artworksByUsername.set(artwork.username, artwork);
+});
+
+function getHTML(dir, username) {
   try {
-    const md = fs.readFileSync(
-      `${DATA_DIR}/bios/${artist.username}.md`,
-      "utf-8"
-    );
-    artist.bioHTML = markdown.render(md);
+    const md = fs.readFileSync(`${DATA_DIR}/${dir}/${username}.md`, "utf-8");
+    return markdown.render(md);
   } catch (err) {
     // console.log(err)
+  }
+}
+
+artists.forEach((artist) => {
+  artist.bioHTML = getHTML("bios", artist.username);
+
+  let artwork;
+  if ((artwork = artworksByUsername.get(artist.username))) {
+    Object.assign(artist, artwork);
+    artist.webInstructionsHTML = getHTML("webInstructions", artist.username);
+    artist.artworkHTML = getHTML("artworks", artist.username);
   }
 });
 
