@@ -34,12 +34,30 @@ async function main() {
   await exportFile(schedule, "text/csv", `${rawDir}/schedule.csv`);
   await exportFile(artworkForm, "text/csv", `${rawDir}/artworks.csv`);
 
-  let res = await drive.files.list({
-    q: "mimeType='image/jpeg' or mimeType='image/png'",
-  });
+  let listedAll = false;
+  let pageToken = null;
+  let photos = [];
 
-  //   console.log(res);
-  const photos = res.data.files;
+  while (!listedAll) {
+    let res = await drive.files.list({
+      q: "mimeType='image/jpeg' or mimeType='image/png'",
+      pageToken,
+    });
+
+    photos = photos.concat(res.data.files);
+
+    if (res.data.nextPageToken) {
+      pageToken = res.data.nextPageToken;
+    } else {
+      listedAll = true;
+    }
+
+    // console.log(res);
+  }
+
+  console.log("num photos", photos.length);
+
+  // return;
 
   await queue.addAll(
     photos.map((d) => () => {
@@ -50,7 +68,8 @@ async function main() {
     })
   );
 
-  res = await drive.files.list({
+  // TODO extract out paginated results query above
+  let res = await drive.files.list({
     q: "mimeType='text/plain'",
   });
   const bios = res.data.files;
