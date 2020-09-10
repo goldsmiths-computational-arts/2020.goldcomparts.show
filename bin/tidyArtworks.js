@@ -101,7 +101,11 @@ artworkRows.forEach((d) => {
         d.username
       }-${i + 1}.jpeg`;
       // console.log(cmd);
-      execSync(cmd, { stdio: "pipe" });
+      try {
+        execSync(cmd, { stdio: "pipe" });
+      } catch (err) {
+        console.log(`Error with ${id} - ${d.username}`);
+      }
     });
   }
 
