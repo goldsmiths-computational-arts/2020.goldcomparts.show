@@ -1,0 +1,5 @@
+***“The View From Down Here”*** aims to open a discussion regarding the ways in which Google Street View appropriates an immense corpus of data by thrusting our social, cultural and biological meanings into the public sphere. It is an interrogation of the privacy and copyright issues that arise as a result. It also looms over us as a grim reminder that the notion of “privacy” in public spaces has been rendered obsolete. 
+
+The unassailable nature of Google’s God’s-eye-view collapses when the human presence behind it becomes evident in the form of the ghostly shadows of the company’s photographers, who are tasked with roaming the streets immortalising our world with their lens. 
+ 
+As you walk past this artwork you cannot help having your silhouette captured by the beady red eyes of hundreds of LEDs. You cannot help but become an unwilling agent of a surveillance mechanism. In the form of this interactive LED wall, the artist displays a collection of some of the virtual casualties (Google’s photographers and their vehicles) and misappropriated data of Google’s monopoly.

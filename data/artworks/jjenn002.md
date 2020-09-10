@@ -1,0 +1,7 @@
+As a part of a larger project exploring notions of fate, responsibility, agency, emergence and necessity, Wyrd is concerned with weaving and digital technology. More precisely it is focused on weaving drafts (or notations/constructs) as codified images of a process, as navigational tools for the setup and operation of a weaving loom to achieve a suggested structures and patterns. 
+
+Through the construction of generative, digital weaving drafts, patterns are created, burnt into long strips of paper with a thermal printer. A collection of these simulated digital weavings drawn down on paper, conceived through experiments with algorithmic procedures and emergent systems, are presented alongside an interactive installation. 
+
+The installation lets one co-create patterns together with a computational system, channelled through ever changing weaving drafts and printed in real time. Bodily movements, tracked with a camera, are used to navigate the operation of a digital loom represented in the grids and matrices of the drafts as well as influencing an emergent system which together brings forth lingering trails of pixelated memories, merged into unfolding patterns. 
+
+It is an invitation to read as well as make patterns, to participate in a process where one is never in complete control of the outcome, but continually interfering with and influencing the emerging drawings.

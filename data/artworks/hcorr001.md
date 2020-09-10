@@ -1,0 +1,5 @@
+It’s Just a Matter of Time 
+
+It’s Just a Matter of Time is an immersive interactive VR experience. Players must traverse through a looping series of transient non-places. Being within these spaces, the player finds time moving in inconsistent ways. In these moments the space itself is deformed to reflect the temporal malaise of its occupants. 
+
+This piece is the latest instalment in a series of works examining the city and our interactions within it. Investigations into the London Transport System revealed that some social groups’ needs are prioritised over others. The work focuses on this preferential bias, specifically examining if it has forced some groups to spend longer inside non places than others and that these places can have an impact on one's perception of time. By presenting these non-places within a virtual reality, the piece aimed to draw attention to spaces that are often forgotten, even whilst within them, as well as the people who inhabit them.

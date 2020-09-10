@@ -1,0 +1,5 @@
+Sleep affirmations, sleep themed Spotify playlists and mindfulness apps promise deep, restorative relaxation and rest. They also require us to remain ‘plugged in’ and commercially engaged throughout the night, absorbing restful imperatives unconsciously (if they do indeed send you to sleep). 
+
+Katie Tindle’s installation combines projections of garish, generative fluids written in GLSL shaders, sickly lavender scents and sound piece intoning ‘calming’ poetry co-written with the machine learning algorithm GPT2, to take create a relaxation delivery device which distills calming ambience to a point which verges on sickening. 
+
+Shadowing rhetorical devices emergent when an algorithm was trained using a data set of sleep affirmations, sleep playlists and adult bedtime stories scraped from the internet, Tindle asks whether it is it possible to become sodden and over-saturated with sleep. In a period where ‘well-ness’ has become a both a consumable and a moral imperative, can one be a relaxation glutton, and what happens when it is consumed in excess? Tindle's work prompts these questions in a critical, but darkly funny and complicated way.

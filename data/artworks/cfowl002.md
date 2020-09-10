@@ -1,0 +1,5 @@
+*Constellations* is an electronic composition-instrument. It is designed to inspire play and exploration. The instrument is dseigned to allow both musicians and non-musicians to compose music in a couple of minutes. 
+
+The logic and graphic engines have been built in openFrameworks (C++). The graphic engine creates all the visuals and GUI displayed on the instruments screen. The logic engine generates the "gene sequences" to be sent to the audio engine. The audio engine was built in PureData. It makes use of phase modulation to create different timbres. It can handle four channel polyphony, one for each constellation found on the instrument. 
+
+*Constellations* runs locally on a Raspberry Pi 3A+. The hardware is made up of a touchscreen, two potentiometers, and four buttons. The instrument has been designed to make playing it an intuitive and engaging experience for all.

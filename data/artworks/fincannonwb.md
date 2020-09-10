@@ -1,0 +1,5 @@
+Fogtown is an audiovisual performance piece about identity impermanence and existential uncertainty. It consists of computational illustrations and animations underpinned by an exploration into creating live computational cinema. 
+
+The unstable and ambiguous qualities of the work mirror the artist's struggle to find existential grounding within their personal identity and worldview. The transient nature of live performance reflects on these themes further by creating an artwork that is constantly changing and reacting to new information. 
+
+Fogtown was created primarily in the visual programming language, Touchdesigner, through the use of noise functions, image displacements, and visual feedback loops. With this project, the artist presents new approaches to creating illustrated and animated work outside of traditional methods, and offers new perspectives on how cinematic content can be presented and experienced.

@@ -1,0 +1,5 @@
+Made in a time of a constraint, what does it mean to look deep into basic tools available within software, and use them to drive and inspire behaviours. When performances become virtual, and everyone is a DJ, what is the meaning of interaction in performance. What happens when the performer creates a work, throws out into the either, and casually disregards their creation until it is time to close it down and shut it up. Are you howling into the void?
+
+Affordances is an audio-visual installation, created in Cycling 74’s Max which explores ideas of deterministic sound generation, by using standard user interface elements to recreate a pachinko machine, where ball bearings are replaced by Max’s bangs, and rewards are replaced by instructions to a quadrophonic sound engine. In creating these instructions, a photo-language is created, representing the soundscape in a list of vectors, which can be replayed at anytime.
+
+The installation will be started on Thursday 17th September and will run continuously till Sunday 20th with no further intervention from the artist. It will be streamed during this time at http://www.twitch.tv/lxinspc

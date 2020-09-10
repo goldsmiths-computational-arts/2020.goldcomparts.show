@@ -1,0 +1,7 @@
+It is an audio-visual installation and it aims to co-create rhythm of wave by human and multispecies such as goose and ducks living in lake. Particularly, the light of wave penetrates through multi-layered fabric as both spatial and sensory medium. 
+The audience joins to regenerate and interact on audio-visual wave with their movements through immersive experience. It dances together in the similar way that multispecies live through water in lake and water waves do.
+
+The inspiration journey came from regular field recording the multispecies in lake such as brokewell park, burgess park and hampstead Heath in London. It’s story is regenerated as computational art with the audiovisual communication in waves of resonating light to highlight how audience could see & hear their lives and recreate balanced rhythm together. 
+In making process, I began creating and also fabricating the installation in whole step as work in progress. Beginning from the prototype of diverse materials of fabric sample, exploring with light with kinect, painting(primer > undercoat>topcoat), attaching the each woods, stapling the fabric with wood and finally fabricating woods with muli-layered structure. 
+
+It Embodies a computer vision based interaction both in visible and hearable experience. It uses sensing technology as Kinect to detect audience movements. The projected wave reacts to audience’s movements and position in space and generates audio-visual wave through their bodily interaction.

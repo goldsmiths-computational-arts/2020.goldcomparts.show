@@ -1,0 +1,5 @@
+Isolation collaboration is an alliance between a laptop, an analogue synthesizer and a human.  The computer generates patterns created in MaxMsp routed to Ableton Live.  Kris responds to the output by mixing it live and tweaking parameters to taste.  No one, not even Kris, knows how this will play out.
+
+Heavily influenced by DIY rave culture, Kris generates live visuals via a Kinect Sensor. She has linked the Open Frameworks code to Ableton to adjust the colours via Midi and the pattern changes depending upon her position. A kaleidoscope style is created and projected onto an Olga kit.  
+
+Lockdown has provided many challenges to performers across the board.  Live streaming has taken hold and has been met with varying degrees of success.  Kris chose to record her performance in her council flat.  We are all in this together after all.  No attempt has been made to hide the fact that it is her home, and she is allowing remote visitors inside her private space.  It is not live-streamed and is an examination of truly performing with no known audience.
