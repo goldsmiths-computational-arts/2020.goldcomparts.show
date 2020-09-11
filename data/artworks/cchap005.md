@@ -1,0 +1,1 @@
+This interactive virtual museum presents extracts from five films by early cinema pioneer George Méliès made between the years 1896-1903. The piece deals with embodiment in digital space, and responds to the affect of hypertextual flatness.

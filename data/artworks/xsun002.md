@@ -1,1 +1,5 @@
-Projection Mapping Installation
+The installation composed of project mapping and page-turning device is used to record the journey in Qinghai this year.
+The projection and images are edited by Processing, and the installation is driven by Arduino.
+The photos taken during the journey are stored in the page-turning device, thus displaying the itineraries like a flashback.
+Boasting an amazing variety of landforms, the sceneries and landscapes along the journey have been constantly changing. The depopulated zones, Yardang landform, Danxia landform, salt lake and geothermal spring, are vast and remote, beautiful and spectacular.
+The works is called Mangya which takes the name of a town in Qinghai. In Chinese, it can be literally interpreted as a vast cliff. Being surrounded by the nature in a place far away from the noises and lights of cities, is how it feels like. Moving across Qaidam Basin and standing on the cliff or flat, everything seems so boundless.
