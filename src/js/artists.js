@@ -46,6 +46,18 @@ artists.forEach((artist) => {
   }
 });
 
+artists.forEach((artist) => {
+  artist.bioHTML = getHTML("bios", artist.username);
+
+  let artwork;
+  if ((artwork = artworksByUsername.get(artist.username))) {
+    Object.assign(artist, artwork);
+    artist.webInstructionsHTML = getHTML("webInstructions", artist.username);
+    artist.artworkHTML = getHTML("artworks", artist.username);
+    artist.wallTextHTML = getHTML("wallText", artist.username);
+  }
+});
+
 artists.sort((a, b) => ascending(a.name, b.name));
 
 console.log(
