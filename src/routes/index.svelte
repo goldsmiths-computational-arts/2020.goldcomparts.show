@@ -44,30 +44,6 @@
     font-size: 1.75rem;
     color: #fcfcfc;
   }
-  .openQuote {
-    font-family: futura-pt, sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #fcfcfc;
-    padding-bottom: 0.4rem;
-    text-align: right;
-  }
-  .reference {
-    font-family: futura-pt, sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    color: #5f5f5f;
-    padding-bottom: 2rem;
-    text-align: right;
-  }
-  .introBody {
-    font-family: futura-pt, sans-serif;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: #fcfcfc;
-    padding-bottom: 1.2rem;
-  }
   .introBodyStrong {
     font-family: futura-pt, sans-serif;
     font-weight: 600;
@@ -83,13 +59,6 @@
     min-height: 700px;
     max-height: 1500px;
     height: 80vh;
-  }
-  .content {
-    font-family: futura-pt, sans-serif;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: #fcfcfc;
-    padding-top: 4rem;
   }
 
   @media only screen and (max-width: 768px) {

@@ -8,48 +8,12 @@
     font-size: 2.5rem;
     color: #fcfcfc;
   }
-  .showDates {
-    font-family: futura-pt, sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: #fcfcfc;
-  }
-  .location {
-    font-family: futura-pt, sans-serif;
-    font-weight: 500;
-    font-size: 1.75rem;
-    color: #fcfcfc;
-  }
-  .openQuote {
-    font-family: futura-pt, sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #fcfcfc;
-    padding-bottom: 0.4rem;
-    text-align: right;
-  }
-  .reference {
-    font-family: futura-pt, sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    color: #5f5f5f;
-    padding-bottom: 2rem;
-    text-align: right;
-  }
   .introBody {
     font-family: futura-pt, sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
     color: #fcfcfc;
     padding-bottom: 1.2rem;
-  }
-  .introBodyStrong {
-    font-family: futura-pt, sans-serif;
-    font-weight: 600;
-    font-size: 1.3rem;
-    color: #fcfcfc;
-    padding-bottom: 4rem;
   }
   .content {
     font-family: futura-pt, sans-serif;
