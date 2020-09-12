@@ -7,6 +7,8 @@ const out = artists.map((d) => {
     name: d.name,
     otherName: d.otherName,
     title: d.title,
+    themes: d.themes,
+    media: d.media,
   };
 });
 

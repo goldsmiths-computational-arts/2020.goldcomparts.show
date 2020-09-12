@@ -20,6 +20,9 @@ export const artworks = tsvParse(
 
 artworks.forEach((artwork) => {
   artworksByUsername.set(artwork.username, artwork);
+
+  artwork.themes = artwork.themes.split(", ");
+  artwork.media = artwork.media.split(", ");
 });
 
 function getHTML(dir, username) {

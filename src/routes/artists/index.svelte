@@ -1,21 +1,48 @@
 <script context="module">
   export async function preload({ params }) {
     const artistsRows = await this.fetch("artists.tsv").then(d => d.text());
+    const tags = await this.fetch("/artists/tags.json").then(d => d.json());
 
-    return { artistsRows };
+    return { artistsRows, tags };
   }
 </script>
 
 <script>
+  import { flip } from "svelte/animate";
+  import { fly } from "svelte/transition";
   import { tsvParse } from "d3-dsv";
   import { slugify } from "../../js/helpers.js";
 
   export let artistsRows;
+  export let tags;
 
-  // Make a list of unique artist names
   $: artists = tsvParse(artistsRows).sort((a, b) =>
     a.name.localeCompare(b.name, "en", { sensitivity: "base" })
   );
+
+  let sortOptions = [
+    {
+      title: "Artist",
+      fn: (a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" })
+    },
+    {
+      title: "Artwork",
+      fn: (a, b) =>
+        a.title.localeCompare(b.title, "en", { sensitivity: "base" })
+    }
+  ];
+  let sortBy = sortOptions[0];
+  let theme = null;
+  let media = null;
+
+  $: artistsFiltered = artists
+    .filter(d => {
+      return (
+        (!media || (d.media && d.media.includes(media))) &&
+        (!theme || (d.themes && d.themes.includes(theme)))
+      );
+    })
+    .sort(sortBy.fn);
 </script>
 
 <style>
@@ -31,31 +58,19 @@
     text-align: left;
     background-color: white;
     width: 190px;
-    height: 250px;
+    /* height: 250px; */
   }
-/*
-  .bio-box:hover {
-    background-color: rgba(238, 238, 238, 1);
-    border: 2px solid rgba(0, 0, 0, 1);
-  }
-
-  .bio-box:hover a {
-    color: black;
-  }*/
 
   .bio-photo {
     width: 100%;
     height: 190px;
     display: block;
     background-position: center;
-    background-size:contain;
-    background-color: #A6A8AB;
+    background-size: contain;
+    background-color: #a6a8ab;
   }
-  .bio-box h6{
-    padding:0.5em;
-  }
-  .bio-box:hover .bio-photo {
-    /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+  .bio-box h6 {
+    padding: 0.5em;
   }
 </style>
 
@@ -63,30 +78,55 @@
   <title>Final Show - 2020</title>
 </svelte:head>
 
-<!-- <section class="hero is-primary">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">Artists</h1>
-      <h2 class="subtitle">MA/MFA Computational Arts 2020 - Goldsmiths</h2>
-    </div>
-  </div>
-</section> -->
-
 <section class="section bg-col-7">
   <div class="container">
     <div class="content">
 
+      <select bind:value={sortBy}>
+        {#each sortOptions as d}
+          <option value={d}>{d.title}</option>
+        {/each}
+      </select>
+
+      <select bind:value={theme}>
+        <option value={null}>—</option>
+        {#each tags.themes as theme}
+          <option>{theme}</option>
+        {/each}
+      </select>
+
+      <select bind:value={media}>
+        <option value={null}>—</option>
+        {#each tags.media as media}
+          <option>{media}</option>
+        {/each}
+      </select>
+
       <div class="bio-boxes">
 
-        {#each artists as artist}
-          <div class="bio-box">
+        {#each artistsFiltered as artist, i (artist.username)}
+          <div
+            class="bio-box"
+            transition:fly={{ duration: 300, y: 200 }}
+            animate:flip={{ delay: i * 10, duration: 400 }}>
             <a href="artists/{slugify(artist.name)}">
               <div
                 class="bio-photo"
-                style="background-image:url(img/bios/{artist.username}.jpeg)">
-              </div>
-              <h6>{artist.name} {artist.otherName ? `  (${artist.otherName})` : ''}</h6>
+                style="background-image:url(img/bios/{artist.username}.jpeg)" />
+              <h6>
+                {artist.name}
+                {artist.otherName ? `  (${artist.otherName})` : ''}
+              </h6>
+              <div>{artist.title}</div>
             </a>
+          </div>
+        {:else}
+          <div>
+            Sorry your filter return no results
+            <br />
+            <div class="button" on:click={() => (theme = media = null)}>
+              Click here to remove filters
+            </div>
           </div>
         {/each}
       </div>
