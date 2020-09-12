@@ -14,7 +14,10 @@ npm i
 
 ### Data
 
-- [Google form Biography data](https://docs.google.com/spreadsheets/d/1cFp1oZc4CSHddOLnevgeJIAc3JT8s7uewNPp9TLViVo/edit#gid=1121962197)
+- [Part I form - artist biography](https://docs.google.com/forms/d/e/1FAIpQLScmHKFauB7llCnYPn-QrxvljPoriIc6hLSJ8gXDKqFV-1J9ow/viewform)
+- [Part I sheet - artist biography](https://docs.google.com/spreadsheets/d/1cFp1oZc4CSHddOLnevgeJIAc3JT8s7uewNPp9TLViVo/edit#gid=1121962197)
+- [Part II form - artwork](https://docs.google.com/forms/d/e/1FAIpQLSe-GsbPCEukeBz0XVYLJrxBMT8Djjyh835389A9gLt8XR9maw/viewform)
+- [Part II sheet - artwork](https://docs.google.com/spreadsheets/d/1df60MvCLtNCL3puT3QTe5QZc_wtcJVmLcxWhLzI40E8/edit#gid=532750996)
 
 ### Running the project
 
