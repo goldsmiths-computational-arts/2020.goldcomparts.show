@@ -157,7 +157,7 @@
             <div class="columns">
 
               <div class="column">
-                <img src="img/handsanitizer.png" />
+                <img src="img/handsanitizer.png" alt="Hand sanitiser" />
               </div>
 
               <div class="column">
