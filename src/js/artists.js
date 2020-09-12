@@ -39,6 +39,7 @@ artists.forEach((artist) => {
 
   let artwork;
   if ((artwork = artworksByUsername.get(artist.username))) {
+    artwork.found = true;
     Object.assign(artist, artwork);
     artist.webInstructionsHTML = getHTML("webInstructions", artist.username);
     artist.artworkHTML = getHTML("artworks", artist.username);
@@ -46,3 +47,11 @@ artists.forEach((artist) => {
 });
 
 artists.sort((a, b) => ascending(a.name, b.name));
+
+console.log(
+  `Artworks without artist:`,
+  artworks
+    .filter((d) => !d.found)
+    .map((d) => d.username)
+    .join(", ")
+);
