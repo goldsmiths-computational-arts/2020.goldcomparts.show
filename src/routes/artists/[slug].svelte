@@ -225,6 +225,27 @@
             <SocialLink kind="twitch" value={artist.twitch} />
           </div>
 
+          <!-- Display as a list? -->
+          {#if artist.themes.length}
+            <div class="content">
+              <h6>Themes</h6>
+              <ul>
+                {#each artist.themes as theme}
+                  <li>{theme}</li>
+                {/each}
+              </ul>
+            </div>
+          {/if}
+
+          <!-- or display as tags? -->
+          {#if artist.media.length}
+            <h6>Media</h6>
+            {#each artist.media as media}
+              <span class="tag is-dark">{media}</span>
+              &nbsp;
+            {/each}
+          {/if}
+
           {#if artist.events.length}
             <div class="event-schedule">
               <h3>Event schedule</h3>
