@@ -13,6 +13,11 @@
     border: 2px solid #fff;
     border-radius: 32px;
   }
+
+  img {
+    width: 1920px;
+    height: 1080px;
+  }
 </style>
 
 {#if images.length === 1}
