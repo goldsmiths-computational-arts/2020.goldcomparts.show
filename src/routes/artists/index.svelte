@@ -50,6 +50,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 15px;
   }
 
   .bio-box {
@@ -70,11 +71,24 @@
     height: 190px;
     display: block;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-color: #a6a8ab;
   }
+  .bio-box p {
+    padding: 0em 0.5em;
+    margin-bottom: 1em;
+    color: #363636!important;
+    line-height: 1.3em;
+  }
   .bio-box h6 {
-    padding: 0.5em;
+    padding: 0.5em 0.5em 0em 0.5em;
+    margin-bottom: 0px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+
+
   }
 </style>
 
@@ -121,7 +135,7 @@
                 {artist.name}
                 {artist.otherName ? `  (${artist.otherName})` : ''}
               </h6>
-              <!-- <div>{artist.title}</div> --> <!-- No at titles it looks bad -->
+              <p>{artist.title}</p> <!-- No at titles it looks bad -->
             </a>
           </div>
         {:else}

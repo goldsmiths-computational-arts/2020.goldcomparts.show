@@ -43,7 +43,7 @@
     display: block;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-color: #a6a8ab;
   }
 
@@ -131,8 +131,26 @@
       margin-top: 0.5714em;
     }
 
+    .align-center {
+      text-align: center;
+      max-width: 100%;
+    }
+
     .social-links {
       padding-top: 25px;
+    }
+
+    .artwork-instructions {
+      margin-bottom: 0;
+    }
+
+    section.artist-page{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    section.responsive-video{
+      padding-top: 0pc;
     }
 
     .see-more {
@@ -150,7 +168,7 @@
   <Slideshow images={artworkImages} />
 </div>
 
-<section class="section bg-col-7">
+<section class="section bg-col-7 artist-page">
   <div class="container page-max-width">
 
     <div class="content">
@@ -167,41 +185,48 @@
             {/if}
           </div>
 
-          {#if artist.webInstructionsHTML}
+        
+          {#if artist.webInstructionsHTML ||  artist.interactiveUrl || artist.streamTwitch || artist.streamYouTube}
+
             <div class="artwork-instructions">
-              <h3>How to interact</h3>
-              {@html artist.webInstructionsHTML}
+                {#if artist.webInstructionsHTML}
+                  <h3>How to interact</h3>
+                  {@html artist.webInstructionsHTML}
+               {/if}
+            
+              {#if artist.interactiveUrl}
+                <a
+                  href={artist.interactiveUrl}
+                  target="_blank"
+                  class="rounded-link bg-col-1 bd-col-1 col-7">
+                  See the work
+                </a>
+              {/if}
+
+              <!-- TODO if there is time embed stream channels do an embed? -->
+
+              {#if artist.streamTwitch}
+                <a
+                  href={'https://www.twitch.tv/' + artist.streamTwitch}
+                  target="_blank"
+                  class="rounded-link bg-col-1 bd-col-1 col-7">
+                  Watch twitch stream
+                </a>
+              {/if}
+
+              {#if artist.streamYouTube}
+                <a
+                  href={'https://www.youtube.com/channel/' + artist.streamYouTube}
+                  target="_blank"
+                  class="rounded-link bg-col-1 bd-col-1 col-7">
+                  Watch youtube stream
+                </a>
+              {/if}
+
             </div>
+         
           {/if}
 
-          {#if artist.interactiveUrl}
-            <a
-              href={artist.interactiveUrl}
-              target="_blank"
-              class="rounded-link bg-col-1 bd-col-1 col-7">
-              See the work
-            </a>
-          {/if}
-
-          <!-- TODO if there is time embed stream channels do an embed? -->
-
-          {#if artist.streamTwitch}
-            <a
-              href={'https://www.twitch.tv/' + artist.streamTwitch}
-              target="_blank"
-              class="rounded-link bg-col-1 bd-col-1 col-7">
-              Watch twitch stream
-            </a>
-          {/if}
-
-          {#if artist.streamYouTube}
-            <a
-              href={'https://www.youtube.com/channel/' + artist.streamYouTube}
-              target="_blank"
-              class="rounded-link bg-col-1 bd-col-1 col-7">
-              Watch youtube stream
-            </a>
-          {/if}
           <br />
           <div />
         </div>
@@ -240,10 +265,25 @@
                     {/each}
                   </ul>
                 </div>
+
+
+                {#if artist.events.length}
+                <div class="column is-hidden-desktop is-hidden-tablet">
+                  <div>
+                    <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
+                    <!-- TODO on Tues/Wednesday add in once live page is live -->
+                    <a
+                      href="../schedule"
+                      class="rounded-link bg-col-7 bd-col-7 col-2">
+                      Full Schedule
+                    </a>
+                  </div>
+                </div>
+              {/if}
               </div>
             {/if}
 
-            {#if artist.isRemote}
+            {#if !artist.isRemote}
               <div class="column">
                 <p>ON SITE</p>
                 <p>
@@ -276,7 +316,7 @@
           <div class="columns">
 
             {#if artist.events.length}
-              <div class="column">
+              <div class="column is-hidden-mobile">
                 <div>
                   <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
                   <!-- TODO on Tues/Wednesday add in once live page is live -->
@@ -289,7 +329,7 @@
               </div>
             {/if}
 
-            {#if artist.isRemote}
+            {#if !artist.isRemote}
               <div class="column">
                 <div>
                   <a
