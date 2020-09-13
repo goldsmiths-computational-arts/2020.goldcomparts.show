@@ -1,6 +1,9 @@
 <script>
   export let url;
 
+  // I was getting embed codes from here
+  // https://embedresponsively.com/
+
   $: embedCode = getVideoEmbed(url);
 
   function getVideoEmbed(url) {
