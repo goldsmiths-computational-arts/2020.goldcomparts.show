@@ -61,6 +61,10 @@
     /* height: 250px; */
   }
 
+  .artists-container{
+    min-height: 80vh;
+  }
+
   .bio-photo {
     width: 100%;
     height: 190px;
@@ -79,7 +83,7 @@
 </svelte:head>
 
 <section class="section bg-col-7">
-  <div class="container">
+  <div class="container page-max-width artists-container">
     <div class="content">
 
       <select bind:value={sortBy}>
@@ -117,7 +121,7 @@
                 {artist.name}
                 {artist.otherName ? `  (${artist.otherName})` : ''}
               </h6>
-              <div>{artist.title}</div>
+              <!-- <div>{artist.title}</div> --> <!-- No at titles it looks bad -->
             </a>
           </div>
         {:else}

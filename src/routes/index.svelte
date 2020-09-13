@@ -98,11 +98,7 @@
             <div class="introBodyStrong">
               Chimera Garden is a ​celebration of Computational Art now​, a
               blend of physical and online installation and performance, a
-              four-day festival open to all via
-              <a href={REGISTER_URL} target="_blank">
-                free ticket registration
-              </a>
-              .
+              four-day festival open to all.
             </div>
             <div>
               <a href="/schedule" class="rounded-link col-7 bd-col-7">

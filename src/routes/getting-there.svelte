@@ -9,7 +9,6 @@
 
   .gmap {
     display: block;
-    margin-top: 40px;
   }
 
   .getting-there-section {
@@ -43,7 +42,7 @@
   <title>Getting there</title>
 </svelte:head>
 
-<div class="container is-desktop">
+<div class="container page-max-width top-framed-element">
   <iframe
     class="gmap"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d621.2849271162139!2d-0.03870997075277533!3d51.47394983406136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603cdd0976f5b%3A0x370a516c5d8f1902!2sSt%20James%20Hatcham%20building%2C%20Goldsmiths%20University%20of%20London!5e0!3m2!1sen!2suk!4v1599344161499!5m2!1sen!2suk"
@@ -59,7 +58,7 @@
 </div>
 
 <section class="section bg-col-7 getting-there-section">
-  <div class="container is-widescreen">
+  <div class="container page-max-width">
     <div class="content">
 
       <section class="section bg-col-2 garden-block">

@@ -204,7 +204,7 @@
 </svelte:head>
 
 <section class="section bg-col-7">
-  <div class="container is-widescreen">
+  <div class="container page-max-width">
     <div class="content">
 
       <h2>Events</h2>

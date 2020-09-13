@@ -29,7 +29,7 @@
 </svelte:head>
 <section class="section">
 
-  <div class="container">
+  <div class="container page-max-width">
     <div class="content">
       <div>
         <!-- <h2 class="showDates">17-20 September 2020</h2> -->
