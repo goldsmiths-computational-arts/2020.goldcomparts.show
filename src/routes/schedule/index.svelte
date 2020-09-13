@@ -295,7 +295,9 @@
               </div>
 
               <div class="column is-9">
-                <div class="event-time col-3">{formatTime(event.startsAt)}</div>
+                <div class="event-time col-3">
+                  {formatTime(event.startsAt)} {formatDay(event.startsAt)}
+                </div>
                 <div class="event-title">{event.title}</div>
                 <div class="event-description">{event.desc}</div>
 
