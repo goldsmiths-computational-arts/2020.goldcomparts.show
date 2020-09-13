@@ -230,6 +230,7 @@
 
             <div class="video-sizer">
               <iframe
+                title="Documentation video"
                 src={artist.videoDocUrl}
                 height="500"
                 width="900"
@@ -244,7 +245,9 @@
 
       <!-- TODO:  Start if > Once logic for remote students is in  we can only show this blue block if events online and if in church -->
 
-      <section class="section bg-col-2 col-6">
+      <section
+        class="section bg-col-2 col-6"
+        class:remote-only={artist.isRemote}>
         <div class="container see-more">
           <h2>Want to see more?</h2>
           <div class="columns">
@@ -268,33 +271,35 @@
               </div>
             {/if}
 
-            <!-- TODO:  Need logic to hide this column if student is only showing remotely -->
+            {#if artist.isRemote}
+              <div class="column">
+                <p>ON SITE</p>
+                <p>
+                  Goldsmiths, University of London
+                  <br />
+                  St James Hatcham Building
+                </p>
+                {#if artist.events.length}
+                  <div class="event-schedule" style="padding-bottom: 10px;">
+                    <ul>
+                      {#each artist.events as event}
+                        {#if event.livestream != 'true' && event.physical == 'yes'}
+                          <li>
+                            <a
+                              href="/schedule#{event.id}"
+                              style="color: white;">
+                              {event.title}
+                            </a>
+                            - {formatFullTime(event.startsAt)}
+                          </li>
+                        {/if}
+                      {/each}
+                    </ul>
+                  </div>
+                {/if}
+              </div>
+            {/if}
 
-            <div class="column">
-              <p>ON SITE</p>
-              <p>
-                Goldsmiths, University of London
-                <br />
-                St James Hatcham Building
-              </p>
-              {#if artist.events.length}
-                <div class="event-schedule" style="padding-bottom: 10px;">
-                  <ul>
-                    {#each artist.events as event}
-                      {#if event.livestream != 'true' && event.physical == 'yes'}
-                        <li>
-                          <a href="/schedule#{event.id}" style="color: white;">
-                            {event.title}
-                          </a>
-                          - {formatFullTime(event.startsAt)}
-                        </li>
-                      {/if}
-                    {/each}
-                  </ul>
-                </div>
-              {/if}
-
-            </div>
           </div>
           <div class="columns">
 
@@ -312,19 +317,19 @@
               </div>
             {/if}
 
-            <!-- TODO:  Need logic to hide this column if student is only showing remotely -->
-
-            <div class="column">
-              <div>
-                <a
-                  href="../getting-there"
-                  class="rounded-link bg-col-7 bd-col-7 col-2">
-                  Getting There
-                </a>
-                <!-- <a href="../map" class="rounded-link bg-col-7 bd-col-7 col-2">Map</a> -->
-                <!--  TODO when we have a map layyout -->
+            {#if artist.isRemote}
+              <div class="column">
+                <div>
+                  <a
+                    href="../getting-there"
+                    class="rounded-link bg-col-7 bd-col-7 col-2">
+                    Getting There
+                  </a>
+                  <!-- <a href="../map" class="rounded-link bg-col-7 bd-col-7 col-2">Map</a> -->
+                  <!--  TODO when we have a map layyout -->
+                </div>
               </div>
-            </div>
+            {/if}
           </div>
         </div>
       </section>
