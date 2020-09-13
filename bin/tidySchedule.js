@@ -43,6 +43,7 @@ const scheduleRows = csvParseRows(
 
 scheduleRows.forEach((d) => {
   d.livestream = d.livestream === "yes";
+  d.physical = d.physical === "yes";
 });
 
 const schedule = Array.from(scheduleRows.values());
