@@ -18,6 +18,7 @@
       // svelte:head just keeps appending and doesn't hydrate existing meta tags
       // see https://github.com/sveltejs/sapper/issues/976
       document.head.querySelector("title").remove();
+      document.head.querySelector('link[rel="canonical"').remove();
       Array.from(document.head.querySelectorAll('meta[property*="og"')).forEach(
         d => d.remove()
       );
@@ -28,8 +29,9 @@
 <link rel="stylesheet" href="css/global.css" />
 
 <title>{title}</title>
+<link rel="canonical" href={BASE_URL + url + '/'} />
 <meta property="og:title" content={title} />
-<meta property="og:url" content={BASE_URL + url} />
+<meta property="og:url" content={BASE_URL + url + '/'} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={BASE_URL + image} />
 <meta property="og:image:width" content={imageWidth} />
