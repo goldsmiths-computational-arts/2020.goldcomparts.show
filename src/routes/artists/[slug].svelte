@@ -78,18 +78,6 @@
     margin: 60px 0px 20px 0px;
   }
 
-  .section.responsive-video .video-sizer {
-    width: 100%;
-    height: 0px;
-    padding-bottom: 57%;
-  }
-
-  .section.responsive-video iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-
   .artist-tags {
     margin-top: 20px;
   }
@@ -144,12 +132,12 @@
       margin-bottom: 0;
     }
 
-    section.artist-page{
+    section.artist-page {
       padding-left: 0px;
       padding-right: 0px;
     }
 
-    section.responsive-video{
+    section.responsive-video {
       padding-top: 0pc;
     }
 
@@ -164,138 +152,95 @@
   <title>{artist.name} - Final Show - 2020</title>
 </svelte:head>
 
-<div class="container page-max-width top-framed-element">
-  <Slideshow images={artworkImages} />
-</div>
+<!-- hide all the artwork stuff if we don't have title -->
+{#if artist.title}
+  <div class="container page-max-width top-framed-element">
+    <Slideshow images={artworkImages} />
+  </div>
 
-<section class="section bg-col-7 artist-page">
-  <div class="container page-max-width">
+  <section class="section bg-col-7 artist-page">
+    <div class="container page-max-width">
+      <div class="content">
+        <section class="section bg-col-7">
+          <div class="container align-center">
+            <h2 class="artwork-title">{artist.title}</h2>
+            <h3>
+              {artist.name}
+              {#if artist.otherName}({artist.otherName}){/if}
+            </h3>
+            <div class="artwork-desc">
+              {#if artist.artworkHTML}
+                {@html artist.artworkHTML}
+              {/if}
+            </div>
 
-    <div class="content">
-      <section class="section bg-col-7">
-        <div class="container align-center">
-          <h2 class="artwork-title">{artist.title}</h2>
-          <h3>
-            {artist.name}
-            {#if artist.otherName}({artist.otherName}){/if}
-          </h3>
-          <div class="artwork-desc">
-            {#if artist.artworkHTML}
-              {@html artist.artworkHTML}
-            {/if}
-          </div>
-
-        
-          {#if artist.webInstructionsHTML ||  artist.interactiveUrl || artist.streamTwitch || artist.streamYouTube}
-
-            <div class="artwork-instructions">
+            {#if artist.webInstructionsHTML || artist.interactiveUrl || artist.streamTwitch || artist.streamYouTube}
+              <div class="artwork-instructions">
                 {#if artist.webInstructionsHTML}
                   <h3>How to interact</h3>
                   {@html artist.webInstructionsHTML}
-               {/if}
-            
-              {#if artist.interactiveUrl}
-                <a
-                  href={artist.interactiveUrl}
-                  target="_blank"
-                  class="rounded-link bg-col-1 bd-col-1 col-7">
-                  See the work
-                </a>
-              {/if}
+                {/if}
 
-              <!-- TODO if there is time embed stream channels do an embed? -->
+                {#if artist.interactiveUrl}
+                  <a
+                    href={artist.interactiveUrl}
+                    target="_blank"
+                    class="rounded-link bg-col-1 bd-col-1 col-7">
+                    See the work
+                  </a>
+                {/if}
 
-              {#if artist.streamTwitch}
-                <a
-                  href={'https://www.twitch.tv/' + artist.streamTwitch}
-                  target="_blank"
-                  class="rounded-link bg-col-1 bd-col-1 col-7">
-                  Watch twitch stream
-                </a>
-              {/if}
+                <!-- TODO if there is time embed stream channels do an embed? -->
 
-              {#if artist.streamYouTube}
-                <a
-                  href={'https://www.youtube.com/channel/' + artist.streamYouTube}
-                  target="_blank"
-                  class="rounded-link bg-col-1 bd-col-1 col-7">
-                  Watch youtube stream
-                </a>
-              {/if}
+                {#if artist.streamTwitch}
+                  <a
+                    href={'https://www.twitch.tv/' + artist.streamTwitch}
+                    target="_blank"
+                    class="rounded-link bg-col-1 bd-col-1 col-7">
+                    Watch twitch stream
+                  </a>
+                {/if}
 
-            </div>
-         
-          {/if}
+                {#if artist.streamYouTube}
+                  <a
+                    href={'https://www.youtube.com/channel/' + artist.streamYouTube}
+                    target="_blank"
+                    class="rounded-link bg-col-1 bd-col-1 col-7">
+                    Watch youtube stream
+                  </a>
+                {/if}
 
-          <br />
-          <div />
-        </div>
-      </section>
-
-      {#if artist.videoDocUrl}
-        <section class="section responsive-video">
-          <div class="container">
-            <VideoEmbed url={artist.videoDocUrl} />
-          </div>
-        </section>
-      {/if}
-
-      <!-- TODO:  Start if > Once logic for remote students is in  we can only show this blue block if events online and if in church -->
-
-      <section
-        class="section bg-col-2 col-6"
-        class:remote-only={artist.isRemote}>
-        <div class="container see-more">
-          <h2>Want to see more?</h2>
-          <div class="columns">
-            {#if artist.events.length}
-              <div class="column">
-                <p>LIVE ONLINE</p>
-                <div class="event-schedule" style="padding-bottom: 10px;">
-                  <ul>
-                    {#each artist.events as event}
-                      {#if event.livestream == true}
-                        <li>
-                          <a href="/schedule#{event.id}" style="color: white;">
-                            {event.title}
-                          </a>
-                          - {formatFullTime(event.startsAt)}
-                        </li>
-                      {/if}
-                    {/each}
-                  </ul>
-                </div>
-
-
-                {#if artist.events.length}
-                <div class="column is-hidden-desktop is-hidden-tablet">
-                  <div>
-                    <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
-                    <!-- TODO on Tues/Wednesday add in once live page is live -->
-                    <a
-                      href="../schedule"
-                      class="rounded-link bg-col-7 bd-col-7 col-2">
-                      Full Schedule
-                    </a>
-                  </div>
-                </div>
-              {/if}
               </div>
             {/if}
 
-            {#if !artist.isRemote}
-              <div class="column">
-                <p>ON SITE</p>
-                <p>
-                  Goldsmiths, University of London
-                  <br />
-                  St James Hatcham Building
-                </p>
-                {#if artist.events.length}
+            <br />
+            <div />
+          </div>
+        </section>
+
+        {#if artist.videoDocUrl}
+          <section class="section responsive-video">
+            <div class="container">
+              <VideoEmbed url={artist.videoDocUrl} />
+            </div>
+          </section>
+        {/if}
+
+        <!-- TODO:  Start if > Once logic for remote students is in  we can only show this blue block if events online and if in church -->
+
+        <section
+          class="section bg-col-2 col-6"
+          class:remote-only={artist.isRemote}>
+          <div class="container see-more">
+            <h2>Want to see more?</h2>
+            <div class="columns">
+              {#if artist.events.length}
+                <div class="column">
+                  <p>LIVE ONLINE</p>
                   <div class="event-schedule" style="padding-bottom: 10px;">
                     <ul>
                       {#each artist.events as event}
-                        {#if event.livestream != 'true' && event.physical == 'yes'}
+                        {#if event.livestream == true}
                           <li>
                             <a
                               href="/schedule#{event.id}"
@@ -308,47 +253,89 @@
                       {/each}
                     </ul>
                   </div>
-                {/if}
-              </div>
-            {/if}
 
-          </div>
-          <div class="columns">
-
-            {#if artist.events.length}
-              <div class="column is-hidden-mobile">
-                <div>
-                  <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
-                  <!-- TODO on Tues/Wednesday add in once live page is live -->
-                  <a
-                    href="../schedule"
-                    class="rounded-link bg-col-7 bd-col-7 col-2">
-                    Full Schedule
-                  </a>
+                  {#if artist.events.length}
+                    <div class="column is-hidden-desktop is-hidden-tablet">
+                      <div>
+                        <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
+                        <!-- TODO on Tues/Wednesday add in once live page is live -->
+                        <a
+                          href="../schedule"
+                          class="rounded-link bg-col-7 bd-col-7 col-2">
+                          Full Schedule
+                        </a>
+                      </div>
+                    </div>
+                  {/if}
                 </div>
-              </div>
-            {/if}
+              {/if}
 
-            {#if !artist.isRemote}
-              <div class="column">
-                <div>
-                  <a
-                    href="../getting-there"
-                    class="rounded-link bg-col-7 bd-col-7 col-2">
-                    Getting There
-                  </a>
-                  <!-- <a href="../map" class="rounded-link bg-col-7 bd-col-7 col-2">Map</a> -->
-                  <!--  TODO when we have a map layyout -->
+              {#if !artist.isRemote}
+                <div class="column">
+                  <p>ON SITE</p>
+                  <p>
+                    Goldsmiths, University of London
+                    <br />
+                    St James Hatcham Building
+                  </p>
+                  {#if artist.events.length}
+                    <div class="event-schedule" style="padding-bottom: 10px;">
+                      <ul>
+                        {#each artist.events as event}
+                          {#if event.livestream != 'true' && event.physical == 'yes'}
+                            <li>
+                              <a
+                                href="/schedule#{event.id}"
+                                style="color: white;">
+                                {event.title}
+                              </a>
+                              - {formatFullTime(event.startsAt)}
+                            </li>
+                          {/if}
+                        {/each}
+                      </ul>
+                    </div>
+                  {/if}
                 </div>
-              </div>
-            {/if}
+              {/if}
+
+            </div>
+            <div class="columns">
+
+              {#if artist.events.length}
+                <div class="column is-hidden-mobile">
+                  <div>
+                    <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
+                    <!-- TODO on Tues/Wednesday add in once live page is live -->
+                    <a
+                      href="../schedule"
+                      class="rounded-link bg-col-7 bd-col-7 col-2">
+                      Full Schedule
+                    </a>
+                  </div>
+                </div>
+              {/if}
+
+              {#if !artist.isRemote}
+                <div class="column">
+                  <div>
+                    <a
+                      href="../getting-there"
+                      class="rounded-link bg-col-7 bd-col-7 col-2">
+                      Getting There
+                    </a>
+                    <!-- <a href="../map" class="rounded-link bg-col-7 bd-col-7 col-2">Map</a> -->
+                    <!--  TODO when we have a map layyout -->
+                  </div>
+                </div>
+              {/if}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-
-  </div>
-</section>
+  </section>
+{/if}
 
 <!-- TODO:  End if  -> Once logic for remote students is in  we can only show this blue block if events online and if in church -->
 
@@ -392,17 +379,17 @@
           {/if}
 
           <!-- or display as tags? -->
-          {#if artist.themes.length || artist.media.length}
+          {#if (artist.themes && artist.themes.length) || (artist.media && artist.media.length)}
             <div class="artist-tags">
               <h6>Tags</h6>
-              {#if artist.themes.length}
+              {#if artist.themes && artist.themes.length}
                 {#each artist.themes as theme}
                   <span class="tag is-dark">{theme}</span>
                   &nbsp;
                 {/each}
               {/if}
 
-              {#if artist.media.length}
+              {#if artist.media && artist.media.length}
                 {#each artist.media as media}
                   <span class="tag is-dark">{media}</span>
                   &nbsp;
