@@ -127,7 +127,26 @@ a:hover {
   border-color: #7bc1b7;
 }
 
+.rounded-link.bg-col-1.bd-col-1.col-7:hover{
+  color: transparent;
+  color: #fd7f4c;
+  border-color: #fd7f4c;
+
+}
+
+.top-framed-element{
+  margin-top: 40px;
+}
+
 section.bg-col-2 h2,
 section.bg-col-2 {
   color: white;
 }
+
+@media screen and (min-width: 1200px) {
+    .container.page-max-width{
+      max-width: 960px!important;
+    }
+}
+
+
