@@ -9,9 +9,10 @@
 
 <script>
   import { range } from "d3-array";
-  import { slugify, formatFullTime } from "../../js/helpers";
+  import { slugify, formatFullTime, getVideoEmbed } from "../../js/helpers";
   import SocialLink from "../../components/SocialLink.svelte";
   import Slideshow from "../../components/Slideshow.svelte";
+  import VideoEmbed from "../../components/VideoEmbed.svelte";
 
   export let artist;
 
@@ -209,36 +210,7 @@
       {#if artist.videoDocUrl}
         <section class="section responsive-video">
           <div class="container">
-
-            <!-- TODO: The video doc urls need to be cleaned up, for Vimeo grab the video id from end of string -->
-
-            <!-- Supplied format -->
-            <!-- https://vimeo.com/456355806 -->
-
-            <!-- Correct vimeo format : -->
-            <!-- Something like this in a script / helper to be used something like this below: -->
-
-            <!-- https://player.vimeo.com/video/456355806-->
-
-            <!-- Supplied format -->
-            <!-- https://youtu.be/W1mQymdvlu0 -->
-
-            <!-- Something like this in a script / helper to be used something like this below: -->
-
-            <!-- Correct youtube embed format : -->
-            <!-- https://www.youtube.com/embed/W1mQymdvlu0 -->
-
-            <div class="video-sizer">
-              <iframe
-                title="Documentation video"
-                src={artist.videoDocUrl}
-                height="500"
-                width="900"
-                frameborder="0"
-                allow="autoplay"
-                allowfullscreen />
-            </div>
-
+            <VideoEmbed url={artist.videoDocUrl} />
           </div>
         </section>
       {/if}
