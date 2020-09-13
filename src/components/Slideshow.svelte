@@ -15,8 +15,8 @@
   }
 
   img {
-    width: 1920px;
-    height: 1080px;
+    width: 960px;
+    height: 540px;
   }
 </style>
 
