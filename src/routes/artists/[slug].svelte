@@ -10,6 +10,7 @@
 <script>
   import { range } from "d3-array";
   import { slugify, formatFullTime } from "../../js/helpers";
+  import Meta from "../../components/Meta.svelte";
   import SocialLink from "../../components/SocialLink.svelte";
   import Slideshow from "../../components/Slideshow.svelte";
   import VideoEmbed from "../../components/VideoEmbed.svelte";
@@ -25,6 +26,12 @@
   $: artworkImages = range(artist.numImages).map(
     i => `/img/artworks/${artist.username}-${i + 1}.jpeg`
   );
+
+  $: pageTitle = [artist.name, artist.title].filter(d => d).join(" — ");
+
+  $: socialImage = artworkImages.length
+    ? artworkImages[0]
+    : `img/bios/${artist.username}.jpeg`;
 </script>
 
 <style>
@@ -149,7 +156,12 @@
 </style>
 
 <svelte:head>
-  <title>{artist.name} - Final Show - 2020</title>
+  <title>{pageTitle}</title>
+  <Meta
+    title={pageTitle}
+    image={socialImage}
+    imageWidth="1920"
+    imageHeight="1080" />
 </svelte:head>
 
 <!-- hide all the artwork stuff if we don't have title -->
