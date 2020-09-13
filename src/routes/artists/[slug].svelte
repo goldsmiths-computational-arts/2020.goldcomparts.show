@@ -162,6 +162,7 @@
     image={socialImage}
     imageWidth="1920"
     imageHeight="1080" />
+  <meta property="og:type" content="profile" />
 </svelte:head>
 
 <!-- hide all the artwork stuff if we don't have title -->
