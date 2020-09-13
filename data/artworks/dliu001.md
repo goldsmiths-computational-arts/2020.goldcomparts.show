@@ -1,0 +1,3 @@
+Dongyuan Liu is working on a Multi-screens installation which is trying to find beauty forms of 'intelligent agent's memory' by the way of Data Visualisation and image process.
+
+Departure from theory of Data aesthetics, he is considering what the 'machine's culture' and 'machine's society' looks like. AI is established based on comparisons between human and machine. If the human generated data has aesthetic values, what about machine generated data? He considers the machine generated images as material and uses appropriate algorithms to extract meaningful data which was organized as 'memory fragments'.

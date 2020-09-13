@@ -1,0 +1,1 @@
+A virtual virus chatbot trained on COVID-19 related tweets and social media posts. This project aims to provide a way to communicate with the unfamiliar creature and reflect on our own.
