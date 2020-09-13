@@ -1,0 +1,2 @@
+Qianhui Fan is an artist who prefers critical practice. Her works involve installations, performances, sound art, light perception art and digital technology. She is good at using the characteristics of materials as a medium. Based on the progress of interdisciplinary research across biophysics, computing and art, her works are intended to explore the intersection of life, politics and technical methods.
+The main direction of her recent work is synesthesia, showing sound design and visual beauty through interactive installations.
