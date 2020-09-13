@@ -16,6 +16,20 @@ The biographies are written in Markdown which is rendered using [markdown-it](ht
 
 ## Basic markdown guide
 
+### Line breaks
+
+To make a single line break do a normal line break but leave **two spaces at the end of each line**
+
+```
+Apple  
+Oranges  
+Pears  
+```
+
+Apple  
+Oranges  
+Pears  
+
 ### Links
 
 Add link with the following, remember links *have to start with* `https://` or `http://`
