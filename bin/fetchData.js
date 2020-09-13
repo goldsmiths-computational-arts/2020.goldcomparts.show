@@ -13,6 +13,7 @@ fs.mkdirSync(biosDir, { recursive: true });
 
 const queue = new PQueue({ concurrency: 1 });
 
+const megaForm = "1mxVo-yHN-KYJ827BCbOhfOlaRhoEIMlxqs3WMSX3s9Y";
 const artistsForm = "1cFp1oZc4CSHddOLnevgeJIAc3JT8s7uewNPp9TLViVo";
 const schedule = "1yyrr3frgtnz4TnLlPAJRwanqLC8fNSMsr9g9ZnzdTRM";
 const artworkForm = "1df60MvCLtNCL3puT3QTe5QZc_wtcJVmLcxWhLzI40E8";
@@ -30,6 +31,7 @@ const drive = google.drive({
 main();
 
 async function main() {
+  await exportFile(megaForm, "text/csv", `${rawDir}/mega.csv`);
   await exportFile(artistsForm, "text/csv", `${rawDir}/artists.csv`);
   await exportFile(schedule, "text/csv", `${rawDir}/schedule.csv`);
   await exportFile(artworkForm, "text/csv", `${rawDir}/artworks.csv`);

@@ -12,6 +12,7 @@ const photosDir = `${__dirname}/../static/img/bios`;
 
 [biosDir, photosDir].forEach((d) => fs.mkdirSync(d, { recursive: true }));
 
+const megaCsv = `${rawDir}/mega.csv`;
 const artistsCsv = `${rawDir}/artists.csv`;
 const artistsTsv = `${dataDir}/artists.tsv`;
 
@@ -37,6 +38,17 @@ instagram
 publicEmail`
   .trim()
   .split("\n");
+
+const isRemote = new Map();
+
+csvParseRows(fs.readFileSync(megaCsv, "utf-8"), (row, i) => {
+  const email = row[2];
+  const username = email.split("@")[0];
+
+  const remote = /Remotely/.test(row[5]);
+  isRemote.set(username, remote);
+  // console.log({ username, remote });
+});
 
 const artistRows = csvParseRows(
   fs.readFileSync(artistsCsv, "utf-8"),
@@ -65,6 +77,8 @@ artistRows.forEach((d) => {
   d.slug = slugify(d.name);
 
   d.username = d.email.split("@")[0];
+
+  d.isRemote = isRemote.get(d.username);
 
   if (d.website && !/^https?:\/\//.test(d.website)) {
     d.website = "http://" + d.website;
