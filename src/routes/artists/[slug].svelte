@@ -294,7 +294,7 @@
                     <div class="event-schedule" style="padding-bottom: 10px;">
                       <ul>
                         {#each artist.events as event}
-                          {#if event.livestream != 'true' && event.physical == 'yes'}
+                          {#if event.physical}
                             <li>
                               <a
                                 href="/schedule#{event.id}"

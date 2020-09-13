@@ -8,7 +8,7 @@
 </script>
 
 <script>
-  import { tsvParse } from "d3-dsv";
+  import { tsvParse, autoType } from "d3-dsv";
   import { ascending, group } from "d3-array";
   import { slugify, formatDate, formatDay, formatTime } from "../../js/helpers";
   import { EVENT_URL } from "../../js/constants";
@@ -16,6 +16,9 @@
 
   export let scheduleRows;
   export let artistsRows;
+
+  const ONSITE = "ONSITE";
+  const ONLINE = "ONLINE";
 
   // Make a list of unique artist names
   let artists;
@@ -31,13 +34,13 @@
       artist.slug = slugify(artist.name);
     });
 
-    events = tsvParse(scheduleRows)
+    events = tsvParse(scheduleRows, autoType)
       .map(row => {
-        row.themes = row.themes.split(/,\s*/);
-        row.medium = row.medium.split(/,\s*/);
+        // row.themes = row.themes.split(/,\s*/);
+        // row.medium = row.medium.split(/,\s*/);
 
         row.artists = [];
-        if (row.username.trim()) {
+        if (row.username && row.username.trim()) {
           row.username.split(/,\s*/).forEach(username => {
             const artist = artistByUsername.get(username);
             if (artist) {
@@ -63,16 +66,18 @@
     } else {
       // TODO make some constants
       // TODO tidy up the sheet parsing
-      if (filter === "onsite") {
-        return d.physical == "yes";
+      if (filter === ONSITE) {
+        return d.physical;
       }
-      if (filter === "online") {
-        return d.livestream == "true";
+      if (filter === ONLINE) {
+        return d.livestream;
       }
     }
   });
 
-  $: eventsByDay = group(filteredEvents, d => d.startTime.slice(0, 10));
+  $: eventsByDay = group(filteredEvents, d =>
+    d.startTime.toISOString().slice(0, 10)
+  );
   $: eventsByDay2 = Array.from(eventsByDay.entries())
     .sort((a, b) => ascending(a[0], b[0]))
     .map(([key, events]) => {
@@ -250,14 +255,14 @@
         </span>
         <span
           class="filter-item"
-          class:is-selected={filter === 'online'}
-          on:click={() => (filter = 'online')}>
+          class:is-selected={filter === ONLINE}
+          on:click={() => (filter = ONLINE)}>
           ONLINE
         </span>
         <span
           class="filter-item"
-          class:is-selected={filter === 'onsite'}
-          on:click={() => (filter = 'onsite')}>
+          class:is-selected={filter === ONSITE}
+          on:click={() => (filter = ONSITE)}>
           ONSITE
         </span>
       </div>
@@ -279,11 +284,11 @@
             <!-- TODO for next release convert to links to live page and getting there-->
             <div class="columns">
               <div class="column is-1 location-data">
-                {#if event.livestream == 'true'}
+                {#if event.livestream}
                   <span class="rounded-link col-6 bd-col-6">ONLINE</span>
                   <!-- <a href="/live" class="col-3 bd-col-3">ONLINE</a> -->
                 {/if}
-                {#if event.physical == 'yes'}
+                {#if event.physical}
                   <span class="rounded-link col-6 bd-col-6">ONSITE</span>
                   <!-- <a href="/getting-there" class="col-3 bd-col-3">ONSITE</a> -->
                 {/if}
