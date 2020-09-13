@@ -12,7 +12,7 @@
       return `<iframe src='https://player.vimeo.com/video/${vimeoID}' frameborder='0' allowFullScreen></iframe>`;
     }
 
-    if (/youtube/.test(url)) {
+    if (/youtu\.?be/.test(url)) {
       if (url.length > 28) {
         var queryString = {};
         url.replace(new RegExp("([^?=&]+)(=([^&]*))?", "g"), function(
@@ -42,7 +42,7 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .embed-container iframe {
+  :global(.embed-container iframe) {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,9 +52,5 @@
 </style>
 
 <div class="embed-container">
-  <iframe
-    title="Video embed"
-    src="https://www.youtube.com/embed//wigKjzq5uuM"
-    frameborder="0"
-    allowfullscreen />
+  {@html embedCode}
 </div>

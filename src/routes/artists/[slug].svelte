@@ -9,7 +9,7 @@
 
 <script>
   import { range } from "d3-array";
-  import { slugify, formatFullTime, getVideoEmbed } from "../../js/helpers";
+  import { slugify, formatFullTime } from "../../js/helpers";
   import SocialLink from "../../components/SocialLink.svelte";
   import Slideshow from "../../components/Slideshow.svelte";
   import VideoEmbed from "../../components/VideoEmbed.svelte";
