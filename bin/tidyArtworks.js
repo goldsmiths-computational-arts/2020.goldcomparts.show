@@ -86,6 +86,12 @@ artworkRows.forEach((d) => {
   );
   delete d.webInstructions;
 
+  d.streamYouTube = d.streamYouTube.replace(
+    "https://www.youtube.com/channel/",
+    ""
+  );
+  d.streamTwitch = d.streamTwitch.replace("https://www.twitch.tv/", "");
+
   if (d.images) {
     // console.log();
     // console.log(d.images);
