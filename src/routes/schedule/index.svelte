@@ -28,6 +28,7 @@
     artists = tsvParse(artistsRows);
     artists.forEach(artist => {
       artistByUsername.set(artist.username, artist);
+      artist.slug = slugify(artist.name);
     });
 
     events = tsvParse(scheduleRows)
@@ -270,6 +271,7 @@
 
         {#each events as event, i}
           <div
+            id={event.id}
             class=" event {eventBdClass(event)}"
             live={event.livestream}
             physical={event.physical}>

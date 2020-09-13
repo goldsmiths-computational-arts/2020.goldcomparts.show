@@ -12,8 +12,7 @@ const scheduleRows = tsvParse(
 
 export const schedule = [];
 
-let prevRow;
-scheduleRows.forEach((row) => {
+scheduleRows.forEach((row, id) => {
   if (!(row.startDate && row.title)) return;
 
   let startTime = parseDate(row.startDate + " " + row.startTime);
@@ -25,9 +24,8 @@ scheduleRows.forEach((row) => {
   // console.log(row);
   // console.log(row.startDate, row.startTime);
 
-  const newRow = { ...row, startTime };
+  const newRow = { ...row, id, startTime };
   delete newRow.startDate;
-  schedule.push(newRow);
 
-  const startsAt = (prevRow = row);
+  schedule.push(newRow);
 });

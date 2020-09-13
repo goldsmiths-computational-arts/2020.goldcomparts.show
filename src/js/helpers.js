@@ -19,3 +19,4 @@ export function trackEvent(category, action, label) {
 export const formatDate = timeFormat("%A %d %b");
 export const formatDay = timeFormat("%A");
 export const formatTime = timeFormat("%H.%M");
+export const formatFullTime = timeFormat("%A %d %b %H.%M");

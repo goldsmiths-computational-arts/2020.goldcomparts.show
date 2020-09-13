@@ -9,10 +9,16 @@
 
 <script>
   import { range } from "d3-array";
-  import { slugify, formatDate, formatDay, formatTime } from "../../js/helpers";
+  import { slugify, formatFullTime } from "../../js/helpers";
   import SocialLink from "../../components/SocialLink.svelte";
 
   export let artist;
+
+  $: {
+    artist.events.forEach(event => {
+      event.startsAt = new Date(event.startTime);
+    });
+  }
 
   $: artworkImages = range(artist.numImages).map(
     i => `/img/artworks/${artist.username}-${i + 1}.jpeg`
@@ -481,21 +487,21 @@
           <div class="columns">
             {#if artist.events.length}
               <div class="column">
-                  <p>LIVE ONLINE</p>
-                    <div class="event-schedule" style="padding-bottom: 10px;">
-                      <ul>
-                        {#each artist.events as event}
-                           {#if event.livestream == true}
-                              <li>
-                                <a href="/schedule/" style="color: white;">  <!-- TODO Nice to have if we don't scroll to the event can we have online events and day preselected when you arrive at schedule page -->
-                                  {event.title}
-                                </a>
-                                - {event.startTime}  <!--  TODO can we have this a bit more human readable so date and start time -->
-                              </li>
-                           {/if}
-                        {/each}
-                      </ul>
-                    </div>
+                <p>LIVE ONLINE</p>
+                <div class="event-schedule" style="padding-bottom: 10px;">
+                  <ul>
+                    {#each artist.events as event}
+                      {#if event.livestream == true}
+                        <li>
+                          <a href="/schedule#{event.id}" style="color: white;">
+                            {event.title}
+                          </a>
+                          - {formatFullTime(event.startsAt)}
+                        </li>
+                      {/if}
+                    {/each}
+                  </ul>
+                </div>
               </div>
             {/if}
 
@@ -503,20 +509,23 @@
 
             <div class="column">
               <p>ON SITE</p>
-              <p>Goldsmiths, University of London<br/>
-              St James Hatcham Building</p>
+              <p>
+                Goldsmiths, University of London
+                <br />
+                St James Hatcham Building
+              </p>
               {#if artist.events.length}
                 <div class="event-schedule" style="padding-bottom: 10px;">
                   <ul>
                     {#each artist.events as event}
-                       {#if event.livestream != 'true' && event.physical == 'yes'}
-                          <li>
-                            <a href="/schedule/" style="color: white;"><!-- TODO Nice to have if we don't scroll to the event can we have onsite events and day preselected when you arrive at schedule page -->
-                              {event.title}
-                            </a>
-                            - {event.startTime}
-                          </li>
-                       {/if}
+                      {#if event.livestream != 'true' && event.physical == 'yes'}
+                        <li>
+                          <a href="/schedule#{event.id}" style="color: white;">
+                            {event.title}
+                          </a>
+                          - {formatFullTime(event.startsAt)}
+                        </li>
+                      {/if}
                     {/each}
                   </ul>
                 </div>
