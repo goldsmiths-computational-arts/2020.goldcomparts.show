@@ -1,6 +1,6 @@
 username	name	otherName	title	themes	media
 amiro001	Alesandra Miro Quesada	badgrandpa	La Historia de Rosario Flores	Thing power,Computational resistance,Memory bank	AR
-cchan007	Andrew Chang	張嘉洋	op('pantomimus')	Bodies in relation,Memory bank	audio visual,performance,narrative
+cchan007	Andrew Chang	張嘉洋	op('pantomimus')	Computational resistance,Bodies in relation,Non-directional travel	cinema,performance,narrative
 qba001	Baqi Ba	巴岐	Can Be Called Love	Bodies in relation,Non-directional travel,Paracomputing	cinema,live,performance
 belda001	Batool Desouky		Programmoire	Paracomputing	data,generative,physical computing
 cfowl002	Callum Fowler		Constellations	Bodies in relation,Experiential array	sound,audio visual,music
@@ -10,7 +10,7 @@ ckarp001	Christina Karpodini		Sonically Touchable	Bodies in relation,Distance or
 cli003	Chun LI				
 cdeba001	Clemence Debaig		Results May Vary	Distance orchestra,Experiential array,Memory bank	live,performance,playable experience
 dalsa002	Daniah S. Alsaleh		How Do I Remember Thee?	Thing power,Non-directional travel,Memory bank	audio visual,ML,generative
-dupto001	David Upton		Walking with  Data	Thing power,Bodies in relation,Distance orchestra	interactive,data,generative
+dupto001	David Upton		Walking with Data	Thing power,Expanded Terrains,Generative poetics	data,AR,generative
 dliu001	Dongyuan Liu		machinesMemory	Thing power	data,ML,generative
 dpate002	Duncan Paterson		THE HOUSE OF ASTERION	Multispecies rehearsal,Paracomputing	interactive,generative
 eedwa001	Eleanor Edwards		Co-produced	Expanded Terrains,Generative poetics,Experiential array	interactive,playable experience
@@ -49,13 +49,13 @@ sxu003	Shuai Xu		Diffusion	Thing power,Experiential array,Memory bank	interactiv
 ysun005	Uchan Sun		Corobot: When the Coronavirus Begin to Talk	Generative poetics	interactive,ML,language
 vjuss001	Veera Jussila		Museum of Borderlands	Computational resistance,Experiential array,Memory bank	interactive,sound,ML
 wtalb001	Wesley Talbot		AGA	Thing power	physical computing
-wfinc001	Williams Fincannon				
-xhu002	Xiaoyi Hu		Run Run	Non-directional travel	sound,playable experience,3D
+wfinc001	Williams Fincannon		Fogtown	Thing power,Expanded Terrains,Non-directional travel	performance,illustration,animation
+xhu002	Xiaoyi Hu		RUN RUN	Non-directional travel	sound,playable experience,3D
 xsun002	Xinyu Sun		The Vast Cliff	Experiential array	light,generative,physical computing
 yzhou015	YI ZHOU				
 ylu007	Yanyi Lu		Augmented Creativity	Thing power,Bodies in relation,Memory bank	cinema,ML,narrative
 yjin004	Yewen Jin		Liminal Dream	Expanded Terrains,Non-directional travel,Experiential array	interactive,sound,3D
-yzhan037	Yishuai Zhang		All is a transient dream	Thing power,Bodies in relation,Multispecies rehearsal	interactive,audio visual,performance
+yzhan037	Yishuai Zhang		ALL IS A TRANSIENT DREAM	Thing power,Bodies in relation,Multispecies rehearsal	live,audio visual,performance
 yliao001	Yu Hsuan Liao		Chaotic Objects	Bodies in relation,Generative poetics,Memory bank	cinema,data,ML
 yjun001	Yuhyeon Jun (Agnes)		Interplay through Wave	Bodies in relation,Expanded Terrains,Multispecies rehearsal	interactive,audio visual,playable experience
 zwu003	Ziwei Wu		Mimicry	Thing power,Generative poetics,Memory bank	interactive,ML,generative
