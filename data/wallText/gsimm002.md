@@ -1,0 +1,1 @@
+To try it out, Dowload it to an AR ready device from the QR codes bellow.

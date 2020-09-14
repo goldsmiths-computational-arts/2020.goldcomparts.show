@@ -1,1 +1,1 @@
-A companion website containing a set of interactive experiments and meditations on weaving drafts together with further information can be found here.
+Follow the link to reach the companion website

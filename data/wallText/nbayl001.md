@@ -1,0 +1,1 @@
+To engage with the piece, stand in front of it - ideally around 1-2 metres away. The work will detect your body position and fix the AR world to your perspective. By changing your viewing angle you will access different perspectives and temporalities.

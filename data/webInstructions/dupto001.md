@@ -1,1 +1,1 @@
-Using your smart phone, log on to www.codedwalls.com/walkingwithdata and follow the instructions there.
+Using your smart phone, log on to www.codedwalls.com/walkingwithdata, and follow the instructions there.

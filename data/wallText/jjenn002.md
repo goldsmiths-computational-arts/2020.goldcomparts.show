@@ -1,0 +1,3 @@
+**Any movement** in front of the printing system initiates the transformation from draft to physical print. The state of the emergent backend system feeds into the drafts and the “threading” of warp threads through the virtual heddles. **Horizontal movements** navigate the “treadling”, selecting which warp threads to be lifted. **Vertical movements**, as in raising one's arms, changes in what way the digital loom will be set up and updated while no motion is detected. 
+
+Over time, motion seen by the computer in the room influences the environment and behaviours of the emergent system as well as the tieUp of the weaving draft.

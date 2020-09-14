@@ -1,0 +1,2 @@
+“Feel free to go close or far and move around the multi-layered interactive installation.”
+It would bring u to spatial and interplaying journey in both sound and visual through metaphor of wave. Hope u enjoy the immersive experience!

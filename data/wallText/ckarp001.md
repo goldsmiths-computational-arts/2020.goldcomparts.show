@@ -1,0 +1,1 @@
+Tap on any of the three shapes on the tablet and create your own narrative of performance. Explore the different sonic interpretations of touch.

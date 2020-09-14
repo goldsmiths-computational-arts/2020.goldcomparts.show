@@ -1,0 +1,1 @@
+Scan the QR code with your phone camera to enter the virtual world

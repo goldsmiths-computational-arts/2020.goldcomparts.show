@@ -1,0 +1,1 @@
+Follow the instructions on the screen, take a picture, send it to the plotter and watch it print the design.

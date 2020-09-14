@@ -1,0 +1,1 @@
+Gaze into the abyss and eventually the abyss will gaze back into you, similarly look long enough and you will become a part of the project.
