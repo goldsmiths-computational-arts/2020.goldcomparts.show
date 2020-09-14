@@ -219,7 +219,7 @@
         The online component of Chimera Garden features a mixture of live
         performance, discussion and demonstrations, streamed directly from St
         James Hatcham Church and remote artists’ locations. You will be able to
-        catch the online stream through Twitch here on our website during the
+        catch the online stream <a href="/live">here on our website</a> during the
         show.
       </p>
 
@@ -285,11 +285,13 @@
             <div class="columns">
               <div class="column is-1 location-data">
                 {#if event.livestream}
-                  <span class="rounded-link col-6 bd-col-6">ONLINE</span>
+                  <!-- <span class="rounded-link col-6 bd-col-6">ONLINE</span> -->
+                  <a href="/live" class="rounded-link bd-col-1 col-1">ONLINE</a>
                   <!-- <a href="/live" class="col-3 bd-col-3">ONLINE</a> -->
                 {/if}
                 {#if event.physical}
-                  <span class="rounded-link col-6 bd-col-6">ONSITE</span>
+                  <!-- <span class="rounded-link col-6 bd-col-6">ONSITE</span> -->
+                  <a href="/getting-there" class="rounded-link bd-col-1 col-1">ONSITE</a>
                   <!-- <a href="/getting-there" class="col-3 bd-col-3">ONSITE</a> -->
                 {/if}
               </div>

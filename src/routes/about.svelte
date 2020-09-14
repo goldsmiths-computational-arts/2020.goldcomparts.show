@@ -73,7 +73,7 @@
   <div style="display: none;">
     <!-- These links are to get Sapper to work, ignore them -->
     <a href="/sitemap.xml">sitemap</a>
-    <a href="/live">live</a>
+    <!-- <a href="/live">live</a> -->
   </div>
 
 </section>

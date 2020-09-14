@@ -7,9 +7,37 @@
     display: block;
   }
 
-  .chat {
-    margin-top: 4em;
+  .chat h2{
+    margin-bottom: 0.2em;
   }
+
+  iframe {
+    width:100%;
+  }
+
+  .responsive-iframe{
+    width: 100%;
+    height: 0px;
+    padding-bottom: 57%;
+  }
+
+  .responsive-iframe iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .events-button-container{
+    text-align: right;
+  }
+
+  @media screen and (max-width: 768px) {
+    .events-button-container{
+      text-align: left;
+    }
+  }
+
+
 </style>
 
 <svelte:head>
@@ -25,19 +53,22 @@
 </section>
  -->
 
+
 <div class="container page-max-width top-framed-element">
     <section>
       <div class="container">
-        <iframe
-          id="twitch-video"
-          title="Twitch video stream"
-          src="https://player.twitch.tv/?channel=goldsmiths_comparts&amp;parent={BASE_HOST}"
-          frameborder="0"
-          allowfullscreen="true"
-          scrolling="no"
-          height="500"
-          width="900">
-        </iframe>
+        <div class="responsive-iframe">
+          <iframe
+            id="twitch-video"
+            title="Twitch video stream"
+            src="https://player.twitch.tv/?channel=goldsmiths_comparts&amp;parent={BASE_HOST}"
+            frameborder="0"
+            allowfullscreen="true"
+            scrolling="no"
+            height="500"
+            width="900">
+          </iframe>
+        </div>
       </div>
     </section>
 </div>
@@ -47,9 +78,18 @@
   <div class="container page-max-width">
 
     <section class="chat">
-      <div class="container">
-        <h2 class="subtitle">Chat stream</h2>
-
+      <div class="content">
+        <div class="columns">
+          <div class="column">
+            <h2 class="subtitle">Live Broadcast</h2>
+            <p>To join in our audience Q&A, you can use the chat below after signing up for a <a href="https://www.twitch.tv/signup" target="_blank">Twitch account</a>.
+          </div>
+          <div class="column events-button-container">
+            <a href="/schedule" class="rounded-link col-2 bg-col-7">
+              EVENTS SCHEDULE
+            </a>
+          </div>
+        </div>
         <iframe
           id="twitch-chat"
           title="Twitch chat"

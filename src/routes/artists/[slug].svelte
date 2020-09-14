@@ -241,61 +241,20 @@
 
         <!-- TODO:  Start if > Once logic for remote students is in  we can only show this blue block if events online and if in church -->
 
-        <section
-          class="section bg-col-2 col-6"
-          class:remote-only={artist.isRemote}>
-          <div class="container see-more">
-            <h2>Want to see more?</h2>
-            <div class="columns">
-              {#if artist.events.length}
-                <div class="column">
-                  <p>LIVE ONLINE</p>
-                  <div class="event-schedule" style="padding-bottom: 10px;">
-                    <ul>
-                      {#each artist.events as event}
-                        {#if event.livestream == true}
-                          <li>
-                            <a
-                              href="/schedule#{event.id}"
-                              style="color: white;">
-                              {event.title}
-                            </a>
-                            - {formatFullTime(event.startsAt)}
-                          </li>
-                        {/if}
-                      {/each}
-                    </ul>
-                  </div>
-
-                  {#if artist.events.length}
-                    <div class="column is-hidden-desktop is-hidden-tablet">
-                      <div>
-                        <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
-                        <!-- TODO on Tues/Wednesday add in once live page is live -->
-                        <a
-                          href="../schedule"
-                          class="rounded-link bg-col-7 bd-col-7 col-2">
-                          Full Schedule
-                        </a>
-                      </div>
-                    </div>
-                  {/if}
-                </div>
-              {/if}
-
-              {#if !artist.isRemote}
-                <div class="column">
-                  <p>ON SITE</p>
-                  <p>
-                    Goldsmiths, University of London
-                    <br />
-                    St James Hatcham Building
-                  </p>
-                  {#if artist.events.length}
+        {#if !artist.isRemote && artist.events.length}
+          <section
+            class="section bg-col-2 col-6"
+            class:remote-only={artist.isRemote}>
+            <div class="container see-more">
+              <h2>Want to see more?</h2>
+              <div class="columns">
+                {#if artist.events.length}
+                  <div class="column">
+                    <p>LIVE ONLINE</p>
                     <div class="event-schedule" style="padding-bottom: 10px;">
                       <ul>
                         {#each artist.events as event}
-                          {#if event.physical}
+                          {#if event.livestream == true}
                             <li>
                               <a
                                 href="/schedule#{event.id}"
@@ -308,43 +267,86 @@
                         {/each}
                       </ul>
                     </div>
-                  {/if}
-                </div>
-              {/if}
 
-            </div>
-            <div class="columns">
-
-              {#if artist.events.length}
-                <div class="column is-hidden-mobile">
-                  <div>
-                    <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
-                    <!-- TODO on Tues/Wednesday add in once live page is live -->
-                    <a
-                      href="../schedule"
-                      class="rounded-link bg-col-7 bd-col-7 col-2">
-                      Full Schedule
-                    </a>
+                    {#if artist.events.length}
+                      <div class="column is-hidden-desktop is-hidden-tablet">
+                        <div>
+                          <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
+                          <!-- TODO on Tues/Wednesday add in once live page is live -->
+                          <a
+                            href="../schedule"
+                            class="rounded-link bg-col-7 bd-col-7 col-2">
+                            Full Schedule
+                          </a>
+                        </div>
+                      </div>
+                    {/if}
                   </div>
-                </div>
-              {/if}
+                {/if}
 
-              {#if !artist.isRemote}
-                <div class="column">
-                  <div>
-                    <a
-                      href="../getting-there"
-                      class="rounded-link bg-col-7 bd-col-7 col-2">
-                      Getting There
-                    </a>
-                    <!-- <a href="../map" class="rounded-link bg-col-7 bd-col-7 col-2">Map</a> -->
-                    <!--  TODO when we have a map layyout -->
+                {#if !artist.isRemote}
+                  <div class="column">
+                    <p>ON SITE</p>
+                    <p>
+                      Goldsmiths, University of London
+                      <br />
+                      St James Hatcham Building
+                    </p>
+                    {#if artist.events.length}
+                      <div class="event-schedule" style="padding-bottom: 10px;">
+                        <ul>
+                          {#each artist.events as event}
+                            {#if event.physical}
+                              <li>
+                                <a
+                                  href="/schedule#{event.id}"
+                                  style="color: white;">
+                                  {event.title}
+                                </a>
+                                - {formatFullTime(event.startsAt)}
+                              </li>
+                            {/if}
+                          {/each}
+                        </ul>
+                      </div>
+                    {/if}
                   </div>
-                </div>
-              {/if}
+                {/if}
+
+              </div>
+              <div class="columns">
+
+                {#if artist.events.length}
+                  <div class="column is-hidden-mobile">
+                    <div>
+                      <!-- <a href="../live" class="rounded-link bg-col-7">Watch Live</a> -->
+                      <!-- TODO on Tues/Wednesday add in once live page is live -->
+                      <a
+                        href="../schedule"
+                        class="rounded-link bg-col-7 bd-col-7 col-2">
+                        Full Schedule
+                      </a>
+                    </div>
+                  </div>
+                {/if}
+
+                {#if !artist.isRemote}
+                  <div class="column">
+                    <div>
+                      <a
+                        href="../getting-there"
+                        class="rounded-link bg-col-7 bd-col-7 col-2">
+                        Getting There
+                      </a>
+                      <!-- <a href="../map" class="rounded-link bg-col-7 bd-col-7 col-2">Map</a> -->
+                      <!--  TODO when we have a map layyout -->
+                    </div>
+                  </div>
+                {/if}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        {/if}
       </div>
     </div>
   </section>
