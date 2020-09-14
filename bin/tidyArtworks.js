@@ -10,9 +10,10 @@ const rawDir = resolve(`${__dirname}/../raw`);
 const dataDir = resolve(`${__dirname}/../data`);
 const artworksDir = resolve(`${__dirname}/../data/artworks`);
 const webInstructionsDir = resolve(`${__dirname}/../data/webInstructions`);
+const wallTextDir = resolve(`${__dirname}/../data/wallText`);
 const photosDir = resolve(`${__dirname}/../static/img/artworks`);
 
-[artworksDir, webInstructionsDir, photosDir].forEach((d) =>
+[artworksDir, webInstructionsDir, wallTextDir, photosDir].forEach((d) =>
   fs.mkdirSync(d, { recursive: true })
 );
 
@@ -86,11 +87,13 @@ artworkRows.forEach((d) => {
   );
   delete d.webInstructions;
 
-  d.streamYouTube = d.streamYouTube.replace(
-    "https://www.youtube.com/channel/",
-    ""
-  );
-  d.streamTwitch = d.streamTwitch.replace("https://www.twitch.tv/", "");
+  if (d.wallTextInstructions.trim()) {
+    fs.writeFileSync(
+      `${wallTextDir}/${d.username}.md`,
+      d.wallTextInstructions.trim()
+    );
+  }
+  delete d.wallTextInstructions;
 
   if (d.images) {
     // console.log();
