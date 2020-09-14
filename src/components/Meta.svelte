@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onDestroy } from "svelte";
   import { stores } from "@sapper/app";
   const { page } = stores();
 
@@ -12,7 +12,7 @@
   export let imageWidth = 1200;
   export let imageHeight = 630;
 
-  onMount(() => {
+  onDestroy(() => {
     return () => {
       // delete these tags on unmount to fix client-side issue where
       // svelte:head just keeps appending and doesn't hydrate existing meta tags
