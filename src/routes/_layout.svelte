@@ -1,5 +1,11 @@
 <script>
+  import { onMount } from "svelte";
   import Nav from "../components/Nav.svelte";
+  import { tracking } from "./js/tracking";
+
+  onMount(() => {
+    tracking();
+  });
 </script>
 
 <style>
