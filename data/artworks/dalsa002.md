@@ -1,7 +1,11 @@
-The artwork addresses the process and mechanism of memory making in the presence of media influences, interferences and intrusions that feed into the distortion of recollections of the past.  
+The installation explores the process and mechanism of memory making in the presence of media influences. How the constant flux of images in media impacts, interferes and intrudes with memory preservation in particular within the context of cultural identity.
 
- An exploration within an art context, on  memories of the past happenings  and the act of overriding or slowly rewriting of images in contemporary culture informed by different modes of media and the dynamics of visual politics, in particular, the flux of images in current news interferences that erode the individual or collective stories in cognitive storage. 
+“How do I remember Thee” is influenced by the framework of cultural theorist Stuart’s Hall philosophy of coding and decoding discourse. The piece situates itself as a commentary on how the archival memories of the past is being slowly distorted by images in contemporary political culture informed by different modes of media.
 
-“How do I remember Thee?” is a video installation on 3 screens, using StyleGAN2, sinGAN, First Order Motion Model
+The installation consists of Three screens that uses Three different types of AI generative models: 
 
-Duration 8 min on Loop
+Screen 1: StyleGAN2 model (Nvidia) which has been trained on a unique dataset and generates deep fakes. 
+Screen 2: Deep fakes manipulated by First Order_motion_model paper (Siarohin Et al)
+Screen 3:  Contemporary Images manipulated by sinGAN model (Shaham Et al)
+
+Duration 6:42s

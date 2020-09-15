@@ -1,0 +1,2 @@
+This is trained and generated from thousands of Dun-huang murals in the northwestern China.
+AI erased the specific characteristics of the deities, making them more like people. (Stripping off the sacred mapping) The gods of the old age have died, does AI replace it? By the interactive way, non-linear narrative is presented and created by the audience. The work also refers to montage, machine factory, feminism, human history.
