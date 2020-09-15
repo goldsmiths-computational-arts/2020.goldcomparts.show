@@ -12,7 +12,7 @@
     { label: "Schedule", href: "/schedule" },
     { label: "Live", href: "/live" },
     { label: "Getting There", href: "/getting-there" },
-    // { label: "Map", href: "/map" },
+    { label: "Map", href: "/map" },
     { label: "About", href: "/about" }
   ];
 
