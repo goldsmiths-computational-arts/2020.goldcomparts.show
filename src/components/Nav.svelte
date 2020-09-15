@@ -8,6 +8,7 @@
 
   let menuItems = [
     { label: "Artists", href: "/artists" },
+    { label: "Artworks", href: "/artworks" },
     { label: "Schedule", href: "/schedule" },
     { label: "Live", href: "/live" },
     { label: "Getting There", href: "/getting-there" },
