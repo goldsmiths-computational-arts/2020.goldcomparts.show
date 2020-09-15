@@ -1,1 +1,1 @@
-Use A/S/D/W or direction keys for movement and mouse for changing directions of view.
+Use the left joystick for movement and the right joystick for change of view. Find the portals to enter the next place.

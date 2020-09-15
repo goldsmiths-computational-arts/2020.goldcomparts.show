@@ -1,1 +1,3 @@
-Please scan the QR-code to visit Dreamspace where you can input your own dream and explore the dreams of others
+Please note the dream journal entries are displayed at random and may contain words or ideas which some may find offensive.
+
+Each star represents a word within dreamspace. Their location and clustering is derived from the vector similarity algorithm, which has been populated with over a hundred thousand dream journal entries. The constellations show specific dreams and join together the words locations within the dreamspace.

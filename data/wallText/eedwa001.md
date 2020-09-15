@@ -1,1 +1,1 @@
-Follow the link to bring the Art Object to you
+Use the iPad to play your part in the formation of the Art Object
