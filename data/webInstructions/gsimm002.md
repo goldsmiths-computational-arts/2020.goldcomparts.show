@@ -1,1 +1,3 @@
-To try it out, Dowload it on an AR ready device from these links :( Links to come, hope thats ok)
+Download on an AR capable device here:
+ios: https://apps.apple.com/app/id1529811825
+android: https://play.google.com/store/apps/details?id=com.Lorn.SoundSpace.Four&hl=en_GB

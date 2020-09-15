@@ -1,1 +1,1 @@
-Move in space to active sound and visual interactions.
+The piece is interactive to the movement of the audience in the exhibition space.

@@ -1,1 +1,1 @@
-Just type your message and send. It might take a minute to wake the bot up, so pls be patient : ) Full sentence will get better result.
+Just type your message and send. It might take a minute to wake the bot up, so pls be patient : ) Full sentences with Punctuation in the end will get better result.

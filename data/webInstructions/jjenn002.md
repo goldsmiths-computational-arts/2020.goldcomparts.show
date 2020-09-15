@@ -1,1 +1,1 @@
-Follow the link to reach the companion website
+Follow the link to reach the companion website. Here, some of the mechanics and algorithms that generate the weaving drafts are exposed and can be explored and interacted with.
