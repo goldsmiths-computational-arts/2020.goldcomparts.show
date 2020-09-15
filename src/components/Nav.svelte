@@ -2,8 +2,7 @@
   import { stores } from "@sapper/app";
 
   const { page } = stores();
-
-  $: console.log($page.path);
+  // $: console.log($page.path);
 
   let showMenu = false;
 
@@ -40,11 +39,11 @@
 
   a.is-active {
     border-bottom-color: black;
-    color:black;
+    color: black;
   }
 
   @media only screen and (max-width: 1023px) {
-    .navbar-menu{
+    .navbar-menu {
       background-color: #387194;
     }
   }
@@ -54,17 +53,16 @@
       padding-top: 20px;
     }
     .navbar-item img {
-        margin-top: -10px;
-        max-height:2.3rem;
+      margin-top: -10px;
+      max-height: 2.3rem;
     }
   }
 
   @media only screen and (max-width: 768px) {
     .navbar-item img {
-        margin-left: -10px;
+      margin-left: -10px;
     }
   }
-
 </style>
 
 <nav

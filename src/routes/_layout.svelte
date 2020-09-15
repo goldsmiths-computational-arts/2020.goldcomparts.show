@@ -1,11 +1,21 @@
 <script>
   import { onMount } from "svelte";
   import Nav from "../components/Nav.svelte";
-  import { tracking } from "./js/tracking";
 
-  onMount(() => {
-    tracking();
-  });
+  import { stores } from "@sapper/app";
+  import { tick } from "svelte";
+
+  const { page } = stores();
+
+  let firstView = true;
+
+  $: {
+    if (!firstView) {
+      console.log(`tracking`, $page.path);
+      gtag("config", "UA-147134681-1", { page_path: $page.path });
+    }
+    firstView = false;
+  }
 </script>
 
 <style>
