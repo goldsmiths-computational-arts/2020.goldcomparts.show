@@ -2,9 +2,9 @@ username	name	otherName	title	themes	media
 amiro001	Alesandra Miro Quesada	badgrandpa	La Historia de Rosario Flores	Thing power,Computational resistance,Memory bank	AR
 cchan007	Andrew Chang	張嘉洋	op('pantomimus')	Computational resistance,Bodies in relation,Non-directional travel	cinema,performance,narrative
 qba001	Baqi Ba	巴岐	Can Be Called Love	Bodies in relation,Non-directional travel,Paracomputing	cinema,live,performance
-belda001	Batool Desouky		Programmoire	Paracomputing	data,generative,physical computing
+belda001	Batool Desouky		Programmoire + The Work Station	Generative poetics,Paracomputing	live,generative,physical computing
 cfowl002	Callum Fowler		Constellations	Bodies in relation,Experiential array	sound,audio visual,music
-ccami002	Camila Colussi		Better times are coming	Bodies in relation,Non-directional travel,Experiential array	interactive,sound,audio visual
+ccami002	Camila Colussi		Better Times Are Coming	Bodies in relation,Non-directional travel,Experiential array	interactive,sound,audio visual
 hkarn001	Chloe Karnezi	Χλόη Καρνέζη	Digitised Dysmorphia	Distance orchestra,Memory bank	interactive,light,ML
 ckarp001	Christina Karpodini		Sonically Touchable	Bodies in relation,Distance orchestra,Paracomputing	sound,wearable,performance
 cli003	Chun LI				
@@ -18,12 +18,12 @@ ekoli001	Elli Koliniati
 eichi001	Eri Ichikawa		Through the Window	Expanded Terrains	data,generative
 elafk001	Ernie Lafky		Social dysDance 1	Bodies in relation	performance
 floft002	Felix Loftus		Decomposition for my Machinic Eye	Bodies in relation,Multispecies rehearsal,Memory bank	photography
-gsimm002	George Simms		Cosmic Mourn	Thing power,Bodies in relation,Experiential array	audio visual,AR,3D
+gsimm002	George Simms		Cosmic Mourn	Thing power,Expanded Terrains,Paracomputing	interactive,audio visual,AR
 ggnec001	Gerolamo Gnecchi Ruscone		For the Tide!	Expanded Terrains,Multispecies rehearsal	interactive,data,physical computing
 gmont004	Giulia Monterrosa		The View From Down Here	Computational resistance,Memory bank	interactive,light,photography
 hcorr001	Hannah Corrie		It's Just a Matter of Time	Bodies in relation,Non-directional travel,Experiential array	interactive,VR,3D
 hryan003	Hazel Ryan				
-jgoul002	JG Legion		Here I Stand	Computational resistance,Bodies in relation,Distance orchestra	interactive,light,narrative
+jgoul002	JG Legion		Here I Stand	Computational resistance,Bodies in relation	interactive,light,narrative
 jjenn002	Jakob Jennerholm Hammar		Wyrd	Thing power,Experiential array,Paracomputing	interactive,generative
 jlawt001	James Lawton				
 jquin002	James Quinn		Choose Your anceStory™	Computational resistance,Experiential array,Memory bank	interactive,narrative,playable experience
@@ -48,7 +48,7 @@ rasto001	Rebecca Aston		Ground	Non-directional travel,Experiential array,Memory 
 rbiro001	Romain Biros		ab_tempura	Bodies in relation,Non-directional travel,Experiential array	live,audio visual,performance
 sxu003	Shuai Xu		Diffusion	Thing power,Experiential array,Memory bank	interactive,performance,music
 tsmit003	Tate Smith		ARTIFICIAL HELL	Computational resistance,Bodies in relation,Memory bank	interactive,physical computing,illustration
-ysun005	Uchan Sun		Corobot: When the Coronavirus Begin to Talk	Generative poetics	interactive,ML,language
+ysun005	Uchan Sun		CoroBot -When the Coronavirus Start to Talk	Generative poetics	interactive,ML,language
 vjuss001	Veera Jussila		Museum of Borderlands	Computational resistance,Experiential array,Memory bank	interactive,sound,ML
 wtalb001	Wesley Talbot		AGA	Thing power	physical computing
 wfinc001	Williams Fincannon		Fogtown	Thing power,Expanded Terrains,Non-directional travel	performance,illustration,animation
