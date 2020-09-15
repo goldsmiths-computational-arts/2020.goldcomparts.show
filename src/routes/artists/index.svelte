@@ -62,7 +62,7 @@
     /* height: 250px; */
   }
 
-  .artists-container{
+  .artists-container {
     min-height: 80vh;
   }
 
@@ -77,7 +77,7 @@
   .bio-box p {
     padding: 0em 0.5em;
     margin-bottom: 1em;
-    color: #363636!important;
+    color: #363636 !important;
     line-height: 1.3em;
   }
   .bio-box h6 {
@@ -85,10 +85,7 @@
     margin-bottom: 0px;
   }
 
-
   @media screen and (max-width: 768px) {
-
-
   }
 </style>
 
@@ -99,12 +96,6 @@
 <section class="section bg-col-7">
   <div class="container page-max-width artists-container">
     <div class="content">
-
-      <select bind:value={sortBy}>
-        {#each sortOptions as d}
-          <option value={d}>{d.title}</option>
-        {/each}
-      </select>
 
       <select bind:value={theme}>
         <option value={null}>—</option>
@@ -135,7 +126,8 @@
                 {artist.name}
                 {artist.otherName ? `  (${artist.otherName})` : ''}
               </h6>
-              <p>{artist.title}</p> <!-- No at titles it looks bad -->
+              <p>{artist.title}</p>
+              <!-- No at titles it looks bad -->
             </a>
           </div>
         {:else}
