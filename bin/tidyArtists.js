@@ -5,6 +5,8 @@ import { csvParseRows, tsvFormat } from "d3-dsv";
 import ProgressBar from "progress";
 import { slugify } from "../src/js/helpers";
 
+const FULL_THING = false;
+
 const rawDir = `${__dirname}/../raw`;
 const dataDir = `${__dirname}/../data`;
 const biosDir = `${__dirname}/../data/bios`;
@@ -95,28 +97,28 @@ artistRows.forEach((d) => {
 
   delete d.email;
 
-  // if (!d.bioText && d.bioMarkdown) {
-  //   // console.log(d.bioMarkdown);
-  //   const id = d.bioMarkdown.split("=")[1];
-  //   try {
-  //     d.bioText = fs.readFileSync(`${rawDir}/bios/${id}.md`, "utf-8");
-  //   } catch (err) {
-  //     console.warn(`Couldn't open ${id} for ${d.slug}`);
-  //   }
-  // }
+  if (FULL_THING && !d.bioText && d.bioMarkdown) {
+    // console.log(d.bioMarkdown);
+    const id = d.bioMarkdown.split("=")[1];
+    try {
+      d.bioText = fs.readFileSync(`${rawDir}/bios/${id}.md`, "utf-8");
+    } catch (err) {
+      console.warn(`Couldn't open ${id} for ${d.slug}`);
+    }
+  }
 
-  // fs.writeFileSync(`${biosDir}/${d.username}.md`, d.bioText.trim());
+  fs.writeFileSync(`${biosDir}/${d.username}.md`, d.bioText.trim());
   delete d.bioText;
   delete d.bioMarkdown;
 
-  // if (d.bioImage) {
-  //   const id = d.bioImage.split("=")[1];
-  //   // Resize the images and convert to JPEG, some are PNGs just with .jpeg extension
-  //   execSync(
-  //     `sips -s format jpeg -Z 600 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.username}.jpeg`,
-  //     { stdio: "pipe" }
-  //   );
-  // }
+  if (FULL_THING && d.bioImage) {
+    const id = d.bioImage.split("=")[1];
+    // Resize the images and convert to JPEG, some are PNGs just with .jpeg extension
+    execSync(
+      `sips -s format jpeg -Z 600 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.username}.jpeg`,
+      { stdio: "pipe" }
+    );
+  }
   delete d.bioImage;
 
   artistsMap.set(d.slug, d);
