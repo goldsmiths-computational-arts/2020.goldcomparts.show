@@ -1,8 +1,8 @@
 username	name	otherName	title	themes	media
 amiro001	Alesandra Miro Quesada	badgrandpa	La Historia de Rosario Flores	Thing power,Computational resistance,Memory bank	AR
 cchan007	Andrew Chang	張嘉洋	op('pantomimus')	Computational resistance,Bodies in relation,Non-directional travel	cinema,performance,narrative
-qba001	Baqi Ba	巴岐	Can Be Called Love	Bodies in relation,Non-directional travel,Paracomputing	cinema,live,performance
-belda001	Batool Desouky		Programmoire + The Work Station	Generative poetics,Paracomputing	live,generative,physical computing
+qba001	Baqi Ba	巴岐	Can Be e Called Love	Expanded Terrains,Non-directional travel,Paracomputing	live,interactive,audio visual
+belda001	Batool Desouky		Programmoire + The Workstation	Computational resistance,Paracomputing	live,generative,physical computing
 cfowl002	Callum Fowler		Constellations	Bodies in relation,Experiential array	sound,audio visual,music
 ccami002	Camila Colussi		Better Times Are Coming	Bodies in relation,Non-directional travel,Experiential array	interactive,sound,audio visual
 hkarn001	Chloe Karnezi	Χλόη Καρνέζη	Digitised Dysmorphia	Distance orchestra,Memory bank	interactive,light,ML
@@ -19,10 +19,10 @@ eichi001	Eri Ichikawa		Through the Window	Expanded Terrains	data,generative
 elafk001	Ernie Lafky		Social dysDance 1	Bodies in relation	performance
 floft002	Felix Loftus		Decomposition for my Machinic Eye	Bodies in relation,Multispecies rehearsal,Memory bank	photography
 gsimm002	George Simms		Cosmic Mourn	Thing power,Expanded Terrains,Paracomputing	interactive,audio visual,AR
-ggnec001	Gerolamo Gnecchi Ruscone		For the Tide!	Expanded Terrains,Multispecies rehearsal	interactive,data,physical computing
+ggnec001	Gerolamo Gnecchi Ruscone		forTheTide!	Expanded Terrains	interactive,data,physical computing
 gmont004	Giulia Monterrosa		The View From Down Here	Computational resistance,Memory bank	interactive,light,photography
 hcorr001	Hannah Corrie		It's Just a Matter of Time	Bodies in relation,Non-directional travel,Experiential array	interactive,VR,3D
-hryan003	Hazel Ryan				
+hryan003	Hazel Ryan		Monument To	Thing power,Experiential array,Memory bank	interactive,playable experience,3D
 jgoul002	JG Legion		Here I Stand	Computational resistance,Bodies in relation	interactive,light,narrative
 jjenn002	Jakob Jennerholm Hammar		Wyrd	Thing power,Experiential array,Paracomputing	interactive,generative
 jlawt001	James Lawton				
@@ -30,7 +30,7 @@ jquin002	James Quinn		Choose Your anceStory™	Computational resistance,Experien
 jchen022	Jingyi Chen	陈婧怡	Lost Thearchy	Memory bank	interactive,audio visual,ML
 jfull001	Jonny Fuller-Rowell		In Time'	Non-directional travel,Experiential array	interactive,physical computing
 cchap005	Jude Marcella		The Snow Globe	Expanded Terrains,Experiential array,Memory bank	cinema,playable experience
-jburg002	Julian Bramley Burgess		Dreamspace	Bodies in relation,Non-directional travel,Memory bank	interactive,data,illustration
+jburg002	Julian Bramley Burgess		Dreamspace	Bodies in relation,Non-directional travel,Memory bank	data,ML,illustration
 kokpo001	Karen Okpoti		A Siren Calls	Bodies in relation	interactive,sound,performance
 ktind001	Katie Tindle		sleepAffirmation_1.Sleep fluids (lofi, sleep, study, chill)	Computational resistance,Generative poetics,Distance orchestra	sound,audio visual,narrative
 kclyn001	Keir Clyne		_MAGICBOX_	Expanded Terrains,Experiential array	live,interactive,playable experience
@@ -40,7 +40,7 @@ oaneke001	Lara aneke		Just Another Portrait Printer	Thing power	generative,physi
 mcard001	Marina Cardoso		If 2020 were a poem	Generative poetics	data,generative,language
 mspag003	Mattia Spagnuolo		Sistema 1	Expanded Terrains,Non-directional travel,Experiential array	light,sound,performance
 mli006	Mengdi Li	李梦迪	Living Root Bridge	Bodies in relation	interactive,illustration,animation
-nbayl001	Nathan Bayliss		Lockdown	Non-directional travel,Memory bank	interactive,AR,narrative
+nbayl001	Nathan Bayliss		Lockdown_	Non-directional travel,Memory bank	AR,3D
 oschi001	Oliver Schilke		Meshed	Thing power,Computational resistance,Multispecies rehearsal	interactive,sound,language
 pchen006	Peilu Chen		Useless Future	Bodies in relation	interactive,audio visual,physical computing
 qfan001	Qianhui Fan		Immortal power	Thing power,Multispecies rehearsal	interactive,sound,generative
@@ -56,7 +56,7 @@ xhu002	Xiaoyi Hu		RUN RUN	Non-directional travel	sound,playable experience,3D
 xsun002	Xinyu Sun		Vast Cliff	Experiential array	light,generative,physical computing
 yzhou015	YI ZHOU		ECHO	Memory bank	audio visual,illustration
 ylu007	Yanyi Lu		Augmented Creativity	Thing power,Bodies in relation,Memory bank	cinema,ML,narrative
-yjin004	Yewen Jin		Liminal Dream	Expanded Terrains,Non-directional travel,Experiential array	interactive,sound,3D
+yjin004	Yewen Jin		Liminal Dream	Expanded Terrains,Non-directional travel,Experiential array	sound,playable experience,3D
 yzhan037	Yishuai Zhang		ALL IS A TRANSIENT DREAM	Thing power,Bodies in relation,Multispecies rehearsal	live,audio visual,performance
 yliao001	Yu Hsuan Liao		Chaotic Objects	Bodies in relation,Generative poetics,Memory bank	cinema,data,ML
 yjun001	Yuhyeon Jun (Agnes)		Interplay through Wave	Bodies in relation,Expanded Terrains,Multispecies rehearsal	interactive,audio visual,playable experience
