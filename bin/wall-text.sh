@@ -1,5 +1,6 @@
 set -x
 mkdir -p raw/wall-text-pdf/
+rm raw/wall-text-pdf/*
 puppeteer-pdf http://localhost:3000/wall-texts/alesandra-miro-quesada --path raw/wall-text-pdf/alesandra-miro-quesada.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/andrew-chang --path raw/wall-text-pdf/andrew-chang.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/baqi-ba --path raw/wall-text-pdf/baqi-ba.pdf

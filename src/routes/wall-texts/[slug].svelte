@@ -25,24 +25,25 @@
   }
 
   .content {
-    margin: 60px 100px;
-    max-width: 800px;
+    margin: 100px;
   }
 
   h2 {
     font-weight: 500;
   }
 
-  .wall-text {
-    width: 440px;
-  }
-
   .social {
     margin-top: 2em;
   }
+
+  .crunch.content {
+    font-size: 90%;
+  }
 </style>
 
-<div class="content">
+<div
+  class="content"
+  class:crunch={artist.artworkHTML && artist.artworkHTML.length > 1400}>
 
   <img
     style="float: right"
@@ -55,6 +56,8 @@
     {artist.name}
     {#if artist.otherName}({artist.otherName}){/if}
   </h2>
+
+  <br clear="both" />
 
   <div class="wall-text">
     {@html artist.artworkHTML}
