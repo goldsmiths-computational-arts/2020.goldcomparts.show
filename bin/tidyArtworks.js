@@ -115,6 +115,16 @@ artworkRows.forEach((d) => {
       } catch (err) {
         console.log(`Error with ${id} - ${d.username}`);
       }
+
+      if (!i) {
+        const cmd = `sips -z 270 480 ${rawDir}/photos/${id}.jpeg --out ${photosDir}/${d.username}-thumb.jpeg`;
+        // console.log(cmd);
+        try {
+          execSync(cmd, { stdio: "pipe" });
+        } catch (err) {
+          console.log(`Error with ${id} - ${d.username}`);
+        }
+      }
     });
   }
 
