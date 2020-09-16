@@ -29,6 +29,7 @@ puppeteer-pdf http://localhost:3000/wall-texts/jakob-jennerholm-hammar --path ra
 puppeteer-pdf http://localhost:3000/wall-texts/james-lawton --path raw/wall-text-pdf/james-lawton.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/james-quinn --path raw/wall-text-pdf/james-quinn.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/jg-legion --path raw/wall-text-pdf/jg-legion.pdf
+puppeteer-pdf http://localhost:3000/wall-texts/jingyi-chen --path raw/wall-text-pdf/jingyi-chen.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/jonny-fuller-rowell --path raw/wall-text-pdf/jonny-fuller-rowell.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/jude-marcella --path raw/wall-text-pdf/jude-marcella.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/julian-bramley-burgess --path raw/wall-text-pdf/julian-bramley-burgess.pdf
@@ -49,6 +50,7 @@ puppeteer-pdf http://localhost:3000/wall-texts/qianhui-fan --path raw/wall-text-
 puppeteer-pdf http://localhost:3000/wall-texts/rebecca-aston --path raw/wall-text-pdf/rebecca-aston.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/romain-biros --path raw/wall-text-pdf/romain-biros.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/shuai-xu --path raw/wall-text-pdf/shuai-xu.pdf
+puppeteer-pdf http://localhost:3000/wall-texts/tate-smith --path raw/wall-text-pdf/tate-smith.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/uchan-sun --path raw/wall-text-pdf/uchan-sun.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/veera-jussila --path raw/wall-text-pdf/veera-jussila.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/wesley-talbot --path raw/wall-text-pdf/wesley-talbot.pdf

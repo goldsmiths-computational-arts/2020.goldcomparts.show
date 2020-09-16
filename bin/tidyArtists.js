@@ -3,6 +3,7 @@ import fs from "fs";
 import { execSync } from "child_process";
 import { csvParseRows, tsvFormat } from "d3-dsv";
 import QRCode from "qrcode";
+import PQueue from "p-queue";
 import ProgressBar from "progress";
 import { slugify } from "../src/js/helpers";
 
@@ -17,6 +18,8 @@ const qrcodeDir = `${__dirname}/../static/img/qr`;
 [biosDir, photosDir, qrcodeDir].forEach((d) =>
   fs.mkdirSync(d, { recursive: true })
 );
+
+const queue = new PQueue({ concurrency: 1 });
 
 const megaCsv = `${rawDir}/mega.csv`;
 const artistsCsv = `${rawDir}/artists.csv`;
@@ -77,7 +80,7 @@ const artistsMap = new Map();
 
 const bar = new ProgressBar(":percent  [:bar]", { total: artistRows.length });
 
-artistRows.forEach(async (d) => {
+const processArtists = artistRows.map((d) => async () => {
   delete d.showOtherName;
   delete d.otherNameLanguage;
   delete d.timestamp;
@@ -130,11 +133,14 @@ artistRows.forEach(async (d) => {
 
   await QRCode.toFile(`${qrcodeDir}/${d.username}.svg`, url);
 
+  // console.log(d.slug, d);
   artistsMap.set(d.slug, d);
   bar.tick();
 });
 
-const artists = Array.from(artistsMap.values());
+queue.addAll(processArtists).then(() => {
+  const artists = Array.from(artistsMap.values());
 
-// console.log(artists);
-fs.writeFileSync(artistsTsv, tsvFormat(artists));
+  // console.log(artists);
+  fs.writeFileSync(artistsTsv, tsvFormat(artists));
+});
