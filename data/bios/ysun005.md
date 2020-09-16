@@ -1,2 +1,2 @@
-We are all in the gutter, but some of us are looking at the stars.
-My works range from generative animation to interactive installation and AI practices, especially chatbots.
+Yuqian(Uchan) Sun, artist, interaction designer and computational artist.
+Her works range from generative animation to interactive installation and AI practices, especially chatbots. She showed her works in exhibitions including The edia Facade in Yekaterinburg in Russia, 2020 Artificial life conference art show and Renovators OPPO 2020  campus global emerging artists projects. Her research works about narrative intelligence have been presented at conferences like ACM womENcourage 2020.
