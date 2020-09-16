@@ -1,0 +1,9 @@
+When our digital lives consist of a blur of micro-tasks and the taps and clicks that dispatch them, how do we access our muscle memory rather than treat it as a lost byproduct of the work that matters?
+
+Hazel Ryan asks what a persistent visual record of these throwaway actions might look like, and whether we can find communal disalienation through this process of shared building or documentation of actions usually performed in isolation.
+
+Monument To invites participants to consider acts of work as endemic in every action and every moment mediated through digital platforms, value creation being inseparable under capitalism from promises of digital leisure. Beyond this helpless prognosis, the piece offers hope of empowerment through shared experience, drawing parallels of craftsmanship and existing as a monument-in-progress to the class of lounge labourers which we are all become.
+
+The ‘monument’ itself is a digital landscape populated by the ghosts of median nerve impulses, constructed gradually by the audience via webapp. This app is inspired by incremental games, which are nominated by the artist as the acme of casualised value production.
+
+The final form of the piece is left open to the agency of those who interact with it: the artist has set the stage through her own digital labour, echoes of which are displayed in the initial state of the piece, but the world progresses permanently through interaction so that no two visits are the same. What might emerge, however, is a playful nod both to digital resistance and median nerve compression. Every tap matters, or perhaps materialises towards a mattering.

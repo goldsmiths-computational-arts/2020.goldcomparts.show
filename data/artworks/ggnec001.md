@@ -1,5 +1,1 @@
-We use simple white or blue color to indicate areas of water on maps. We visualize the sea levels and tidal shifts only in height. By simplifying water to one color or number we lose the ever-changing, the complexity, yet predictable, that makes us so drawn to it. 
-
-The project's aim is to listen, understand, and become more aware of a dynamic and complex ecosystem such as the Thames river. To explore this a pendulum is placed on a floating surface next to Tower Bridge. Through its natural oscillation, the pendulum collects and records the transformations that occur during Tidal shifts. Depending on the position of the moon the shifting period varies. It is unequal and inconsistent shaping and affecting what the Tide encounters. 
-
-The data is then used and sent to three stepper motors activating, with the use of magnets and mechanisms, the movement of two devices: a pendulum and a plate of metal pollutants (sand magnetite) collected and recycled from the beaches of the Thames. The devices will then generate visuals and sounds giving a whole new voice and sensorial experience for the Tide!
+-should be in other form that i sent- unfortunately cannot find it anymore...
