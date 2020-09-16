@@ -5,7 +5,7 @@ import { csvParseRows, tsvFormat } from "d3-dsv";
 import ProgressBar from "progress";
 import { slugify } from "../src/js/helpers";
 
-const FULL_THING = false;
+const FULL_THING = true;
 
 const rawDir = `${__dirname}/../raw`;
 const dataDir = `${__dirname}/../data`;
@@ -27,9 +27,9 @@ otherName
 otherNameLanguage
 bioImage
 location
-bioTextOrFile
-bioText
-bioMarkdown
+oldBioTextOrFile
+oldBioText
+oldBioMarkdown
 website
 youtube
 vimeo
@@ -37,7 +37,11 @@ twitch
 facebook
 twitter
 instagram
-publicEmail`
+publicEmail
+blank1
+blank2
+bioText
+`
   .trim()
   .split("\n");
 
@@ -74,7 +78,11 @@ artistRows.forEach((d) => {
   delete d.otherNameLanguage;
   delete d.timestamp;
 
-  delete d.bioTextOrFile;
+  delete d.oldBioTextOrFile;
+  delete d.oldBioText;
+  delete d.oldBioMarkdown;
+  delete d.blank1;
+  delete d.blank2;
 
   d.slug = slugify(d.name);
 
@@ -97,19 +105,10 @@ artistRows.forEach((d) => {
 
   delete d.email;
 
-  if (FULL_THING && !d.bioText && d.bioMarkdown) {
-    // console.log(d.bioMarkdown);
-    const id = d.bioMarkdown.split("=")[1];
-    try {
-      d.bioText = fs.readFileSync(`${rawDir}/bios/${id}.md`, "utf-8");
-    } catch (err) {
-      console.warn(`Couldn't open ${id} for ${d.slug}`);
-    }
+  if (FULL_THING && d.bioText) {
+    fs.writeFileSync(`${biosDir}/${d.username}.md`, d.bioText.trim());
   }
-
-  fs.writeFileSync(`${biosDir}/${d.username}.md`, d.bioText.trim());
   delete d.bioText;
-  delete d.bioMarkdown;
 
   if (FULL_THING && d.bioImage) {
     const id = d.bioImage.split("=")[1];
