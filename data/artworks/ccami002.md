@@ -7,11 +7,7 @@ Listening space.
 At the high speed of the 21th Century, we’ve lost time. Jonathan Crary in his book “24/7 Late Capitalism and the ends of sleep” identifies a non-stop culture that erases any pause, duration or waiting-time. Our experience of the world turned compressed, alienating our relation with the earth, other beings and even ourselves. This project plays with time under the idea of recovering the experience of time, not just as something that happens to us, but something that we are part of, as bodies in relation, affecting our surroundings.
 
 Move and change time.
-
 Move and change space.
-
 Move and resonate with the universe.
-
 Listen back.
-
 Resonate together.
