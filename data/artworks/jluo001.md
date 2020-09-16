@@ -1,4 +1,4 @@
-This work is composed of 5 musical instruments, each of which could be visualized as an element in the painting. It is amazing that most of the songs are arranged by different instruments, and the effect of a single instrument and their ensemble are very different. 
+Sing a Picture is composed of 5 musical instruments, each of which could be visualized as an element in the painting. It is amazing that most of the songs are arranged by different instruments, and the effect of a single instrument and their ensemble are very different. 
 
 The project allows everyone to control the playing or not of the instruments to show the charm of music and at the same time turn what the instruments sing into a painting. This work is mainly written using openFrameworks, using the audio material of 5 musical instruments in a song. How to respectively calculate and visualize the 5 audio used as screen elements is also the biggest difficulty and breakthrough of the work. The final picture is composed of 5 elements, which also implies the complementarity of musical instruments. 
 
