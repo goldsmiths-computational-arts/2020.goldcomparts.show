@@ -34,6 +34,7 @@ puppeteer-pdf http://localhost:3000/wall-texts/jingyi-chen --path raw/wall-text-
 puppeteer-pdf http://localhost:3000/wall-texts/jonny-fuller-rowell --path raw/wall-text-pdf/jonny-fuller-rowell.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/jude-marcella --path raw/wall-text-pdf/jude-marcella.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/julian-bramley-burgess --path raw/wall-text-pdf/julian-bramley-burgess.pdf
+puppeteer-pdf http://localhost:3000/wall-texts/junqiao-luo --path raw/wall-text-pdf/junqiao-luo.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/karen-okpoti --path raw/wall-text-pdf/karen-okpoti.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/katie-tindle --path raw/wall-text-pdf/katie-tindle.pdf
 puppeteer-pdf http://localhost:3000/wall-texts/keir-clyne --path raw/wall-text-pdf/keir-clyne.pdf
