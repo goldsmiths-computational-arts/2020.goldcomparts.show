@@ -1,0 +1,1 @@
+const t="2020.goldcomparts.show",a="https://2020.goldcomparts.show",e="https://www.eventbrite.co.uk/e/chimera-garden-computational-arts-mamfa-degree-show-digital-exhibition-tickets-119608075975",s="https://www.eventbrite.co.uk/e/chimera-garden-computational-arts-mamfa-degree-show-physical-exhibition-tickets-119513404811";export{a as B,e as E,s as R,t as a};
