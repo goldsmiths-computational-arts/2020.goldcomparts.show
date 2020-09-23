@@ -1,4 +1,4 @@
-# 2020-preview.goldcomparts.show
+# 2020.goldcomparts.show
 
 - [How to update biography](https://github.com/aubergene/2020.goldcomparts.show/blob/master/HOW_TO_UPDATE.md)
 
