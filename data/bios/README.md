@@ -5,7 +5,7 @@ The biographies are written in Markdown which is rendered using [markdown-it](ht
 ## How to edit
 
 1. You'll need to have a Github account, so register or login
-1. Find your name in [this list of files](https://github.com/aubergene/2020-preview.goldcomparts.show/tree/master/data/bios), you'll only have a file you submitted the artist form
+1. Find your name in [this list of files](https://github.com/aubergene/2020.goldcomparts.show/tree/master/data/bios), you'll only have a file you submitted the artist form
 1. Click on your file and then click the pencil icon (edit this file), second icon from the top right
 1. Write/edit your biography
 1. **Don't** add any heading, title or your social links, these comes from the spreadsheet. You just need to write the biography/artist statement
