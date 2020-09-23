@@ -1,13 +1,11 @@
 # How to update your page
 
-There are **65 students** in this show! I don't have time to manually edit or check peoples' work as I have a **TON** of work making the website as it is!
-
 There are two forms you need to complete:
 
 - [Part I form - artist biography](https://docs.google.com/forms/d/e/1FAIpQLScmHKFauB7llCnYPn-QrxvljPoriIc6hLSJ8gXDKqFV-1J9ow/viewform)
 - [Part II form - artwork](https://docs.google.com/forms/d/e/1FAIpQLSe-GsbPCEukeBz0XVYLJrxBMT8Djjyh835389A9gLt8XR9maw/viewform)
 
-The pages are automatically generated when I run a script from whatever you submit in the forms! If you need to change something then you need to submit the entire form again, copy in anything from before which you want to keep. If you type things like "N/A" then that is what will appear on your page. 
+The pages are automatically generated when I run a script from whatever you submit in the forms! If you need to change something then you need to submit the entire form again including images! You can copy and paste text from what is currently on the page to make it easier. If you type things like "N/A" then that is what will appear on your page. 
 **The last thing you have submitted is what gets published, if you make a mistake, submit the whole thing again!** I know it's a pain, I'm sorry but it's the best we have.
 
 You also need to submit all your images each time! Get the sizes correct or they will look stretched
