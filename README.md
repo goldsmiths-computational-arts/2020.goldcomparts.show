@@ -1,8 +1,6 @@
 # 2020-preview.goldcomparts.show
 
-## Biography data
-
-- [How to edit your biography](https://github.com/aubergene/2020.goldcomparts.show/tree/master/data/bios#artist-biographies)
+- [How to update biography](https://github.com/aubergene/2020.goldcomparts.show/blob/master/HOW_TO_UPDATE.md)
 
 ## Getting started
 
